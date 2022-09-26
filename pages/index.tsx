@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Home from 'components/page/Home/index';
+import Home from 'components/page/Home/Index';
 import Navbar from '../components/common/navbar';
 
 const App: NextPage = () => (
