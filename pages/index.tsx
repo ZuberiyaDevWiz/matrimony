@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 
-const Home: NextPage = () => (
+const App: NextPage = () => (
     <div>
         {/* // <div className="text-4xl space-y-6 font-bold flex flex-col items-center text-gray-800 mt-10 "> */}
         {/* <p className="hover:scale-110 transition-all cursor-pointer ">NEXTJS 🖤</p>
@@ -14,4 +14,4 @@ const Home: NextPage = () => (
     </div>
 );
 
-export default Home;
+export default App;
