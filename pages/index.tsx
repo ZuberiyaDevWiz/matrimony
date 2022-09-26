@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import Navbar from '../components/common/navbar';
 
 const Home: NextPage = () => (
     <div>
@@ -12,8 +11,6 @@ const Home: NextPage = () => (
         <p className="hover:scale-110 transition-all cursor-pointer ">Husky 🐶</p>
 
         <h1 className="animate-bounce pt-10">Enjoy!!!!!!!</h1> */}
-
-        <Navbar />
     </div>
 );
 
