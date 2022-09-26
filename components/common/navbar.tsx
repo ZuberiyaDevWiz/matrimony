@@ -7,7 +7,6 @@ const Navbar = () => {
 
     return (
         <>
-            <Image className="relative" src="/images/wed1.jpg" layout="fill" />
             <div className="flex justify-center">
                 <div className="flex justify-center absolute">
                     <div className="flex space-x-6 text-lg justify-end pr-16 bg-white w-screen h-11 items-center">
