@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Image from 'next/image';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 
 const Navbar = () => {
@@ -8,32 +7,30 @@ const Navbar = () => {
     return (
         <>
             <div className="flex justify-end overflow-hidden items-center h-20 bg-[#800000] text-white ">
-                    <div className="flex gap-8">
-                        <div className="">
-                            <button className=" hover:underline font-semibold text-lg" type="button">
-                                Login
-                            </button>
-                        </div>
-                        <div className="flex relative mr-8">
-                            <button className="hover:underline font-semibold text-lg" type="button">
-                                Register
-                            </button>
-                            {isShow ? (
-                                <RiArrowDropUpLine
-                                    onClick={() => setIsShow(!isShow)}
-                                    className="absolute -right-6 top-1/2 text-3xl -translate-y-3"
-                                />
-                            ) : (
-                                <RiArrowDropDownLine
-                                    onClick={() => setIsShow(!isShow)}
-                                    className="absolute -right-6 top-1/2 text-3xl -translate-y-3"
-                                />
-                            )}
-
-                            
-                        </div>
+                <div className="flex gap-8">
+                    <div className="">
+                        <button className=" hover:underline font-semibold text-lg" type="button">
+                            Login
+                        </button>
+                    </div>
+                    <div className="flex relative mr-8">
+                        <button className="hover:underline font-semibold text-lg" type="button">
+                            Register
+                        </button>
+                        {isShow ? (
+                            <RiArrowDropUpLine
+                                onClick={() => setIsShow(!isShow)}
+                                className="absolute -right-6 top-1/2 text-3xl -translate-y-3"
+                            />
+                        ) : (
+                            <RiArrowDropDownLine
+                                onClick={() => setIsShow(!isShow)}
+                                className="absolute -right-6 top-1/2 text-3xl -translate-y-3"
+                            />
+                        )}
                     </div>
                 </div>
+            </div>
         </>
     );
 };
