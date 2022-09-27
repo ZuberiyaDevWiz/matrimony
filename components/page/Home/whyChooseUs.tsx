@@ -23,7 +23,9 @@ const WhyChooseUs = () => (
                 </p>
             </div>
             <div className="absolute flex top-[85%] left-[17%]">
-                <button type="button" className='text-white'>Read More</button>
+                <button type="button" className="text-white">
+                    Read More
+                </button>
             </div>
         </div>
     </section>
