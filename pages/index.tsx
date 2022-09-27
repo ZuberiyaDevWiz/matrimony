@@ -1,6 +1,4 @@
 import type { NextPage } from 'next';
-import Home from 'components/page/Home/Index';
-import Navbar from '../components/common/navbar';
 
 const App: NextPage = () => (
     <div>
@@ -13,9 +11,6 @@ const App: NextPage = () => (
         <p className="hover:scale-110 transition-all cursor-pointer ">Husky 🐶</p>
 
         <h1 className="animate-bounce pt-10">Enjoy!!!!!!!</h1> */}
-
-        <Navbar />
-        <Home />
     </div>
 );
 
