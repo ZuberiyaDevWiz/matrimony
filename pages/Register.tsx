@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
-import Radio from 'components/common/radio';
+import Radio from 'components/Form/radio';
 import Image from 'next/image';
 
 const Register = () => (
@@ -39,7 +39,7 @@ const Register = () => (
                     <div className="flex items-center justify-center pr-14 pt-3">
                         <input type="checkbox" />
                         <p className="ml-1">
-                            Accept the{' '}
+                            I Accept the{' '}
                             <a href="/" className="ml-1 text-blue-500 underline">
                                 Terms & conditions
                             </a>
