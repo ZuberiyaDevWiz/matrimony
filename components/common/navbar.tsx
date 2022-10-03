@@ -6,7 +6,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="flex justify-end overflow-hidden items-center h-20 bg-[#800000] text-white ">
+            <div className="flex justify-end overflow-hidden items-center h-20 bg-[#a50000] text-white ">
                 <div className="flex gap-8">
                     <div className="">
                         <button className=" hover:underline font-semibold text-lg" type="button">

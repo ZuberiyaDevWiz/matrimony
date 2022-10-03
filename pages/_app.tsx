@@ -6,7 +6,7 @@ import Home from 'components/page/Home/Index';
 const MyApp = ({ Component, pageProps }: AppProps) => (
     <>
         <Navbar />
-        <Home/>
+        <Home />
         <Component {...pageProps} />
     </>
 );
