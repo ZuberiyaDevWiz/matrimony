@@ -16,7 +16,7 @@ const religionDetails = () => {
             <div className="flex px-4 pt-6  space-x-3 ">
                 <p className="">Willing to marry from</p>
                 <div className="flex flex-row  space-x-3 w-1/2">
-                    <Button color="two" rounded text="same Division" />
+                    <Button color="two" rounded text="Same Division" />
                     <Button color="two" rounded text="Other Division Also" />
                 </div>
             </div>

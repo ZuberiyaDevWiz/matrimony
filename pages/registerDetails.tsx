@@ -23,7 +23,13 @@ const registerDetails = () => (
                     />
                 </div>
                 <div className="  h-14  ">
-                    <Input label="Email" placeholder="Enter Email.." required type="text" rounded />
+                    <Input
+                        label="Email"
+                        placeholder="Enter Email.."
+                        required
+                        type="email"
+                        rounded
+                    />
                 </div>
 
                 <div className=" h-14  ">
@@ -60,7 +66,7 @@ const registerDetails = () => (
                     />
                 </div>
                 <div className="h-14">
-                    <Button color="one" text="Next" rounded />
+                    <Button submit color="one" text="Next" rounded additionalStyles="tw-text-2xl" />
                 </div>
             </div>
         </form>

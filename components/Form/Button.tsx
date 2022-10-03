@@ -7,10 +7,11 @@ interface ButtonProps {
     rounded?: boolean;
     onClick?: () => void;
     submit?: boolean;
+    additionalStyles?: string;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
-    const { text, color, onClick, submit, rounded } = props;
+    const { text, color, onClick, submit, rounded, additionalStyles } = props;
 
     return (
         <button
@@ -31,7 +32,7 @@ const Button: React.FC<ButtonProps> = (props) => {
                     : color === 'five'
             )}
         >
-            <span>{text}</span>
+            <span className={clx('text-base', additionalStyles || null)}>{text}</span>
         </button>
     );
 };
