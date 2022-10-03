@@ -1,12 +1,19 @@
+import { FormEvent } from 'react';
 import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
 
+const submitHandler = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+};
+
 const registerDetails = () => (
     <>
-        <form onSubmit={(e) => e.preventDefault()}>
-            <div className="flex flex-col shadow-lg bg-white w-1/3 px-5">
-                <p className="mt-20 ">Please provide us with your basic details</p>
-                <div className="py-4 w-full h-10">
+        <form onSubmit={submitHandler} className="shadow-4xl bg-slate-300  mx-auto  w-[40%] ">
+            <div className="flex flex-col  px-5 ">
+                <p className="mt-20 pb-5 text-lg font-semibold  ">
+                    Please provide us with your basic details
+                </p>
+                <div className="h-14 ">
                     <Input
                         label="Full Name"
                         placeholder="Enter full name.."
@@ -15,21 +22,15 @@ const registerDetails = () => (
                         rounded
                     />
                 </div>
-                <div className="py-4 w-full h-10">
-                    <Input
-                        label="Email"
-                        placeholder="Enter Email.."
-                        required
-                        type="email"
-                        rounded
-                    />
+                <div className="  h-14  ">
+                    <Input label="Email" placeholder="Enter Email.." required type="text" rounded />
                 </div>
 
-                <div className="py-4 w-full h-10">
+                <div className=" h-14  ">
                     <Input label="Date" placeholder="Enter Date.." required rounded type="date" />
                 </div>
 
-                <div className="py-4 w-full h-10">
+                <div className="  h-14 ">
                     <Input
                         label="Section"
                         placeholder="Enter Section.."
@@ -39,7 +40,7 @@ const registerDetails = () => (
                     />
                 </div>
 
-                <div className="py-4 w-full h-10">
+                <div className="  h-14 ">
                     <Input
                         label="Division"
                         placeholder="Enter Division.."
@@ -49,7 +50,7 @@ const registerDetails = () => (
                     />
                 </div>
 
-                <div className="py-4 w-full h-10">
+                <div className="  h-14  ">
                     <Input
                         label="Password"
                         placeholder="Enter Password"
@@ -58,7 +59,9 @@ const registerDetails = () => (
                         type="password"
                     />
                 </div>
-                <Button color="orange" rounded text="Next" />
+                <div className="h-14">
+                    <Button color="one" text="Next" rounded />
+                </div>
             </div>
         </form>
     </>

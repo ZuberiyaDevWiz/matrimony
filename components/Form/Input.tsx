@@ -35,23 +35,25 @@ const Input: FC<InputProps> = (props) => {
     return (
         <div>
             <label htmlFor={name}>
-                <p className="font-medium text-md pb-10">{label}</p>
-                <input
-                    name={name}
-                    type={type}
-                    placeholder={placeholder}
-                    value={value}
-                    required={required}
-                    minLength={minLength}
-                    maxLength={maxLength}
-                    onChange={changeHandler}
-                    width={width}
-                    height={height}
-                    className={clx(
-                        'w-full py-2 border-[1px] border-gray-500',
-                        rounded ? '!rounded-full' : '!rounded'
-                    )}
-                />
+                <p className="font-medium text-sm px-2">{label}</p>
+                <div className="">
+                    <input
+                        name={name}
+                        type={type}
+                        placeholder={placeholder}
+                        value={value}
+                        required={required}
+                        minLength={minLength}
+                        maxLength={maxLength}
+                        onChange={changeHandler}
+                        width={width}
+                        height={height}
+                        className={clx(
+                            'w-full  pl-3 border-[1px] border-gray-500',
+                            rounded ? '!rounded-md' : '!rounded'
+                        )}
+                    />
+                </div>
             </label>
         </div>
     );

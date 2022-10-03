@@ -9,7 +9,7 @@ const Navbar = () => {
         <section>
             <div className="flex justify-center">
                 <div className="flex justify-center absolute">
-                    <div className="flex space-x-6 text-lg justify-end pr-16 bg-gray-400 w-screen h-11 items-center">
+                    <div className="flex space-x-6 text-lg justify-end pr-16 bg-red-500 w-screen h-11 items-center">
                         <div className="">
                             <button
                                 className=" hover:underline font-semibold text-lg"
