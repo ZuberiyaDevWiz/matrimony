@@ -1,11 +1,18 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useState } from 'react';
+import { useState, FC, Dispatch, SetStateAction } from 'react';
 import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import Router from 'next/router';
 
-const newPassword = () => {
+const NewPassword: FC<{
+    setNext: Dispatch<SetStateAction<number>>;
+}> = ({ setNext }) => {
     const [show, setShow] = useState(false);
+
+    const submitHandler = () => {
+        Router.push('Login/login');
+    };
 
     return (
         <section className="shadow-2xl bg-gray-300 mx-auto w-[30%] px-6 mt-8">
@@ -52,11 +59,11 @@ const newPassword = () => {
                     )}
                 </div>
                 <div className="w-full py-8">
-                    <Button text="Submit" color="three" rounded submit />
+                    <Button text="Submit" color="three" rounded submit onClick={submitHandler} />
                 </div>
             </form>
         </section>
     );
 };
 
-export default newPassword;
+export default NewPassword;
