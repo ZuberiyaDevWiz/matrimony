@@ -17,7 +17,7 @@ const WhyUs = () => (
                     GET STARTED NOW
                 </button>
             </div>
-            <div className='flex items-center justify-around my-8 w-[75%]'>
+            <div className="flex items-center justify-around my-8 w-[75%]">
                 <div className="w-24 h-24 divide-x-2 rounded-full shadow-2xl bg-white">
                     <div className="p-5 pt-6 ">
                         <Image
