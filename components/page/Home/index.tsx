@@ -1,10 +1,10 @@
-import WhyChooseUs from './WhyChooseUs';
-import WhyUs from './WhyUs';
+import WhyChooseUs from './whyChooseUs';
+import WhyUs from './whyUs';
 
 const Home = () => (
-    <>
+    <section>
         <WhyChooseUs />
         <WhyUs />
-    </>
+    </section>
 );
 export default Home;
