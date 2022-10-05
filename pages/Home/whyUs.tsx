@@ -50,9 +50,6 @@ const WhyUs = () => (
                 </div>
             </div>
         </div>
-        <div className="h-96">
-            <h1>helo</h1>
-        </div>
     </section>
 );
 export default WhyUs;

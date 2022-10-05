@@ -1,5 +1,5 @@
-import WhyChooseUs from './WhyChooseUs';
-import WhyUs from './WhyUs';
+import WhyUs from './whyUs';
+import WhyChooseUs from './whyChooseUs';
 
 const Home = () => (
     <>
@@ -7,4 +7,5 @@ const Home = () => (
         <WhyUs />
     </>
 );
+
 export default Home;

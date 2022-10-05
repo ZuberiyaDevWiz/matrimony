@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
-import Radio from 'components/common/radio';
+import Radio from 'components/Form/radio';
 import Image from 'next/image';
 
 const Register = () => (
     <>
         <section
+            className="pt-9"
             style={{
                 backgroundImage: 'url(/images/wed2.jpeg)',
                 height: '100vh',
@@ -15,14 +16,17 @@ const Register = () => (
                 width: '100vw',
             }}
         >
-            <form onSubmit={(e) => e.preventDefault()} className="shadow-2xl w-1/3 p-5 bg-white">
+            <form
+                onSubmit={(e) => e.preventDefault()}
+                className="shadow-2xl w-1/3  mx-auto bg-gray-300"
+            >
                 <div className="flex flex-col px-5 ">
                     <h1 className="mt-16 pb-6 text-2xl font-semibold">Find your Match</h1>
                     <Radio label="Looking For" name="radio" options={['Bride', 'Groom']} />
 
                     <div className="py-3">
                         <input
-                            className="border border-gray-400 w-full rounded"
+                            className="border border-gray-400 w-full rounded px-4"
                             type="text"
                             placeholder="Enter Name.."
                             required
@@ -30,7 +34,7 @@ const Register = () => (
                     </div>
                     <div className="">
                         <input
-                            className="border border-gray-400 w-full rounded"
+                            className="border border-gray-400 w-full rounded px-4"
                             type="number"
                             placeholder="Enter Number.."
                             required
@@ -39,7 +43,7 @@ const Register = () => (
                     <div className="flex items-center justify-center pr-14 pt-3">
                         <input type="checkbox" />
                         <p className="ml-1">
-                            Accept the{' '}
+                            I Accept the{' '}
                             <a href="/" className="ml-1 text-blue-500 underline">
                                 Terms & conditions
                             </a>
