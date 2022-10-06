@@ -9,9 +9,14 @@ const NewPassword: FC<{
     setNext: Dispatch<SetStateAction<number>>;
 }> = ({ setNext }) => {
     const [show, setShow] = useState(false);
+    const [newpassword, setNewpassword] = useState('');
+    const [confirmpassword, setConfirmpassword] = useState('');
 
     const submitHandler = () => {
         Router.push('Login/login');
+        if (newpassword !== confirmpassword) {
+            alert('passwords do not match');
+        }
     };
 
     return (
