@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const WhyChooseUs = () => (
     <section>
-        <div className="w-[100%] mt-8 relative h-[450px]">
+        <div className="w-[100%] relative h-[450px]">
             <Image
                 src="/images/img-1.jpeg"
                 layout="fill"

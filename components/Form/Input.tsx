@@ -15,6 +15,7 @@ interface InputProps {
     rounded: boolean;
     width?: string;
     height?: string;
+    additionalStyles?: string;
 }
 
 const Input: FC<InputProps> = (props) => {
@@ -31,11 +32,12 @@ const Input: FC<InputProps> = (props) => {
         rounded,
         width,
         height,
+        additionalStyles,
     } = props;
     return (
         <div>
             <label htmlFor={name}>
-                <p className="font-medium text-sm px-2">{label}</p>
+                <p className="font-medium text-sm pl-3 py-2 ">{label}</p>
                 <div className="">
                     <input
                         name={name}
@@ -49,8 +51,8 @@ const Input: FC<InputProps> = (props) => {
                         width={width}
                         height={height}
                         className={clx(
-                            'w-full  pl-3 border-[1px] border-gray-500',
-                            rounded ? '!rounded-md' : '!rounded'
+                            'w-full h-10 pl-3 border-[1px] border-gray-500 text-black text-base',
+                            rounded ? '!rounded-md' : '!rounded', additionalStyles || null
                         )}
                     />
                 </div>

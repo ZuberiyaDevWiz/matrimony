@@ -1,61 +1,50 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
-import Radio from 'components/Form/radio';
-import Image from 'next/image';
+import Input from 'components/Form/Input';
+import Select from 'components/Form/Select';
 
 const Register = () => (
     <>
-        <section
-            className="pt-9"
-            style={{
-                backgroundImage: 'url(/images/wed2.jpeg)',
-                height: '100vh',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                objectFit: 'revert-layer',
-                width: '100vw',
-            }}
-        >
-            <form
-                onSubmit={(e) => e.preventDefault()}
-                className="shadow-2xl w-1/3  mx-auto bg-gray-300"
-            >
-                <div className="flex flex-col px-5 ">
-                    <h1 className="mt-16 pb-6 text-2xl font-semibold">Find your Match</h1>
-                    <Radio label="Looking For" name="radio" options={['Bride', 'Groom']} />
-
-                    <div className="py-3">
-                        <input
-                            className="border border-gray-400 w-full rounded px-4"
-                            type="text"
-                            placeholder="Enter Name.."
-                            required
-                        />
+        <section>
+            <div className='items-center w-96 text-white'>
+                <form
+                    onSubmit={(e) => e.preventDefault()}
+                    className="shadow-2xl bg-black bg-opacity-50 rounded-md "
+                >
+                    <div className="p-5  ">
+                        <p className='text-center font-bold text-2xl text-primary-text tracking-wider pb-4'>Register for Free</p>
+                        <Select label='I am Looking For' name='select' options={[
+                        { key: 'op1', value: 'Choose One' },
+                        { key: 'op2', value: 'Self' },
+                        { key: 'op3', value: 'Daughter' },
+                        { key: 'op4', value: 'Sister' },
+                        { key: 'op4', value: 'Brother' },
+                        { key: 'op4', value: 'Relative' },
+                        { key: 'op4', value: 'Friend' },
+                        { key: 'op4', value: 'Son' },
+                    ]}/>
+                        <Input placeholder='Enter your Name' label='NAME' type='text' required rounded additionalStyles='text-sm'/>
+                        {/* <Input placeholder='Enter your Email' label='EMAIL ADDRESS' type='email' required rounded additionalStyles='text-sm'/> */}
+                        <Input placeholder='Enter Mobile Number' label='MOBILE NUMBER' type='number' required rounded additionalStyles='text-sm'/>
+                        <div className="flex items-baseline justify-start pr-14 pt-3 pl-3">
+                            <input type="checkbox" />
+                            <p className="ml-1">
+                                I Accept the{' '}
+                                <a href="/" className="ml-1 text-blue-500 underline">
+                                    Terms & conditions 
+                                </a>
+                                 and {' '}
+                                <a href="/" className="ml-1 text-blue-500 underline"> Privacy & Policy</a>
+                            </p>
+                        </div>
+                        <div className="py-6 ">
+                            <button className="bg-orange-400 w-full h-9 rounded-lg" type="submit">
+                                Register
+                            </button>
+                        </div>
                     </div>
-                    <div className="">
-                        <input
-                            className="border border-gray-400 w-full rounded px-4"
-                            type="number"
-                            placeholder="Enter Number.."
-                            required
-                        />
-                    </div>
-                    <div className="flex items-center justify-center pr-14 pt-3">
-                        <input type="checkbox" />
-                        <p className="ml-1">
-                            I Accept the{' '}
-                            <a href="/" className="ml-1 text-blue-500 underline">
-                                Terms & conditions
-                            </a>
-                        </p>
-                    </div>
-                    <div className="pt-3 ">
-                        <button className="bg-orange-400 w-full h-9 rounded-lg" type="submit">
-                            Register
-                        </button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </section>
     </>
 );
