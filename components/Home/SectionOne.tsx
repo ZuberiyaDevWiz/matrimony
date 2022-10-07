@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Register from 'pages/Register/register';
+import Register from './Register';
 
 const SectionOne = () => (
     <section>

@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import Image from 'next/image';
 
-const WhyUs = () => (
+const WhyUs : FC = () => (
     <section>
         <div className="flex bg-[#e4e4e4] w-full h-96 divide-x-[2px] d divide-[#a50000]">
             <div className="flex flex-col text-center items-center justify-evenly bg-white w-[25%] h-[75%] my-auto  ml-20 mr-10 rounded-xl content-around ">

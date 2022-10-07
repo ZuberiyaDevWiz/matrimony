@@ -3,7 +3,7 @@ import Button from 'components/Form/Button';
 import Input from 'components/Form/Input';
 import { useState } from 'react';
 
-const personalDetails = () => {
+const PersonalDetails = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [show, setShow] = useState(false);
     return (
@@ -80,4 +80,4 @@ const personalDetails = () => {
     );
 };
 
-export default personalDetails;
+export default PersonalDetails;

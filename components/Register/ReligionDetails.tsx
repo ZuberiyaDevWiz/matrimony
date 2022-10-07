@@ -3,7 +3,7 @@ import Button from 'components/Form/Button';
 import Input from 'components/Form/Input';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 
-const religionDetails = () => {
+const ReligionDetails = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [show, setShow] = useState(false);
 
@@ -74,4 +74,4 @@ const religionDetails = () => {
         </section>
     );
 };
-export default religionDetails;
+export default ReligionDetails;

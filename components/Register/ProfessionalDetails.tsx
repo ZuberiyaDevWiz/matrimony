@@ -4,7 +4,7 @@ import Button from 'components/Form/Button';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import { useState } from 'react';
 
-const professionalDetails = () => {
+const ProfessionalDetails = () => {
     const [show, setShow] = useState(false);
     return (
         <section className="shadow-2xl bg-slate-300 w-1/2 mx-auto">
@@ -158,4 +158,4 @@ const professionalDetails = () => {
         </section>
     );
 };
-export default professionalDetails;
+export default ProfessionalDetails;

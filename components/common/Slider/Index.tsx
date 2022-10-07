@@ -1,20 +1,20 @@
-import { FC } from "react";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation} from 'swiper';
-import CoupleStoriesCard, { CoupleStoriesProps } from "../CoupleStories";
+import { FC } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
+import CoupleStoriesCard, { CoupleStoriesProps } from '../CoupleStories';
 
 interface SliderProps {
-    couples: Array<CoupleStoriesProps>
+    couples: Array<CoupleStoriesProps>;
     slidesPerView: number;
 }
 
-const Slider:FC<SliderProps> = (props) => {
+const Slider: FC<SliderProps> = (props) => {
     const { couples, slidesPerView } = props;
-    return(
+    return (
         <section>
             <div>
-            <Swiper
-                    className=" tw-p-5 tw-rounded-b-md tw-rounded-tr-md  "
+                <Swiper
+                    className=" p-5 rounded-b-md rounded-tr-md  "
                     modules={[Navigation]}
                     navigation
                     draggable
@@ -45,7 +45,7 @@ const Slider:FC<SliderProps> = (props) => {
                 </Swiper>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Slider
+export default Slider;

@@ -2,15 +2,14 @@
 import '../styles/globals.css';
 
 import type { AppProps } from 'next/app';
-import Navbar from 'components/common/navbar';
-import Footer from 'components/common/footer';
+import Navbar from 'components/common/Navbar';
+import Footer from 'components/common/Footer';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
     <>
         <Navbar />
         <Component {...pageProps} />
         <Footer />
-        
     </>
 );
 

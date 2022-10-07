@@ -6,7 +6,7 @@ const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 };
 
-const registerDetails = () => (
+const RegisterDetails = () => (
     <>
         <form onSubmit={submitHandler} className="shadow-4xl bg-slate-300 mt-9 mx-auto  w-[40%] ">
             <div className="flex flex-col  px-5 ">
@@ -73,4 +73,4 @@ const registerDetails = () => (
     </>
 );
 
-export default registerDetails;
+export default RegisterDetails;

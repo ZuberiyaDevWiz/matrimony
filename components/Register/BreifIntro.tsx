@@ -1,6 +1,6 @@
 import Button from 'components/Form/Button';
 
-const breifIntro = () => (
+const BreifIntro = () => (
     <>
         <section className="shadow-2xl bg-gray-300 w-[35%] mx-auto">
             <h1 className="mt-14 px-4 text-lg font-bold">
@@ -19,4 +19,4 @@ const breifIntro = () => (
     </>
 );
 
-export default breifIntro;
+export default BreifIntro;

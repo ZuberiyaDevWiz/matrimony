@@ -52,7 +52,8 @@ const Input: FC<InputProps> = (props) => {
                         height={height}
                         className={clx(
                             'w-full h-10 pl-3 border-[1px] border-gray-500 text-black text-base',
-                            rounded ? '!rounded-md' : '!rounded', additionalStyles || null
+                            rounded ? '!rounded-md' : '!rounded',
+                            additionalStyles || null
                         )}
                     />
                 </div>
