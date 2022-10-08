@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, FC, Dispatch, SetStateAction } from 'react';
 import Button from 'components/Form/Button';
 import Input from 'components/Form/Input';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 
-const religionDetails = () => {
+const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
+    setNextStep,
+}) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [show, setShow] = useState(false);
 
@@ -65,13 +67,13 @@ const religionDetails = () => {
 
             <div className="flex flex-row px-4 py-8 space-x-6 ">
                 <div className="w-1/6 bg-violet-400 hover:bg-violet-600 focus:outline-none focus:ring focus:ring-violet-300 w ">
-                    <Button text="previous" rounded />
+                    <Button text="previous" rounded onClick={() => setNextStep(1)} />
                 </div>
                 <div className="w-1/6 bg-violet-400 hover:bg-violet-600  focus:outline-none focus:ring focus:ring-violet-300 ">
-                    <Button text="continue" rounded />
+                    <Button text="continue" rounded onClick={() => setNextStep(3)} />
                 </div>
             </div>
         </section>
     );
 };
-export default religionDetails;
+export default ReligionDetails;

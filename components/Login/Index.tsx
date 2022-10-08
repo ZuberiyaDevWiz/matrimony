@@ -1,15 +1,24 @@
 import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
+import Router from 'next/router';
+
+const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+};
+
+const otpHandler = () => {
+    Router.push('/loginOtp');
+};
 
 const Login = () => {
     const [show, setShow] = useState(false);
 
     return (
-        <section className="shadow-2xl bg-gray-300 w-[30%] mx-auto px-6 mt-8">
+        <section className="shadow-2xl bg-gray-300 w-[30%] mx-auto px-6 my-8">
             <h1 className="font-bold text-lg py-5 ">Login</h1>
-            <form onSubmit={(e) => e.preventDefault()}>
+            <form onSubmit={submitHandler}>
                 <div className="w-full  ">
                     <Input
                         label="Email/Mobile"
@@ -42,13 +51,20 @@ const Login = () => {
                 <div className="flex">
                     <input type="checkbox" />
                     <p>keep me logged in</p>
-                    <a className="pl-32 text-blue-700" href="/">
+                    <a className="pl-32 text-blue-700" href="/forgotPassword">
                         Forgot password?
                     </a>
                 </div>
-                <div className="flex py-7 w-full space-x-9 ">
-                    <Button text="cancel" color="two" rounded submit />
+                <div className=" py-7 w-full mx-auto  ">
                     <Button text="Login" color="two" rounded submit />
+                </div>
+                <div className="flex text-xs space-x-4 items-center w-1/2 mx-auto">
+                    <hr className="w-full h-[2px] bg-black opacity-20" />
+                    <p>OR</p>
+                    <hr className="w-full h-[2px] bg-black opacity-20" />
+                </div>
+                <div className="w-full mt-4 mx-auto pb-4">
+                    <Button text="Login with OTP" color="two" rounded onClick={otpHandler} />
                 </div>
             </form>
         </section>

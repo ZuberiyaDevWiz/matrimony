@@ -2,9 +2,11 @@
 import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
-import { useState } from 'react';
+import { useState, FC, Dispatch, SetStateAction } from 'react';
 
-const professionalDetails = () => {
+const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
+    setNextStep,
+}) => {
     const [show, setShow] = useState(false);
     return (
         <section className="shadow-2xl bg-slate-300 w-1/2 mx-auto">
@@ -149,13 +151,13 @@ const professionalDetails = () => {
 
             <div className="flex flex-row  py-8 space-x-6 px-5 ">
                 <div className="w-1/6 bg-violet-400 hover:bg-violet-600  focus:outline-none focus:ring focus:ring-violet-300 ">
-                    <Button text="previous" rounded />
+                    <Button text="previous" rounded onClick={() => setNextStep(3)} />
                 </div>
                 <div className="w-1/6  bg-violet-400 hover:bg-violet-600 focus:outline-none focus:ring focus:ring-violet-300 ">
-                    <Button text="continue" />
+                    <Button text="continue" onClick={() => setNextStep(5)} />
                 </div>
             </div>
         </section>
     );
 };
-export default professionalDetails;
+export default ProfessionalDetails;

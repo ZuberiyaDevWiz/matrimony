@@ -1,14 +1,16 @@
 import { FC } from 'react';
+import clx from 'utils/clx';
 
 interface RadioProps {
     name: string;
     label: string;
     value?: string;
     options: Array<string>;
+    additionalStyles?: string;
 }
 
 const Radio: FC<RadioProps> = (props) => {
-    const { label, options, name, value } = props;
+    const { label, options, name, value, additionalStyles } = props;
 
     return (
         <div>
@@ -17,7 +19,9 @@ const Radio: FC<RadioProps> = (props) => {
                 {options.map((option) => (
                     <div key={option}>
                         <input type="radio" name={name} value={value} className="focus:tw-ring-0" />
-                        <span className="tw-pl-2 tw-text-sm">{option}</span>
+                        <span className={clx('tw-pl-2 tw-text-sm', additionalStyles || null)}>
+                            {option}
+                        </span>
                     </div>
                 ))}
             </div>

@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { FC } from 'react';
-import FooterLink from './footerLinks';
+import FooterLink from './FooterLinks';
 
 const Footer: FC = () => (
     <div className="bg-red-900">
@@ -43,24 +43,6 @@ const Footer: FC = () => (
                     <FooterLink title="FeedBack" url="/" />
                     <FooterLink title="Safety Tips" url="/" />
                 </div>
-
-                {/* <div className="pl-20">
-                    <h1 className="text-white text-sm italic pt-[37px] pb-6 font-bold">
-                        Contact Information
-                    </h1>
-                    <div className="links grid text-white">
-                        <p className="text-2xl">9999999999</p>
-                        <p className="text-2xl">9999999999</p>
-                        <p className="pb-4">support@gmail.com</p>
-                        <div className="Social=media font-bold">
-                            <h3>Follows Us On</h3>
-                            <a href="/">ff</a>
-                            <a href="/">ff</a>
-                            <a href="/">ff</a>
-                            <a href="/">ff</a>
-                        </div>
-                    </div>
-                </div> */}
 
                 <div className="pl-20 flex flex-col text-white space-y-3 ">
                     <h1 className=" text-white text-lg pb-6 font-bold">Contact Information</h1>

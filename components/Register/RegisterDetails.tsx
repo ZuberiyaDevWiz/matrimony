@@ -1,4 +1,4 @@
-import { FormEvent } from 'react';
+import { FormEvent, FC, Dispatch, SetStateAction } from 'react';
 import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
 
@@ -6,7 +6,10 @@ const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 };
 
-const registerDetails = () => (
+const RegisterDetails: FC<{
+    setNextStep: Dispatch<SetStateAction<number>>;
+    setProfileComplete: Dispatch<SetStateAction<number>>;
+}> = ({ setNextStep, setProfileComplete }) => (
     <>
         <form onSubmit={submitHandler} className="shadow-4xl bg-slate-300 mt-9 mx-auto  w-[40%] ">
             <div className="flex flex-col  px-5 ">
@@ -66,11 +69,18 @@ const registerDetails = () => (
                     />
                 </div>
                 <div className="h-14">
-                    <Button submit color="one" text="Next" rounded additionalStyles="text-4xl" />
+                    <Button
+                        submit
+                        color="one"
+                        text="Next"
+                        rounded
+                        additionalStyles="text-4xl"
+                        onClick={() => setNextStep(2)}
+                    />
                 </div>
             </div>
         </form>
     </>
 );
 
-export default registerDetails;
+export default RegisterDetails;
