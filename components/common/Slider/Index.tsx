@@ -14,7 +14,7 @@ const Slider: FC<SliderProps> = (props) => {
         <section>
             <div>
                 <Swiper
-                    className=" p-5 rounded-b-md rounded-tr-md  "
+                    className=" tw-p-5  tw-rounded-b-md tw-rounded-tr-md  "
                     modules={[Navigation]}
                     navigation
                     draggable
@@ -33,15 +33,19 @@ const Slider: FC<SliderProps> = (props) => {
                         },
                     }}
                 >
-                    {couples.map((couple) => (
-                        <SwiperSlide key={couple.title}>
-                            <CoupleStoriesCard
-                                title={couple.title}
-                                img={couple.img}
-                                message={couple.message}
-                            />
-                        </SwiperSlide>
-                    ))}
+                    <div className="flex">
+                        <div className="">
+                            {couples.map((couple) => (
+                                <SwiperSlide key={couple.title}>
+                                    <CoupleStoriesCard
+                                        title={couple.title}
+                                        img={couple.img}
+                                        message={couple.message}
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </div>
+                    </div>
                 </Swiper>
             </div>
         </section>

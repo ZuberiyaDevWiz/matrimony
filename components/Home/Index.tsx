@@ -7,7 +7,7 @@ const Home = () => (
     <section>
         <div className="h-full w-full">
             <SectionOne />
-            <SectionTwo/>
+            <SectionTwo />
             <WhyChooseUs />
             <WhyUs />
         </div>

@@ -15,10 +15,10 @@ module.exports = {
                 },
                 secondary: {
                     background: '#e7e7e7',
-                    text: '#9ca3af',
+                    text: '#a50000',
                 },
             },
         },
     },
-    plugins: [require("@tailwindcss/line-clamp")],
+    plugins: [require('@tailwindcss/line-clamp')],
 };

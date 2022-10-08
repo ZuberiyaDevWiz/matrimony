@@ -6,7 +6,7 @@ import Select from 'components/Form/Select';
 const Register = () => (
     <>
         <section>
-            <div className="items-center w-96 text-white">
+            <div className="items-center w-96 h-fit text-white">
                 <form
                     onSubmit={(e) => e.preventDefault()}
                     className="shadow-2xl bg-black bg-opacity-50 rounded-md "
