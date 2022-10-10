@@ -1,10 +1,12 @@
 import React from 'react';
+import FeaturedCard from 'components/common/Slider/FeaturedCard';
+import { FeaturedCardDetails } from 'Constants/FeaturedCardDetails';
 
 // eslint-disable-next-line arrow-body-style
 const FeaturedProfiles = () => {
     return (
-        <section>
-            <div className="pt-5 space-y-8">
+        <section className="mb-14">
+            <div className="pt-10 space-y-8">
                 <div>
                     <h2 className="font-bold text-[34px] tracking-wide text-secondary-text text-center">
                         Featured Profiles
@@ -35,6 +37,9 @@ const FeaturedProfiles = () => {
                         <div className="title px-2">Groom</div>
                     </label>
                 </div>
+            </div>
+            <div className="my-6 mx-10">
+                <FeaturedCard couplesCard={FeaturedCardDetails} slidesPerView={4} />
             </div>
         </section>
     );
