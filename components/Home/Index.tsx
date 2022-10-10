@@ -1,13 +1,13 @@
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
-import WhyUs from './WhyUs';
-import WhyChooseUs from './WhyChooseUs';
+import WhyUs from './whyUs';
+import WhyChooseUs from './whyChooseUs';
 
 const Home = () => (
     <section>
         <div className="h-full w-full">
             <SectionOne />
-            <SectionTwo/>
+            <SectionTwo />
             <WhyChooseUs />
             <WhyUs />
         </div>

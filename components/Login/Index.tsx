@@ -3,6 +3,7 @@ import Button from 'components/Form/Button';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { useState, FormEvent } from 'react';
 import Router from 'next/router';
+import Link from 'next/link';
 
 const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -51,9 +52,9 @@ const Login = () => {
                 <div className="flex">
                     <input type="checkbox" />
                     <p>keep me logged in</p>
-                    <a className="pl-32 text-blue-700" href="/forgotPassword">
-                        Forgot password?
-                    </a>
+                    <Link href="/forgotPassword">
+                        <p className="pl-32 text-blue-700">Forgot password?</p>
+                    </Link>
                 </div>
                 <div className=" py-7 w-full mx-auto  ">
                     <Button text="Login" color="two" rounded submit />

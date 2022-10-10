@@ -2,6 +2,7 @@
 import React from 'react';
 import Input from 'components/Form/Input';
 import Select from 'components/Form/Select';
+import Link from 'next/link';
 
 const Register = () => (
     <>
@@ -50,14 +51,18 @@ const Register = () => (
                             <input type="checkbox" />
                             <p className="ml-1">
                                 I Accept the{' '}
-                                <a href="/" className="ml-1 text-blue-500 underline">
-                                    Terms & conditions
-                                </a>
+                                <Link href="/">
+                                    <span className="ml-1 text-blue-500 underline">
+                                        {' '}
+                                        Terms & conditions
+                                    </span>
+                                </Link>
                                 and{' '}
-                                <a href="/" className="ml-1 text-blue-500 underline">
-                                    {' '}
-                                    Privacy & Policy
-                                </a>
+                                <Link href="/">
+                                    <span className="ml-1 text-blue-500 underline">
+                                        Privacy and Policy
+                                    </span>
+                                </Link>
                             </p>
                         </div>
                         <div className="py-6 ">
