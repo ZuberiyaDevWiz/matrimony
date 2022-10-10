@@ -2,6 +2,10 @@ import { FC } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import CoupleStoriesCard, { CoupleStoriesProps } from '../CoupleStories';
+// eslint-disable-next-line import/no-unresolved
+import 'swiper/css';
+// eslint-disable-next-line import/no-unresolved
+import 'swiper/css/navigation';
 
 interface SliderProps {
     couples: Array<CoupleStoriesProps>;
@@ -14,37 +18,23 @@ const Slider: FC<SliderProps> = (props) => {
         <section>
             <div>
                 <Swiper
-                    className=" tw-p-5  tw-rounded-b-md tw-rounded-tr-md  "
+                    className=" p-10  rounded-b-md rounded-tr-md  "
                     modules={[Navigation]}
-                    navigation
                     draggable
-                    breakpoints={{
-                        300: {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 40,
-                        },
-                        1024: {
-                            slidesPerView,
-                            spaceBetween: 10,
-                        },
-                    }}
+                    navigation
+                    slidesPerView={4}
+                    spaceBetween={10}
                 >
-                    <div className="flex">
-                        <div className="">
-                            {couples.map((couple) => (
-                                <SwiperSlide key={couple.title}>
-                                    <CoupleStoriesCard
-                                        title={couple.title}
-                                        img={couple.img}
-                                        message={couple.message}
-                                    />
-                                </SwiperSlide>
-                            ))}
-                        </div>
+                    <div>
+                        {couples.map((couple) => (
+                            <SwiperSlide key={couple.title}>
+                                <CoupleStoriesCard
+                                    title={couple.title}
+                                    img={couple.img}
+                                    message={couple.message}
+                                />
+                            </SwiperSlide>
+                        ))}
                     </div>
                 </Swiper>
             </div>

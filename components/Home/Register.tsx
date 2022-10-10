@@ -2,6 +2,7 @@
 import React from 'react';
 import Input from 'components/Form/Input';
 import Select from 'components/Form/Select';
+import Button from 'components/Form/Button';
 
 const Register = () => (
     <>
@@ -61,9 +62,7 @@ const Register = () => (
                             </p>
                         </div>
                         <div className="py-6 ">
-                            <button className="bg-orange-400 w-full h-9 rounded-lg" type="submit">
-                                Register
-                            </button>
+                            <Button text="REGISTER" color="one" rounded />
                         </div>
                     </div>
                 </form>

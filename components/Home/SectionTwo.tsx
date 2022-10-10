@@ -1,6 +1,6 @@
 import Slider from 'components/common/Slider/Index';
 import { CoupleCard } from 'Constants/CoupleCard';
-import { BsArrowLeftCircleFill } from 'react-icons/bs';
+// import { BsArrowLeftCircleFill } from 'react-icons/bs';
 
 const SectionTwo = () => (
     <div className="mx-8">
@@ -12,11 +12,9 @@ const SectionTwo = () => (
                 Over Thousands of Success Stories
             </h5>
         </div>
-        <div className="mx-24 flex">
-            <div className="mx-24 flex flex-row">
-                {/* <BsArrowLeftCircleFill className="text-[30px]" /> */}
-                <Slider couples={CoupleCard} slidesPerView={2} />
-            </div>
+        <div className="my-10">
+            {/* <BsArrowLeftCircleFill /> */}
+            <Slider slidesPerView={6} couples={CoupleCard} />
         </div>
     </div>
 );
