@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturedCard from 'components/common/Slider/FeaturedCard';
 import { FeaturedCardDetails } from 'Constants/FeaturedCardDetails';
+import Button from 'components/Form/Button';
 
 // eslint-disable-next-line arrow-body-style
 const FeaturedProfiles = () => {
@@ -40,6 +41,9 @@ const FeaturedProfiles = () => {
             </div>
             <div className="my-6 mx-10">
                 <FeaturedCard couplesCard={FeaturedCardDetails} slidesPerView={4} />
+            </div>
+            <div className="text-primary-text w-fit font-semibold mx-auto">
+                <Button text="SignUp to View More" color="one" rounded additionalStyles="px-4" />
             </div>
         </section>
     );

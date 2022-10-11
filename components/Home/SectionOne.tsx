@@ -3,8 +3,8 @@ import Register from './Register';
 
 const SectionOne = () => (
     <section>
-        <div className="relative h-fit">
-            <div className="h-screen">
+        <div className="relative h-fit ">
+            <div className="h-screen border-b-8">
                 <Image
                     src="/images/img-3.jpeg"
                     layout="fill"

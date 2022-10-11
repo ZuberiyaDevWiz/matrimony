@@ -18,7 +18,7 @@ const Register = () => (
                             Register for Free
                         </p>
                         <Select
-                            label="I am Looking For"
+                            label="I AM LOOKING FOR MY"
                             name="select"
                             options={[
                                 { key: 'op1', value: 'Choose One' },
