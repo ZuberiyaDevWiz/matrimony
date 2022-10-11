@@ -13,7 +13,7 @@ const RegisterDetails = () => (
                 <p className="mt-8 pb-5 text-lg font-semibold  ">
                     Please provide us with your basic details
                 </p>
-                <div className="h-14 ">
+                <div>
                     <Input
                         label="Full Name"
                         placeholder="Enter full name.."
@@ -22,7 +22,7 @@ const RegisterDetails = () => (
                         rounded
                     />
                 </div>
-                <div className="  h-14  ">
+                <div>
                     <Input
                         label="Email"
                         placeholder="Enter Email.."
@@ -32,11 +32,11 @@ const RegisterDetails = () => (
                     />
                 </div>
 
-                <div className=" h-14  ">
+                <div>
                     <Input label="Date" placeholder="Enter Date.." required rounded type="date" />
                 </div>
 
-                <div className="  h-14 ">
+                <div>
                     <Input
                         label="Section"
                         placeholder="Enter Section.."
@@ -46,7 +46,7 @@ const RegisterDetails = () => (
                     />
                 </div>
 
-                <div className="  h-14 ">
+                <div>
                     <Input
                         label="Division"
                         placeholder="Enter Division.."
@@ -56,7 +56,7 @@ const RegisterDetails = () => (
                     />
                 </div>
 
-                <div className="  h-14  ">
+                <div>
                     <Input
                         label="Password"
                         placeholder="Enter Password"
@@ -65,8 +65,8 @@ const RegisterDetails = () => (
                         type="password"
                     />
                 </div>
-                <div className="h-14">
-                    <Button submit color="one" text="Next" rounded additionalStyles="text-4xl" />
+                <div>
+                    <Button submit color="one" text="Next" rounded />
                 </div>
             </div>
         </form>
