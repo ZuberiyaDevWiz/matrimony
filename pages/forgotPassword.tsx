@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import ForgotPassword from 'components/ForgotPassword';
+import ForgotPassword from 'components/ForgotPassword/Index';
 
 const ForgotPasswordPage = () => (
     <>
