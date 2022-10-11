@@ -13,9 +13,11 @@ const NewPassword: FC<{
     const [confirmpassword, setConfirmpassword] = useState('');
 
     const submitHandler = () => {
-        Router.push('Login/login');
+        Router.push('/login');
         if (newpassword !== confirmpassword) {
             alert('passwords do not match');
+        } else {
+            alert('passwords matched');
         }
     };
 
