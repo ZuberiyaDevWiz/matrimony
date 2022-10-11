@@ -3,7 +3,7 @@ import Register from './Register';
 
 const SectionOne = () => (
     <section>
-        <div className="relative">
+        <div className="relative h-fit">
             <div className="h-screen">
                 <Image
                     src="/images/img-3.jpeg"
@@ -11,7 +11,7 @@ const SectionOne = () => (
                     className="absolute object-cover "
                     alt="section one picture"
                 />
-                <div className="absolute mt-14 ml-10 ">
+                <div className="absolute mt-[5%] ml-10 ">
                     <Register />
                 </div>
             </div>

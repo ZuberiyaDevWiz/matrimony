@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable @next/next/no-html-link-for-pages */
 import { FC } from 'react';
 import FooterLink from './FooterLinks';
 

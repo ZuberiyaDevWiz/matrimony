@@ -2,12 +2,13 @@
 import React from 'react';
 import Input from 'components/Form/Input';
 import Select from 'components/Form/Select';
+import Button from 'components/Form/Button';
 import Link from 'next/link';
 
 const Register = () => (
     <>
         <section>
-            <div className="items-center w-96 text-white">
+            <div className="items-center w-96 h-fit text-white">
                 <form
                     onSubmit={(e) => e.preventDefault()}
                     className="shadow-2xl bg-black bg-opacity-50 rounded-md "
@@ -66,9 +67,7 @@ const Register = () => (
                             </p>
                         </div>
                         <div className="py-6 ">
-                            <button className="bg-orange-400 w-full h-9 rounded-lg" type="submit">
-                                Register
-                            </button>
+                            <Button text="REGISTER" color="one" rounded />
                         </div>
                     </div>
                 </form>
