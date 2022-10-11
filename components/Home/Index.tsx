@@ -1,7 +1,7 @@
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
-import WhyUs from './whyUs';
-import WhyChooseUs from './whyChooseUs';
+import WhyUs from './WhyUs';
+import WhyChooseUs from './WhyChooseUs';
 
 const Home = () => (
     <section>
