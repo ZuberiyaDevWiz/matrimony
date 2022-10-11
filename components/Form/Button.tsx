@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = (props) => {
                 'w-full py-2 border-[1px]  text-md border-gray-500 ',
                 rounded ? '!rounded-md' : '!rounded ',
                 color === 'one'
-                    ? 'bg-red-400 hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-600 '
+                    ? 'bg-primary-background hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-600 '
                     : color === 'two'
                     ? 'bg-blue-400 hover:bg-blue-500 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-600 '
                     : color === 'three'

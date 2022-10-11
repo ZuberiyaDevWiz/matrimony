@@ -21,7 +21,7 @@ const FeaturedCard: FC<FeaturedCardProps> = (props) => {
                     className=" p-10  rounded-b-md rounded-tr-md"
                     draggable
                     slidesPerView={5}
-                    spaceBetween={50}
+                    spaceBetween={100}
                 >
                     <div>
                         {couplesCard.map((coupleCard) => (

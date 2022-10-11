@@ -55,5 +55,3 @@ export const CoupleCard = [
             'Lorem Lorem minim anim in aliquip. Magna est sit ex velit pariatur incididunt veniam voluptate id reprehenderit magna aliquip. ',
     },
 ];
-
-
