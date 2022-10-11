@@ -1,5 +1,5 @@
 import { FC, Dispatch, SetStateAction } from 'react';
-import UploadFile from 'components/common/UploadFile';
+import UploadFile from 'components/Form/UploadFile';
 import Button from 'components/Form/Button';
 
 const ProfImage: FC<{ setProfNext: Dispatch<SetStateAction<number>> }> = ({ setProfNext }) => (

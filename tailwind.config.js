@@ -19,7 +19,7 @@ module.exports = {
                 },
                 secondary: {
                     background: '#e7e7e7',
-                    text: '#9ca3af',
+                    text: '#a50000',
                 },
             },
         },

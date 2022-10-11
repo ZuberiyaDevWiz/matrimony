@@ -3,9 +3,9 @@ import { useState } from 'react';
 import BreifIntro from './BreifIntro';
 import PersonalDetails from './PersonalDetails';
 import ProfessionalDetails from './ProfessionalDetails';
-import RegisterDetails from './RegisterDetails';
 import ReligionDetails from './ReligionDetails';
 import VerifyMobile from './VerifyMobile';
+import RegisterDetails from './RegisterDetails';
 
 const RegisterHome = () => {
     const [nextStep, setNextStep] = useState(1);

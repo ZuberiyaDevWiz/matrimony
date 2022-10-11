@@ -1,4 +1,4 @@
-import UploadFile from 'components/common/UploadFile';
+import UploadFile from 'components/Form/UploadFile';
 import Button from 'components/Form/Button';
 
 const ProfDoc = () => (

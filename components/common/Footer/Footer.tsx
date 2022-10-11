@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import { SocialMediaLinks } from 'Constants/SocialMediaLinks';
-import FooterLink from './FooterLinks';
+import FooterLink from './FooterLink';
 
 const Footer: FC = () => (
     <div className="bg-primary-background">
