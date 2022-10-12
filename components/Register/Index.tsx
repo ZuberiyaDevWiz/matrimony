@@ -1,35 +1,98 @@
 /* eslint-disable no-nested-ternary */
 import { useState } from 'react';
-import BreifIntro from './BreifIntro';
-import PersonalDetails from './PersonalDetails';
-import ProfessionalDetails from './ProfessionalDetails';
-import ReligionDetails from './ReligionDetails';
-import VerifyMobile from './VerifyMobile';
-import RegisterDetails from './RegisterDetails';
+import clx from 'utils/clx';
+import BreifIntro from './Steps/BreifIntro';
+import PersonalDetails from './Steps/PersonalDetails';
+import ProfessionalDetails from './Steps/ProfessionalDetails';
+import ReligionDetails from './Steps/ReligionDetails';
+import VerifyMobile from './Steps/VerifyMobile';
+import RegisterDetails from './Steps/RegisterDetails';
 
 const RegisterHome = () => {
     const [nextStep, setNextStep] = useState(1);
-    const [profileComplete, setProfileComplete] = useState(20);
+
+    const Pages = () => {
+        switch (nextStep) {
+            case 1:
+                return <RegisterDetails setNextStep={setNextStep} />;
+            case 2:
+                return <ReligionDetails setNextStep={setNextStep} />;
+            case 3:
+                return <PersonalDetails setNextStep={setNextStep} />;
+            case 4:
+                return <ProfessionalDetails setNextStep={setNextStep} />;
+            case 5:
+                return <BreifIntro setNextStep={setNextStep} />;
+            case 6:
+                return <VerifyMobile setNextStep={setNextStep} />;
+            default:
+                return <RegisterDetails setNextStep={setNextStep} />;
+        }
+    };
 
     return (
-        <>
-            {nextStep === 1 ? (
-                <RegisterDetails
-                    setNextStep={setNextStep}
-                    setProfileComplete={setProfileComplete}
-                />
-            ) : nextStep === 2 ? (
-                <ReligionDetails setNextStep={setNextStep} />
-            ) : nextStep === 3 ? (
-                <PersonalDetails setNextStep={setNextStep} />
-            ) : nextStep === 4 ? (
-                <ProfessionalDetails setNextStep={setNextStep} />
-            ) : nextStep === 5 ? (
-                <BreifIntro setNextStep={setNextStep} />
-            ) : (
-                <VerifyMobile setNextStep={setNextStep} />
-            )}
-        </>
+        <section className="w-full bg-slate-200 ">
+            <div className="flex justify-center ">
+                <ul className="steps w-full space-x-20 py-8 px-16 shadow-2xl bg-white ">
+                    <button
+                        type="button"
+                        className={clx(
+                            'step transition-all text-lg font-semibold ',
+                            nextStep === 1 ? 'border-b-2 border-primary-background' : ''
+                        )}
+                    >
+                        RegisterDetails
+                    </button>
+                    <button
+                        type="button"
+                        className={clx(
+                            'step transition-all text-lg font-semibold ',
+                            nextStep === 2 ? 'border-b-2 border-primary-background' : ''
+                        )}
+                    >
+                        ReligionDetails
+                    </button>
+                    <button
+                        type="button"
+                        className={clx(
+                            'step transition-all text-lg font-semibold  ',
+                            nextStep >= 2 && 'step-accent'
+                        )}
+                    >
+                        PersonalDetails
+                    </button>
+                    <button
+                        type="button"
+                        className={clx(
+                            'step transition-all text-lg font-semibold  ',
+                            nextStep >= 2 && 'step-accent'
+                        )}
+                    >
+                        ProfessionalDetails
+                    </button>
+                    <button
+                        type="button"
+                        className={clx(
+                            'step transition-all text-lg font-semibold ',
+                            nextStep >= 2 && 'step-accent'
+                        )}
+                    >
+                        BreifIntro
+                    </button>
+
+                    <button
+                        type="button"
+                        className={clx(
+                            'step transition-all text-lg font-semibold  ',
+                            nextStep >= 2 && 'step-accent'
+                        )}
+                    >
+                        VerifyMobile
+                    </button>
+                </ul>
+            </div>
+            {Pages()}
+        </section>
     );
 };
 
