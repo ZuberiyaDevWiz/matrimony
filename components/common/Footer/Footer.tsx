@@ -53,7 +53,7 @@ const Footer: FC = () => (
                     <ul className="flex flex-row justify-between">
                         {SocialMediaLinks.map((link) => (
                             <Link href={link.link} key={link.link}>
-                                <li>{link.title}</li>
+                                <li> {link.title} </li>
                             </Link>
                         ))}
                     </ul>

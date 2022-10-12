@@ -1,7 +1,8 @@
-import UploadFile from 'components/common/UploadFile';
+import { FC, Dispatch, SetStateAction } from 'react';
+import UploadFile from 'components/Form/UploadFile';
 import Button from 'components/Form/Button';
 
-const ProfDoc = () => (
+const ProfDoc: FC<{ setProfNext: Dispatch<SetStateAction<number>> }> = ({ setProfNext }) => (
     <section className="shadow-2xl bg-gray-300 mx-auto w-[35%] px-4 py-6">
         <h1 className="font-bold text-2xl py-4">ID Proof Required</h1>
         <p className="font-bold text-lg">
@@ -19,7 +20,7 @@ const ProfDoc = () => (
             *must be less than 15 MB and in jpg, gif, png, bmp or tiff format
         </p>
         <div className="py-8 text-white">
-            <Button text="Submit" color="one" />
+            <Button text="Submit" color="one" onClick={() => setProfNext(3)} />
         </div>
     </section>
 );
