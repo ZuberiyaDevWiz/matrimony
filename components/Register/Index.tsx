@@ -1,12 +1,12 @@
 /* eslint-disable no-nested-ternary */
 import { useState } from 'react';
 import clx from 'utils/clx';
-import BreifIntro from './Steps/BreifIntro';
-import PersonalDetails from './Steps/PersonalDetails';
-import ProfessionalDetails from './Steps/ProfessionalDetails';
-import ReligionDetails from './Steps/ReligionDetails';
-import VerifyMobile from './Steps/VerifyMobile';
-import RegisterDetails from './Steps/RegisterDetails';
+
+import BreifIntro from './Steps/BriefIntro/Index';
+import PersonalDetails from './Steps/PersonalDetails/Index';
+import ProfessionalDetails from './Steps/ProfessionalDetails/Index';
+import ReligionDetails from './Steps/ReligionDetails/Index';
+import RegisterDetails from './Steps/RegisterDeatils/Index';
 
 const RegisterHome = () => {
     const [nextStep, setNextStep] = useState(1);
@@ -23,71 +23,69 @@ const RegisterHome = () => {
                 return <ProfessionalDetails setNextStep={setNextStep} />;
             case 5:
                 return <BreifIntro setNextStep={setNextStep} />;
-            case 6:
-                return <VerifyMobile setNextStep={setNextStep} />;
             default:
                 return <RegisterDetails setNextStep={setNextStep} />;
         }
     };
 
     return (
-        <section className="w-full bg-slate-200 ">
+        <section className="w-[80%]  shadow-xl absolute z-30 top-[76px] left-32  pt-2 ">
             <div className="flex justify-center ">
-                <ul className="steps w-full space-x-20 py-8 px-16 shadow-2xl bg-white ">
+                <ul className="steps w-full grid grid-cols-5 justify-between items-center  bg-white rounded-t-md ">
                     <button
                         type="button"
                         className={clx(
                             'step transition-all text-lg font-semibold ',
-                            nextStep === 1 ? 'border-b-2 border-primary-background' : ''
+                            nextStep === 1
+                                ? ' col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
+                                : ''
                         )}
                     >
-                        RegisterDetails
-                    </button>
-                    <button
-                        type="button"
-                        className={clx(
-                            'step transition-all text-lg font-semibold ',
-                            nextStep === 2 ? 'border-b-2 border-primary-background' : ''
-                        )}
-                    >
-                        ReligionDetails
-                    </button>
-                    <button
-                        type="button"
-                        className={clx(
-                            'step transition-all text-lg font-semibold  ',
-                            nextStep >= 2 && 'step-accent'
-                        )}
-                    >
-                        PersonalDetails
-                    </button>
-                    <button
-                        type="button"
-                        className={clx(
-                            'step transition-all text-lg font-semibold  ',
-                            nextStep >= 2 && 'step-accent'
-                        )}
-                    >
-                        ProfessionalDetails
+                        Register Details
                     </button>
                     <button
                         type="button"
                         className={clx(
                             'step transition-all text-lg font-semibold ',
-                            nextStep >= 2 && 'step-accent'
+                            nextStep === 2
+                                ? 'col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
+                                : ''
                         )}
                     >
-                        BreifIntro
+                        Religion Details
                     </button>
-
                     <button
                         type="button"
                         className={clx(
                             'step transition-all text-lg font-semibold  ',
-                            nextStep >= 2 && 'step-accent'
+                            nextStep === 3
+                                ? 'col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
+                                : ''
                         )}
                     >
-                        VerifyMobile
+                        Personal Details
+                    </button>
+                    <button
+                        type="button"
+                        className={clx(
+                            'step transition-all text-lg font-semibold  ',
+                            nextStep === 4
+                                ? 'col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
+                                : ''
+                        )}
+                    >
+                        Professional Details
+                    </button>
+                    <button
+                        type="button"
+                        className={clx(
+                            'step transition-all text-lg font-semibold ',
+                            nextStep === 5
+                                ? 'col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
+                                : ''
+                        )}
+                    >
+                        Breif Intro
                     </button>
                 </ul>
             </div>
