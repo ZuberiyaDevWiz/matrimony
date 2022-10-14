@@ -28,8 +28,28 @@ const TodayMatches: FC<{ setNext: Dispatch<SetStateAction<number>> }> = ({ setNe
             </div>
         </div>
 
-        <div className="shadow-2xl bg-gray-300 w-[50%] mx-auto p-10 py-10">
-            <h1>Detailed Profile</h1>
+        <div className="shadow-2xl bg-gray-300 w-[100%] mx-auto p-10 py-10 px-6">
+            <div className="">
+                <h1 className="py-4 font-bold">Detailed Profile</h1>
+                <h1 className="py-4 font-bold"> About Zareen S</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque porro,
+                    dolorum qui accusamus voluptas perspiciatis reiciendis temporibus, voluptatibus
+                    repellendus deleniti at beatae molestias cupiditate ut aperiam. Esse explicabo
+                    iusto porro?
+                </p>
+            </div>
+            <div>
+                <h1 className="py-5 font-bold">Contact Details</h1>
+                <div className="flex space-x-3 pb-3">
+                    <p>Contact Number </p>
+                    <p> +91973XXXXXXX</p>
+                </div>
+                <div className="flex space-x-3">
+                    <p>Email ID</p>
+                    <p>XXXXXXXXXXXX@gmail.com</p>
+                </div>
+            </div>
         </div>
         <div className="pt-20 w-1/2 text-white">
             <Button
