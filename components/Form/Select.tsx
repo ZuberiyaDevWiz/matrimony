@@ -7,7 +7,7 @@ interface OptionProps {
 
 interface SelectProps {
     name: string;
-    label: string;
+    label?: string;
     value?: string | number;
     options: Array<OptionProps>;
 }

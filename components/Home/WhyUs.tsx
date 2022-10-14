@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const WhyUs: FC = () => (
     <section>
-        <div className="flex bg-[#e4e4e4] w-full h-[400px] divide-x-[2px] divide-[#a50000]">
-            <div className="flex flex-col text-center items-center justify-evenly bg-white w-[20%] h-[65%] my-auto  ml-16  mr-10 rounded-xl content-around ">
+        <div className="flex bg-[#e4e4e4] w-full h-[400px] divide-x-[2px] divide-[#a50000] px-8">
+            <div className="flex flex-col text-center items-center justify-evenly bg-white w-[20%] h-[65%] my-auto  mx-auto  mr-10 rounded-xl content-around ">
                 <h6 className="font-semibold text-[16px] pt-2 px-6">
                     Our Strategy & Process To Find Better Match For You
                 </h6>
@@ -19,12 +19,12 @@ const WhyUs: FC = () => (
                 </button>
             </div>
             <div className="grid grid-cols-3 gap-4 px-6 w-[75%] my-10">
-                <div className="w-fit flex flex-col items-center  my-auto justify-between space-y-6 ">
+                <div className="w-fit flex flex-col items-center  my-auto justify-around space-y-6 ">
                     <div className="p-6 pt-7 w-24 h-24 divide-x-2 rounded-full shadow-2xl bg-white ">
                         <Image src="/icons/icon-1.png" alt="Icons One" width="60px" height="60px" />
                     </div>
                     <div className="space-y-4">
-                        <h2 className="text-center font-bold text-secondary-text">
+                        <h2 className="text-center font-bold text-primary-background">
                             FREE REGISTRATION
                         </h2>
                         <p className="text-center">
@@ -40,7 +40,7 @@ const WhyUs: FC = () => (
                         <Image src="/icons/icon-2.png" alt="Icons Two" width="60px" height="60px" />
                     </div>
                     <div className="space-y-4">
-                        <h2 className="text-center font-bold text-secondary-text">
+                        <h2 className="text-center font-bold text-primary-background">
                             PROFILE SCREENING
                         </h2>
                         <p className="text-center">
@@ -51,7 +51,7 @@ const WhyUs: FC = () => (
                         <Image src="/icons/icon-5.png" alt="Step 1" width="30px" height="30px" />
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-evenly  my-auto space-y-6">
+                <div className="flex flex-col items-center justify-between  my-auto space-y-6">
                     <div className="p-6  w-24 h-24 rounded-full shadow-2xl bg-white ">
                         <Image
                             src="/icons/icon-3.png"
@@ -61,7 +61,7 @@ const WhyUs: FC = () => (
                         />
                     </div>
                     <div className="space-y-4">
-                        <h2 className="text-center font-bold text-secondary-text">
+                        <h2 className="text-center font-bold text-primary-background">
                             CONNECT/START COMMUNICATION
                         </h2>
                         <p className="text-center ">

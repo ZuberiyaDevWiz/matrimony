@@ -8,10 +8,9 @@ const submitHandler = (event: FormEvent<HTMLFormElement>) => {
 
 const RegisterDetails: FC<{
     setNextStep: Dispatch<SetStateAction<number>>;
-    setProfileComplete: Dispatch<SetStateAction<number>>;
-}> = ({ setNextStep, setProfileComplete }) => (
-    <>
-        <form onSubmit={submitHandler} className="shadow-4xl bg-slate-300 mt-9 mx-auto  w-[40%] ">
+}> = ({ setNextStep }) => (
+    <section className="bg-primary-background mt-[2px]">
+        <form onSubmit={submitHandler} className="shadow-4xl bg-slate-300 mx-auto  w-[40%] ">
             <div className="flex flex-col  px-5 ">
                 <p className="mt-8 pb-5 text-lg font-semibold  ">
                     Please provide us with your basic details
@@ -80,7 +79,7 @@ const RegisterDetails: FC<{
                 </div>
             </div>
         </form>
-    </>
+    </section>
 );
 
 export default RegisterDetails;

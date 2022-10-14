@@ -13,11 +13,11 @@ const NewPassword: FC<{
     const [confirmpassword, setConfirmpassword] = useState('');
 
     const submitHandler = () => {
-        Router.push('/login');
         if (newpassword !== confirmpassword) {
             alert('passwords do not match');
         } else {
             alert('passwords matched');
+            Router.push('/login');
         }
     };
 
@@ -32,16 +32,17 @@ const NewPassword: FC<{
                         required
                         rounded
                         type={show ? 'text' : 'password'}
+                        changeHandler={(e) => setNewpassword(e.target.value)}
                     />
                     {show ? (
                         <AiOutlineEye
                             onClick={() => setShow(!show)}
-                            className="absolute top-1/20 -translate-y-5 right-3"
+                            className="absolute top-1/2 translate-y-3 right-3"
                         />
                     ) : (
                         <AiOutlineEyeInvisible
                             onClick={() => setShow(!show)}
-                            className="absolute top-1/20 -translate-y-5 right-3"
+                            className="absolute top-1/2 translate-y-3 right-3"
                         />
                     )}
                 </div>
@@ -52,16 +53,17 @@ const NewPassword: FC<{
                         required
                         rounded
                         type={show ? 'text' : 'password'}
+                        changeHandler={(e) => setConfirmpassword(e.target.value)}
                     />
                     {show ? (
                         <AiOutlineEye
                             onClick={() => setShow(!show)}
-                            className="absolute top-1/20 -translate-y-5 right-3"
+                            className="absolute top-1/2 translate-y-3 right-3"
                         />
                     ) : (
                         <AiOutlineEyeInvisible
                             onClick={() => setShow(!show)}
-                            className="absolute top-1/20 -translate-y-5 right-3"
+                            className="absolute top-1/2 translate-y-3 right-3"
                         />
                     )}
                 </div>
