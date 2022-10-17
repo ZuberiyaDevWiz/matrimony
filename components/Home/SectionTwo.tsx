@@ -1,5 +1,5 @@
 import Slider from 'components/common/Slider/Index';
-import { CoupleCard } from 'Constants/CoupleCard';
+import { CoupleCard } from 'constants/CoupleCard';
 // import { BsArrowLeftCircleFill } from 'react-icons/bs';
 
 const SectionTwo = () => (

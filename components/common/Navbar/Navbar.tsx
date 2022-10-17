@@ -1,15 +1,24 @@
 import { useState } from 'react';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
+import Router from 'next/router';
 
 const Navbar = () => {
     const [isShow, setIsShow] = useState(false);
+
+    const loginHandler = () => {
+        Router.push('/login');
+    };
 
     return (
         <>
             <div className="flex justify-end overflow-hidden items-center h-16 bg-[#a50000] text-white ">
                 <div className="flex gap-8">
                     <div className="">
-                        <button className=" hover:underline font-semibold text-lg" type="button">
+                        <button
+                            className=" hover:underline font-semibold text-lg"
+                            type="button"
+                            onClick={loginHandler}
+                        >
                             Login
                         </button>
                     </div>

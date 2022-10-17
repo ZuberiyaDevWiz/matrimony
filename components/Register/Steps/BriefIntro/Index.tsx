@@ -1,10 +1,45 @@
 import { FC, Dispatch, SetStateAction, FormEvent } from 'react';
 import Button from 'components/Form/Button';
 import Router from 'next/router';
+import axios from 'axios';
 
 const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    Router.push('/login');
+    const body = {
+        firstName: 'zuberiya',
+        lastName: 'fathima',
+        email: 'zub123',
+        dob: new Date('12/11/2022'),
+        password: '123456',
+        gender: 'FEMALE',
+        section: 'jndjwsnjn',
+        division: 'jnfjnejfnw',
+        willingToMarryFrom: 'Same Division',
+        wearsHijab: 'Hijab',
+        ReadsQuran: 'Only Jumah/Friday',
+        maritialStatus: 'unmarried',
+        familyStatus: 'sdsdf',
+        physicallyChallenged: true,
+        height: 'fk',
+        highestEducation: 'btech',
+        employedAt: 'webranc',
+        occupation: 'full stack dev',
+        annualIncome: 12312341234,
+        workLocation: 'frazerTown',
+        residingState: 'karnataka',
+        residingCity: 'Bangalore',
+        citizenShip: 'india',
+        familyType: 'Joint Family',
+        ReligiousValues: 'dwadqwda',
+    };
+    axios
+        .post('/api/user/signup', body)
+        .then((res) => {
+            console.log(res.data);
+        })
+        .catch((err) => {
+            console.error(err);
+        });
 };
 
 const BreifIntro: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ setNextStep }) => (
