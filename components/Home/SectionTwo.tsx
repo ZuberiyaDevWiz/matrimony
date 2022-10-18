@@ -4,7 +4,7 @@ import { CoupleCard } from 'Constant/CoupleCard';
 
 const SectionTwo = () => (
     <div className="mx-8">
-        <div className="pt-5 ">
+        <div className="pt-5">
             <h2 className="font-bold text-[34px] tracking-wide text-secondary-text text-center">
                 Success Stories
             </h2>

@@ -1,105 +1,64 @@
-import { FormEvent, FC, Dispatch, SetStateAction } from 'react';
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/jsx-key */
+import { FormEvent, FC, Dispatch, SetStateAction, ChangeEvent, useState } from 'react';
 import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
 import Select from 'components/Form/Select';
+import { RegisterLinks } from 'constants/RegisterDetailsLink';
 
-const submitHandler = (event: FormEvent<HTMLFormElement>) => {
+const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 };
 
 const RegisterDetails: FC<{
     setNextStep: Dispatch<SetStateAction<number>>;
 }> = ({ setNextStep }) => (
-    <section className="bg-white mt-[2px] ">
-        <form onSubmit={submitHandler} className="shadow-4xl mx-auto">
+    <form onSubmit={submitHandler}>
+        <section className="bg-white mt-[2px] shadow-4xl mx-auto">
             <div className="flex flex-col  px-10 ">
-                <p className="mt-8 pb-5 text-lg font-semibold  ">
+                <p className="mt-8 pb-5 text-xl font-semibold text-primary-background ">
                     Please provide us with your basic details
                 </p>
                 <div className="grid grid-cols-2 gap-4">
-                    <div>
+                    {RegisterLinks.map((register) => (
                         <Input
-                            label="First Name"
-                            placeholder="Enter first name.."
-                            required
-                            type="text"
-                            rounded
-                        />
-                    </div>
-
-                    <div>
-                        <Input
-                            label="Last Name"
-                            placeholder="Enter last name.."
-                            required
-                            type="text"
-                            rounded
-                        />
-                    </div>
-                    <div className="">
-                        <Select
-                            label="Gender"
-                            name="select"
-                            options={[
-                                { key: 'op1', value: 'Choose' },
-                                { key: 'op2', value: 'Male' },
-                                { key: 'op3', value: 'Female' },
-                            ]}
-                        />
-                    </div>
-                    <div>
-                        <Input
-                            label="Email"
-                            placeholder="Enter Email.."
-                            required
-                            type="email"
-                            rounded
-                        />
-                    </div>
-
-                    <div>
-                        <Input
-                            label="Date of Birth"
-                            placeholder="Enter Date.."
+                            name={register.name}
+                            placeholder={register.placeholder}
+                            type={register.type}
                             required
                             rounded
-                            type="date"
+                            label={register.label}
                         />
-                    </div>
-
-                    <div>
-                        <Input
-                            label="Section"
-                            placeholder="Enter Section.."
-                            required
-                            rounded
-                            type="text"
-                        />
-                    </div>
-
-                    <div className="">
-                        <Select
-                            label="Gender"
-                            name="select"
-                            options={[
-                                { key: 'op1', value: 'Choose' },
-                                { key: 'op2', value: 'Male' },
-                                { key: 'op3', value: 'Female' },
-                            ]}
-                        />
-                    </div>
-
-                    <div>
-                        <Input
-                            label="Password"
-                            placeholder="Enter Password"
-                            required
-                            rounded
-                            type="password"
-                        />
-                    </div>
+                    ))}
+                    <Select
+                        label="Gender"
+                        name="select"
+                        options={[
+                            { key: 'op1', value: 'Choose' },
+                            { key: 'op2', value: 'Male' },
+                            { key: 'op3', value: 'Female' },
+                        ]}
+                    />
+                    <Select
+                        label="Section"
+                        name="select"
+                        options={[
+                            { key: 'op1', value: 'Choose' },
+                            { key: 'op2', value: 'Male' },
+                            { key: 'op3', value: 'Female' },
+                        ]}
+                    />{' '}
+                    <Select
+                        label="Division"
+                        name="select"
+                        options={[
+                            { key: 'op1', value: 'Choose' },
+                            { key: 'op2', value: 'Male' },
+                            { key: 'op3', value: 'Female' },
+                        ]}
+                    />
                 </div>
-                <div className="flex ml-auto w-[49%] my-8">
+                <div className="mx-auto w-[50%] py-8">
                     <Button
                         submit
                         color="one"
@@ -110,8 +69,8 @@ const RegisterDetails: FC<{
                     />
                 </div>
             </div>
-        </form>
-    </section>
+        </section>
+    </form>
 );
 
 export default RegisterDetails;

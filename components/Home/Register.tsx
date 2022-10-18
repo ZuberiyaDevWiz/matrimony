@@ -2,8 +2,8 @@
 import React from 'react';
 import Input from 'components/Form/Input';
 import Select from 'components/Form/Select';
-import Link from 'next/link';
 import Button from 'components/Form/Button';
+import Link from 'next/link';
 
 const Register = () => (
     <>

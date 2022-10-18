@@ -1,12 +1,11 @@
 /* eslint-disable no-nested-ternary */
 import { useState } from 'react';
 import clx from 'utils/clx';
-
-import BreifIntro from './Steps/BriefIntro/Index';
-import PersonalDetails from './Steps/PersonalDetails/Index';
-import ProfessionalDetails from './Steps/ProfessionalDetails/Index';
-import ReligionDetails from './Steps/ReligionDetails/Index';
 import RegisterDetails from './Steps/RegisterDeatils/Index';
+import ReligionDetails from './Steps/ReligionDetails/Index';
+import ProfessionalDetails from './Steps/ProfessionalDetails/Index';
+import PersonalDetails from './Steps/PersonalDetails/Index';
+import BreifIntro from './Steps/BriefIntro/Index';
 
 const RegisterHome = () => {
     const [nextStep, setNextStep] = useState(1);

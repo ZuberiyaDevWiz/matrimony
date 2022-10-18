@@ -63,6 +63,7 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                 <div className="">
                     <Select
                         label="Religious Values"
+                        name="select"
                         options={[
                             { key: 'op1', value: 'Select religious values' },
                             { key: 'op2', value: 'Islam is truth' },

@@ -10,7 +10,7 @@ const ProfImage: FC<{ setProfNext: Dispatch<SetStateAction<number>> }> = ({ setP
         <h2 className="py-4 font-semi-bold text-lg">Upload Photo and get better Matches</h2>
         <UploadFile label="Upload your Photo" />
         <div className="pt-5 text-white">
-            <Button text="Submit" color="one" onClick={() => setProfNext(1)} />
+            <Button text="Submit" color="one" onClick={() => setProfNext(2)} />
         </div>
     </section>
 );

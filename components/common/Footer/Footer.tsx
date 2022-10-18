@@ -38,23 +38,23 @@ const Footer: FC = () => (
                     <FooterLink title="Matrimonial Blog" url="/" />
                 </div>
 
-                <div className="flex flex-col col-span-1 space-y-2 text-primary-text">
+                <div className="flex flex-col space-y-2 text-primary-text">
                     <h1 className="font-bold tracking-wide text-lg pb-4">Support</h1>
                     <FooterLink title="Payment Option" url="/" />
                     <FooterLink title="Advertise with us" url="/" />
                     <FooterLink title="FeedBack" url="/" />
                     <FooterLink title="Safety Tips" url="/" />
                 </div>
-                <div className="whitespace-nowrap col-span-1 flex flex-col space-y-2 text-primary-text">
+                <div className="whitespace-nowrap flex flex-col space-y-2 text-primary-text">
                     <h1 className="font-bold tracking-wide text-lg pb-4">Contact Information</h1>
                     <p>+91 9739849106</p>
                     <p>support@gmail.com</p>
                     <div className="mt-4">
                         <p className="font-bold tracking-wide text-lg pb-4">follow us on</p>
-                        <ul className="flex flex-row justify-between">
+                        <ul className="flex flex-row space-x-4">
                             {SocialMediaLinks.map((link) => (
                                 <Link href={link.link} key={link.link}>
-                                    <li>{link.title}</li>
+                                    <li> {link.title} </li>
                                 </Link>
                             ))}
                         </ul>

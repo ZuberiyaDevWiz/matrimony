@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import Select from 'components/Form/Select';
 import Button from 'components/Form/Button';
 // import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import { useState, FC, Dispatch, SetStateAction } from 'react';
+import Select from 'components/Form/Select';
 
 const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
     setNextStep,
@@ -20,6 +20,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                 <div className="col-span-1 space-y-4">
                     <Select
                         label="Highest Education"
+                        name="select"
                         options={[
                             { key: 'op1', value: '---Select---' },
                             { key: 'op2', value: '4 feet' },
@@ -50,6 +51,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                 <div className="col-span-1 space-y-4">
                     <Select
                         label="Occupation"
+                        name="select"
                         options={[
                             { key: 'op1', value: '---Select---' },
                             { key: 'op2', value: '4 feet' },
@@ -67,6 +69,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                         <p>Annual Income</p>
                         <div className="flex w-full justify-between">
                             <Select
+                                name="select"
                                 options={[
                                     { key: 'op1', value: '---Select Currency---' },
                                     { key: 'op2', value: '4 feet' },
@@ -78,6 +81,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                                 ]}
                             />
                             <Select
+                                name="select"
                                 options={[
                                     { key: 'op1', value: '---Select Currency---' },
                                     { key: 'op2', value: '4 feet' },
@@ -95,6 +99,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                 <div className="col-span-1 space-y-4">
                     <Select
                         label="Work Location"
+                        name="select"
                         options={[
                             { key: 'op1', value: '---Select---' },
                             { key: 'op2', value: '4 feet' },
@@ -110,6 +115,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                 <div className="col-span-1 space-y-4">
                     <Select
                         label="Residing State"
+                        name="select"
                         options={[
                             { key: 'op1', value: '---Select---' },
                             { key: 'op2', value: '4 feet' },
@@ -125,6 +131,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                 <div className="col-span-1 space-y-4">
                     <Select
                         label="Residing City"
+                        name="select"
                         options={[
                             { key: 'op1', value: '---Select---' },
                             { key: 'op2', value: '4 feet' },
@@ -139,6 +146,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                 <div className="col-span-1 space-y-4">
                     <Select
                         label="Citizenship"
+                        name="select"
                         options={[
                             { key: 'op1', value: '---Select---' },
                             { key: 'op2', value: '4 feet' },

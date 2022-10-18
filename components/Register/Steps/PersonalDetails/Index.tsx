@@ -3,6 +3,7 @@ import Button from 'components/Form/Button';
 import Input from 'components/Form/Input';
 import { useState, FC, Dispatch, SetStateAction } from 'react';
 import Select from 'components/Form/Select';
+import { countries } from 'constants/Countries';
 
 const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
     setNextStep,
@@ -73,6 +74,7 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                             { key: 'op4', value: '4 feet 4 inches' },
                             { key: 'op4', value: '4 feet 5 inches' },
                         ]}
+                        name="select"
                     />
                 </div>
             </div>

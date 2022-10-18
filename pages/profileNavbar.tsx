@@ -1,8 +1,8 @@
-import ProfileNavbar from 'components/common/ProfileNavbar/ProfileNavbar';
+import ProfileNavbars from 'components/common/ProfileNavbar/Index';
 
 const ProfileNavbarPage = () => (
     <>
-        <ProfileNavbar />
+        <ProfileNavbars />
     </>
 );
 
