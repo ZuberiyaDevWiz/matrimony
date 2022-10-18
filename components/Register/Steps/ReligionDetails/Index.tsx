@@ -77,7 +77,12 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
 
             <div className="flex flex-row py-8 space-x-6 ">
                 <div className="w-full flex gap-8 text-primary-text">
-                    <Button text="Previous" color="one" rounded onClick={() => setNextStep(1)} />
+                    <Button
+                        text="Previous"
+                        additionalStyles="text-black"
+                        rounded
+                        onClick={() => setNextStep(1)}
+                    />
                     <Button text="Continue" color="one" rounded onClick={() => setNextStep(3)} />
                 </div>
             </div>
