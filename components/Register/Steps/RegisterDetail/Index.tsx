@@ -4,7 +4,7 @@ import { FormEvent, FC, Dispatch, SetStateAction, ChangeEvent, useState } from '
 import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
 import Select from 'components/Form/Select';
-import { RegisterLinks } from 'constants/RegisterDetailsLink';
+import { useRegister } from 'store';
 
 const RegisterDetails: FC<{
     setNextStep: Dispatch<SetStateAction<number>>;

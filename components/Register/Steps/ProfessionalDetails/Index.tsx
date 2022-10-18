@@ -3,6 +3,7 @@ import Button from 'components/Form/Button';
 // import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import { useState, FC, Dispatch, SetStateAction } from 'react';
 import Select from 'components/Form/Select';
+import { countries } from 'Constant/Countries';
 
 const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
     setNextStep,
@@ -147,15 +148,10 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                     <Select
                         label="Citizenship"
                         name="select"
-                        options={[
-                            { key: 'op1', value: '---Select---' },
-                            { key: 'op2', value: '4 feet' },
-                            { key: 'op3', value: '4 feet 1 inches' },
-                            { key: 'op4', value: '4 feet 2 inches' },
-                            { key: 'op4', value: '4 feet 3 inches' },
-                            { key: 'op4', value: '4 feet 4 inches' },
-                            { key: 'op4', value: '4 feet 5 inches' },
-                        ]}
+                        options={countries.map((c) => ({
+                            key: c,
+                            value: c.toUpperCase(),
+                        }))}
                     />
                 </div>
             </div>
