@@ -1,7 +1,8 @@
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
-import WhyUs from './whyUs';
-import WhyChooseUs from './whyChooseUs';
+import WhyChooseUs from './WhyChooseUs';
+import WhyUs from './WhyUs';
+import FeaturedProfiles from './FeaturedProfiles';
 
 const Home = () => (
     <section>
@@ -9,6 +10,7 @@ const Home = () => (
             <SectionOne />
             <SectionTwo />
             <WhyChooseUs />
+            <FeaturedProfiles />
             <WhyUs />
         </div>
     </section>

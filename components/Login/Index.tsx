@@ -53,7 +53,7 @@ const Login = () => {
                     <input type="checkbox" />
                     <p>keep me logged in</p>
                     <Link href="/forgotPassword">
-                        <p className="pl-32 text-blue-700">Forgot password?</p>
+                        <p className="pl-32 text-blue-700 cursor-pointer">Forgot password?</p>
                     </Link>
                 </div>
                 <div className=" py-7 w-full mx-auto  ">
