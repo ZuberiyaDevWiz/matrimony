@@ -1,7 +1,7 @@
-import { Document } from 'mongoose';
+// import { Document } from 'mongoose';
 
 declare global {
-    interface TypeUser extends Document {
+    interface TypeUser {
         firstName: string;
         lastName: string;
         email: string;
