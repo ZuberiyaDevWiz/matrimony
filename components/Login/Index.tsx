@@ -4,10 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { useState, FormEvent } from 'react';
 import Router from 'next/router';
 import Link from 'next/link';
-
-const submitHandler = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-};
+import axios from 'axios';
 
 const otpHandler = () => {
     Router.push('/loginOtp');
@@ -15,6 +12,23 @@ const otpHandler = () => {
 
 const Login = () => {
     const [show, setShow] = useState(false);
+    const [info, setInfo] = useState({
+        email: '',
+        password: '',
+    });
+
+    const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        axios
+            .post('/api/user/login', info)
+            .then((res) => {
+                console.log(res.data);
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    };
 
     return (
         <section className="shadow-2xl bg-gray-300 w-[30%] mx-auto px-6 my-8">
@@ -26,7 +40,9 @@ const Login = () => {
                         placeholder="Email/Mobile"
                         required
                         rounded
-                        type="email"
+                        type="text"
+                        value={info.email}
+                        changeHandler={(e) => setInfo({ ...info, email: e.target.value })}
                     />
                 </div>
                 <div className="py-6 w-full relative ">
@@ -35,6 +51,8 @@ const Login = () => {
                         placeholder="password"
                         required
                         rounded
+                        value={info.password}
+                        changeHandler={(e) => setInfo({ ...info, password: e.target.value })}
                         type={show ? 'text' : 'password'}
                     />
                     {show ? (

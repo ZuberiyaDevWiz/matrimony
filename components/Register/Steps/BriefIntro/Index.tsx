@@ -6,7 +6,7 @@ import axios from 'axios';
 const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const body = {
-        firstName: 'zuberiya',
+        firstName: 'zuberiya2',
         lastName: 'fathima',
         email: 'zub123',
         dob: new Date('12/11/2022'),
