@@ -1,6 +1,6 @@
 import React from 'react';
 import FeaturedCard from 'components/common/Slider/FeaturedCard';
-import { FeaturedCardDetails } from 'Constants/FeaturedCardDetails';
+import { FeaturedCardDetails } from 'Constant/FeaturedCardDetails';
 import Button from 'components/Form/Button';
 
 // eslint-disable-next-line arrow-body-style
