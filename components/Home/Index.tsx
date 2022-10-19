@@ -3,6 +3,7 @@ import SectionTwo from './SectionTwo';
 import WhyChooseUs from './WhyChooseUs';
 import WhyUs from './WhyUs';
 import FeaturedProfiles from './FeaturedProfiles';
+import SpecialService from './SpecialService';
 
 const Home = () => (
     <section>
@@ -12,6 +13,7 @@ const Home = () => (
             <WhyChooseUs />
             <FeaturedProfiles />
             <WhyUs />
+            <SpecialService />
         </div>
     </section>
 );

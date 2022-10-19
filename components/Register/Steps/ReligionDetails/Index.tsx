@@ -1,6 +1,8 @@
 import { useState, FC, Dispatch, SetStateAction } from 'react';
 import Button from 'components/Form/Button';
 import Select from 'components/Form/Select';
+import { useRegister } from 'store';
+import clx from 'utils/clx';
 
 const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
     setNextStep,
@@ -10,6 +12,8 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
     const [info, setInfo] = useState({
         marryFrom: '',
     });
+
+    const { registerDetails, setRegister } = useRegister((state) => state);
 
     return (
         <section className="shadow-2xl px-10 ">
@@ -25,14 +29,22 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     <p className="text-lg">Willing to marry from</p>
                     <div className="w-full flex gap-4 ">
                         <Button
-                            onClick={() => setInfo({ ...info, marryFrom: 'Same Division' })}
                             rounded
                             text="Same Division"
+                            additionalStyles={clx(
+                                registerDetails.willingToMarryFrom === 'Same Division' &&
+                                    'bg-blue-500'
+                            )}
+                            onClick={() => setRegister('willingToMarryFrom', 'Same Division')}
                         />
                         <Button
-                            onClick={() => setInfo({ ...info, marryFrom: 'Other Division' })}
                             rounded
                             text="Other Division Also"
+                            additionalStyles={clx(
+                                registerDetails.willingToMarryFrom === 'Other Division also' &&
+                                    'bg-blue-500'
+                            )}
+                            onClick={() => setRegister('willingToMarryFrom', 'Other Division also')}
                         />
                     </div>
                 </div>

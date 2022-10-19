@@ -3,7 +3,7 @@ import Button from 'components/Form/Button';
 import Input from 'components/Form/Input';
 import { useState, FC, Dispatch, SetStateAction } from 'react';
 import Select from 'components/Form/Select';
-import { countries } from 'constants/Countries';
+import { countries } from 'Constant/Countries';
 
 const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
     setNextStep,

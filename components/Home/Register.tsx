@@ -1,16 +1,25 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import React from 'react';
+import { FormEvent } from 'react';
 import Input from 'components/Form/Input';
 import Select from 'components/Form/Select';
 import Button from 'components/Form/Button';
 import Link from 'next/link';
+import Router from 'next/router';
+
+const registerHandler = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+};
+
+const clickHandler = () => {
+    Router.push('/loginOtp');
+};
 
 const Register = () => (
     <>
         <section>
-            <div className="items-center w-96 h-fit text-white">
+            <div className="items-center w-96 h-[80vh] text-white">
                 <form
-                    onSubmit={(e) => e.preventDefault()}
+                    onSubmit={registerHandler}
                     className="shadow-2xl bg-black bg-opacity-50 rounded-md "
                 >
                     <div className="p-5  ">
@@ -53,21 +62,21 @@ const Register = () => (
                             <p className="ml-1">
                                 I Accept the{' '}
                                 <Link href="/">
-                                    <span className="ml-1 text-blue-500 underline">
+                                    <span className="ml-1 text-primary-background underline cursor-pointer">
                                         {' '}
                                         Terms & conditions
                                     </span>
                                 </Link>
-                                and{' '}
+                                <span> and </span>
                                 <Link href="/">
-                                    <span className="ml-1 text-blue-500 underline">
+                                    <span className="ml-1 text-primary-background underline cursor-pointer">
                                         Privacy and Policy
                                     </span>
                                 </Link>
                             </p>
                         </div>
                         <div className="py-6 ">
-                            <Button text="REGISTER" color="one" rounded />
+                            <Button text="REGISTER" color="one" rounded onClick={clickHandler} />
                         </div>
                     </div>
                 </form>
