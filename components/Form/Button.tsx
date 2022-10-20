@@ -8,10 +8,12 @@ interface ButtonProps {
     onClick?: () => void;
     submit?: boolean;
     additionalStyles?: string;
+    additionalButtonStyles?: string;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
-    const { text, color, onClick, submit, rounded, additionalStyles } = props;
+    const { text, color, onClick, submit, rounded, additionalStyles, additionalButtonStyles } =
+        props;
 
     return (
         <button
@@ -20,7 +22,8 @@ const Button: React.FC<ButtonProps> = (props) => {
             type={submit ? 'submit' : 'button'}
             className={clx(
                 'w-full py-2 border-[1px]  text-md border-gray-500 ',
-                rounded ? '!rounded-md' : '!rounded ',
+                rounded ? '!rounded-md' : ' ',
+                additionalButtonStyles || null,
                 color === 'one'
                     ? 'bg-primary-background hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-700 '
                     : color === 'two'
@@ -32,7 +35,7 @@ const Button: React.FC<ButtonProps> = (props) => {
                     : color === 'five'
             )}
         >
-            <span className={clx('text-lg', additionalStyles || null)}>{text}</span>
+            <span className={clx(additionalStyles || null)}>{text}</span>
         </button>
     );
 };

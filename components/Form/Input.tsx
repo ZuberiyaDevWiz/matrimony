@@ -6,8 +6,8 @@ interface InputProps {
     name?: string;
     placeholder: string;
     changeHandler?: (e: ChangeEvent<HTMLInputElement>) => void;
-    type: 'text' | 'number' | 'email' | 'password' | 'date' | string;
-    value?: string | number;
+    type?: 'text' | 'number' | 'email' | 'password' | 'date' | string;
+    value?: string | number | Date;
     label: string;
     required?: boolean;
     minLength?: number;
