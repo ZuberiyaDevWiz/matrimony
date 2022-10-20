@@ -24,5 +24,4 @@ export const PurchaseCard = [
         img: '/images/img-10.jpg',
         title: 'Wedding Gifts',
     },
-    
 ];

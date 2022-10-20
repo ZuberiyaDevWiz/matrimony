@@ -149,8 +149,8 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                         label="Citizenship"
                         name="select"
                         options={countries.map((c) => ({
-                            key: c,
-                            value: c.toUpperCase(),
+                            key: c.name,
+                            value: c.name,
                         }))}
                     />
                 </div>

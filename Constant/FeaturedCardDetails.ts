@@ -57,4 +57,3 @@ export const FeaturedCardDetails = [
         place: 'Bengaluru, India.',
     },
 ];
-
