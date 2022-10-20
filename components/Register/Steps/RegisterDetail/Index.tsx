@@ -37,6 +37,7 @@ const RegisterDetails: FC<{
                             type="text"
                             value={registerDetails.firstName}
                             changeHandler={handleChange}
+                            required
                         />
                         <Input
                             label="Last Name"
@@ -46,6 +47,7 @@ const RegisterDetails: FC<{
                             type="text"
                             value={registerDetails.lastName}
                             changeHandler={handleChange}
+                            required
                         />
                         <Input
                             name="email"
@@ -56,7 +58,7 @@ const RegisterDetails: FC<{
                             required
                             value={registerDetails.email}
                             changeHandler={handleChange}
-                        />{' '}
+                        />
                         <Input
                             name="password"
                             label="Password"
