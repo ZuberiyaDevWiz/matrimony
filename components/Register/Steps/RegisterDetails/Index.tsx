@@ -22,8 +22,8 @@ const RegisterDetails: FC<{
     };
 
     return (
-        <form onSubmit={submitHandler}>
-            <section className="bg-white mt-[2px] shadow-4xl mx-auto">
+        <form onSubmit={submitHandler} className="bg-white mt-[2px] shadow-4xl mx-auto">
+            <section>
                 <div className="flex flex-col  px-10 ">
                     <p className="mt-8 pb-5 text-xl font-semibold text-primary-background ">
                         Please provide us with your basic details

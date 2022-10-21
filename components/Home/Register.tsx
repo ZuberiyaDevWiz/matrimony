@@ -16,7 +16,7 @@ const Register = () => {
     return (
         <form onSubmit={registerHandler} className="shadow-2xl bg-black bg-opacity-50 rounded-md ">
             <div className="items-center w-96 h-[80vh] text-white">
-                <div className="p-5  ">
+                <div className="p-5 ">
                     <p className="text-center font-bold text-2xl text-primary-text tracking-wider pb-4">
                         Register for Free
                     </p>

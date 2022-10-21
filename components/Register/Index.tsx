@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import { useState } from 'react';
 import clx from 'utils/clx';
-import RegisterDetails from './Steps/RegisterDetail/Index';
+import RegisterDetails from './Steps/RegisterDetails/Index';
 import ReligionDetails from './Steps/ReligionDetails/Index';
 import ProfessionalDetails from './Steps/ProfessionalDetails/Index';
 import PersonalDetails from './Steps/PersonalDetails/Index';
