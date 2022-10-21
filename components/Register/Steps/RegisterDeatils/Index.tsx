@@ -60,7 +60,7 @@ const RegisterDetails: FC<{
                             type="date"
                             required
                             rounded
-                            value={registerDetails.dob.toDateString()}
+                            value={registerDetails.dob}
                             changeHandler={changeHandler}
                             placeholder="date of birth"
                         />
