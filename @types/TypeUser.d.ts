@@ -34,6 +34,7 @@ declare global {
         residingState: string;
         residingCity: string;
         citizenShip: string;
+        phoneNo: number;
     }
 }
 

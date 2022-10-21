@@ -5,114 +5,93 @@ import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
 import Select from 'components/Form/Select';
 import { useRegister } from 'store';
-import { Division } from 'Constant/Division';
+
+const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+};
 
 const RegisterDetails: FC<{
     setNextStep: Dispatch<SetStateAction<number>>;
 }> = ({ setNextStep }) => {
-    const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        setNextStep(2);
-    };
-
     const { registerDetails, setRegister, step, setStep } = useRegister((state) => state);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const changeHandler = (e: ChangeEvent<HTMLInputElement>) =>
         setRegister(e.target.name, e.target.value);
-    };
 
     return (
-        <form onSubmit={submitHandler} className="bg-white mt-[2px] shadow-4xl mx-auto">
-            <section>
-                <div className="flex flex-col  px-10 ">
+        <form onSubmit={submitHandler}>
+            <section className="bg-white mt-[2px] shadow-2xl">
+                <div className="flex flex-col px-10 ">
                     <p className="mt-8 pb-5 text-xl font-semibold text-primary-background ">
                         Please provide us with your basic details
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                         <Input
-                            label="First Name"
-                            placeholder="Enter first name"
-                            rounded
                             name="firstName"
+                            placeholder="Enter First Name"
                             type="text"
+                            required
+                            rounded
+                            label="First Name"
                             value={registerDetails.firstName}
-                            changeHandler={handleChange}
-                            required
+                            changeHandler={changeHandler}
                         />
                         <Input
-                            label="Last Name"
-                            placeholder="Enter first name"
-                            rounded
                             name="lastName"
+                            placeholder="Enter Last Name"
                             type="text"
+                            required
+                            rounded
+                            label="Last Name"
                             value={registerDetails.lastName}
-                            changeHandler={handleChange}
-                            required
-                        />
-                        <Input
-                            name="email"
-                            label="Email"
-                            placeholder="Enter Email.."
-                            rounded
-                            type="email"
-                            required
-                            value={registerDetails.email}
-                            changeHandler={handleChange}
-                        />
-                        <Input
-                            name="password"
-                            label="Password"
-                            placeholder="Enter password.."
-                            rounded
-                            type="password"
-                            required
-                            value={registerDetails.password}
-                            changeHandler={handleChange}
-                        />{' '}
-                        <Input
-                            name="dob"
-                            label="Date of birth"
-                            placeholder="Enter dob.."
-                            rounded
-                            type="Date"
-                            required
-                            value={registerDetails.dob}
-                            changeHandler={handleChange}
+                            changeHandler={changeHandler}
                         />
                         <Select
                             label="Gender"
                             name="select"
                             options={[
-                                { key: 'op1', value: '--select--' },
+                                { key: 'op1', value: 'Choose' },
                                 { key: 'op2', value: 'Male' },
                                 { key: 'op3', value: 'Female' },
-                                { key: 'op3', value: 'Others' },
                             ]}
+                        />
+                        <Input
+                            label="DOB"
+                            type="date"
+                            required
+                            rounded
+                            value={registerDetails.dob}
+                            changeHandler={changeHandler}
+                            placeholder="date of birth"
                         />
                         <Select
                             label="Section"
                             name="select"
                             options={[
-                                { key: 'op1', value: '--select--' },
-                                { key: 'op2', value: 'Sunni' },
-
-                                { key: 'op3', value: 'Shia' },
-                                { key: 'op4', value: 'Others' },
+                                { key: 'op1', value: 'Choose' },
+                                { key: 'op2', value: 'Male' },
+                                { key: 'op3', value: 'Female' },
                             ]}
                         />{' '}
                         <Select
                             label="Division"
                             name="select"
-                            options={Division.map((x) => ({
-                                key: x,
-                                value: x,
-                            }))}
+                            options={[
+                                { key: 'op1', value: 'Choose' },
+                                { key: 'op2', value: 'Male' },
+                                { key: 'op3', value: 'Female' },
+                            ]}
                         />
                     </div>
-                    <div className="py-16">
-                        <div className="w-[49%]  hover:bg-primary-background hover:text-white hover:rounded">
-                            <Button text="Next" rounded onClick={() => setNextStep(2)} submit />
-                        </div>
+                    <div className="ml-auto w-[49%] py-10">
+                        <Button
+                            submit
+                            color="one"
+                            text="Next"
+                            rounded
+                            additionalStyles="font-semibold text-white"
+                            onClick={() => setNextStep(2)}
+                        />
                     </div>
                 </div>
             </section>

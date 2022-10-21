@@ -18,15 +18,15 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     Personal details will fetch better matching results
                 </h1>
             </div>
-            <div className="grid grid-cols-2 gap-8 pb-8">
+            <div className="grid grid-cols-2 gap-8">
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold">Marital status</p>
+                    <p className="font-semibold text-lg pl-2">Marital status</p>
                     <div className="w-full grid grid-cols-2 space-y-4">
-                        <div className="col-span-2 flex gap-4">
+                        <div className="col-span-2 flex">
                             <Button
-                                rounded
                                 text="UnMarried"
                                 additionalButtonStyles={clx(
+                                    'rounded-l-md border-r-1 border-[#cccccc]',
                                     registerDetails.maritialStatus === 'Unmarried' &&
                                         'bg-primary-background text-white'
                                 )}
@@ -34,19 +34,19 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                             />
                             <Button
                                 text="Married"
-                                rounded
                                 additionalButtonStyles={clx(
+                                    'rounded-r-md border-l-0 border-[#cccccc]',
                                     registerDetails.maritialStatus === 'Married' &&
                                         'bg-primary-background text-white'
                                 )}
                                 onClick={() => setRegister('maritialStatus', 'Married')}
                             />
                         </div>
-                        <div className="col-span-2 flex gap-4">
+                        <div className="col-span-2 flex">
                             <Button
                                 text="Divorced"
-                                rounded
                                 additionalButtonStyles={clx(
+                                    'rounded-l-md border-r-1 border-[#cccccc]',
                                     registerDetails.maritialStatus === 'Divorced' &&
                                         'bg-primary-background text-white'
                                 )}
@@ -54,19 +54,19 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                             />
                             <Button
                                 text="Separated"
-                                rounded
                                 additionalButtonStyles={clx(
+                                    'rounded-r-md border-l-0 border-[#cccccc]',
                                     registerDetails.maritialStatus === 'Separated' &&
                                         'bg-primary-background text-white'
                                 )}
                                 onClick={() => setRegister('maritialStatus', 'Separated')}
                             />
                         </div>
-                        <div className="w-[96%]">
+                        <div className="w-full">
                             <Button
                                 text="Widow"
-                                rounded
                                 additionalButtonStyles={clx(
+                                    'rounded-md  border-[#cccccc]',
                                     registerDetails.maritialStatus === 'Widow' &&
                                         'bg-primary-background text-white'
                                 )}
@@ -76,13 +76,13 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     </div>
                 </div>
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold">Family Status</p>
+                    <p className="font-semibold text-lg pl-2">Family Status</p>
                     <div className="w-full grid grid-cols-2 space-y-4">
-                        <div className="col-span-2 flex gap-4">
+                        <div className="col-span-2 flex">
                             <Button
                                 text="Middle Class"
-                                rounded
                                 additionalButtonStyles={clx(
+                                    'rounded-l-md border-r-1 border-[#cccccc]',
                                     registerDetails.familyStatus === 'Middle Class' &&
                                         'bg-primary-background text-white'
                                 )}
@@ -90,19 +90,19 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                             />
                             <Button
                                 text="Upper Middle Class"
-                                rounded
                                 additionalButtonStyles={clx(
+                                    'rounded-r-md border-l-0 border-[#cccccc]',
                                     registerDetails.familyStatus === ' Upper Middle Class' &&
                                         'bg-primary-background text-white'
                                 )}
                                 onClick={() => setRegister('familyStatus', ' Upper Middle Class')}
                             />
                         </div>
-                        <div className="w-[96%]">
+                        <div className="w-full">
                             <Button
                                 text="Rich/Affluent"
-                                rounded
                                 additionalButtonStyles={clx(
+                                    'rounded-md  border-[#cccccc]',
                                     registerDetails.familyStatus === 'Rich/Affluent' &&
                                         'bg-primary-background text-white'
                                 )}
@@ -113,12 +113,12 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                 </div>
 
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold">Family Type</p>
-                    <div className="w-full flex gap-4 ">
+                    <p className="font-semibold text-lg pl-2">Family Type</p>
+                    <div className="w-full flex">
                         <Button
                             text="Nuclear Family"
-                            rounded
                             additionalButtonStyles={clx(
+                                'rounded-l-md border-r-1 border-[#cccccc]',
                                 registerDetails.familyType === 'Nuclear Family' &&
                                     'bg-primary-background text-white'
                             )}
@@ -126,8 +126,8 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                         />
                         <Button
                             text="Joint Family"
-                            rounded
                             additionalButtonStyles={clx(
+                                'rounded-r-md border-l-0 border-[#cccccc]',
                                 registerDetails.familyType === 'Joint Family' &&
                                     'bg-primary-background text-white'
                             )}
@@ -137,12 +137,12 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                 </div>
 
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold">Physical Status</p>
-                    <div className="w-full flex gap-4">
+                    <p className="font-semibold text-lg pl-2">Physical Status</p>
+                    <div className="w-full flex     ">
                         <Button
                             text="Normal"
-                            rounded
                             additionalButtonStyles={clx(
+                                'rounded-l-md border-r-1 border-[#cccccc]',
                                 registerDetails.physicalStatus === 'Normal' &&
                                     'bg-primary-background text-white'
                             )}
@@ -150,8 +150,8 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                         />
                         <Button
                             text="Physically Challeneged"
-                            rounded
                             additionalButtonStyles={clx(
+                                'rounded-r-md border-l-0 border-[#cccccc]',
                                 registerDetails.physicalStatus === 'PhysicallyChallenged' &&
                                     'bg-primary-background text-white'
                             )}
@@ -162,6 +162,7 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                 <div className="">
                     <Select
                         label="Height"
+                        additionalStyles={clx('text-lg font-bold')}
                         options={[
                             { key: 'op1', value: '---Feet/Inches---' },
                             { key: 'op2', value: '4 feet' },
@@ -178,7 +179,7 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                 <Input label="Weight" placeholder="Enter weight.." rounded />
             </div>
 
-            <div className="flex flex-row py-8 space-x-6 ">
+            <div className="flex flex-row py-14 space-x-6 font-semibold">
                 <div className="w-full flex gap-8 hover:bg-primary-background hover:text-white hover:rounded">
                     <Button text="Previous" rounded onClick={() => setNextStep(2)} />
                 </div>

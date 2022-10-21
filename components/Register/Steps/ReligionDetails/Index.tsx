@@ -1,4 +1,4 @@
-import { useState, FC, Dispatch, SetStateAction } from 'react';
+import { FC, Dispatch, SetStateAction } from 'react';
 import Button from 'components/Form/Button';
 import Select from 'react-select';
 import { useRegister } from 'store';
@@ -19,14 +19,14 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                 </h1>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 pt-6">
+            <div className="grid grid-cols-2 gap-8 py-6">
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold">Willing to marry from</p>
+                    <p className="font-semibold text-lg pl-2">Willing to marry from ?</p>
                     <div className="w-full flex ">
                         <Button
                             text="Same Division"
                             additionalButtonStyles={clx(
-                                'rounded-l-md border-r-0',
+                                'rounded-l-md border-r-1 border-[#cccccc]',
                                 registerDetails.willingToMarryFrom === 'Same Division' &&
                                     'bg-primary-background text-white '
                             )}
@@ -35,7 +35,7 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                         <Button
                             text="Other Division Also"
                             additionalButtonStyles={clx(
-                                'rounded-r-md border-l-0',
+                                'rounded-r-md border-l-0 border-[#cccccc]',
                                 registerDetails.willingToMarryFrom === 'Other Division also' &&
                                     'bg-primary-background text-white'
                             )}
@@ -45,30 +45,30 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                 </div>
 
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold">Do you wear?</p>
-                    <div className="w-full flex">
+                    <p className="font-semibold text-lg pl-2">Do you wear ?</p>
+                    <div className="w-full flex ">
                         <Button
-                            rounded
                             text="Hijab"
                             additionalButtonStyles={clx(
+                                'rounded-l-md border-r-1  border-[#cccccc]',
                                 registerDetails.wearsHijab === 'Hijab' &&
                                     'bg-primary-background text-white'
                             )}
                             onClick={() => setRegister('wearsHijab', 'Hijab')}
                         />
                         <Button
-                            rounded
                             text="Niqab"
                             additionalButtonStyles={clx(
+                                'rounded-l-0 border-l-0 border-r-1 border-[#cccccc]',
                                 registerDetails.wearsHijab === 'Niqab' &&
                                     'bg-primary-background text-white'
                             )}
                             onClick={() => setRegister('wearsHijab', 'Niqab')}
                         />
                         <Button
-                            rounded
                             text="None"
                             additionalButtonStyles={clx(
+                                'rounded-r-md border-l-0  border-[#cccccc]',
                                 registerDetails.wearsHijab === 'None' &&
                                     'bg-primary-background text-white'
                             )}
@@ -77,13 +77,13 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     </div>
                 </div>
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold">Read Quran</p>
-                    <div className="flex justify-between gap-4">
+                    <p className="font-semibold text-lg pl-2">Read Quran</p>
+                    <div className="flex justify-between ">
                         <div className="w-full space-y-4">
                             <Button
-                                rounded
                                 text="Regularly"
                                 additionalButtonStyles={clx(
+                                    'rounded-l-md border-r-1 border-[#cccccc]',
                                     registerDetails.ReadsQuran === 'Regularly' &&
                                         'bg-primary-background text-white'
                                 )}
@@ -91,9 +91,9 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                             />
 
                             <Button
-                                rounded
                                 text="Occasionally"
                                 additionalButtonStyles={clx(
+                                    'rounded-l-md border-r-1 border-[#cccccc]',
                                     registerDetails.ReadsQuran === 'Occasionally' &&
                                         'bg-primary-background text-white'
                                 )}
@@ -102,18 +102,18 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                         </div>
                         <div className="w-full space-y-4">
                             <Button
-                                rounded
                                 text="Only Jumah/Friday"
                                 additionalButtonStyles={clx(
+                                    'rounded-r-md border-l-0 border-[#cccccc]',
                                     registerDetails.ReadsQuran === 'Only Jumah/Friday' &&
                                         'bg-primary-background text-white'
                                 )}
                                 onClick={() => setRegister('ReadsQuran', 'Only Jumah/Friday')}
                             />
                             <Button
-                                rounded
                                 text="Never Read"
                                 additionalButtonStyles={clx(
+                                    'rounded-r-md border-l-0 border-[#cccccc]',
                                     registerDetails.ReadsQuran === 'Never Read' &&
                                         'bg-primary-background text-white'
                                 )}
@@ -123,12 +123,12 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     </div>
                 </div>
 
-                <h1 className="  space-y-2 font-semibold pt-2 ">
-                    Select Religious Values
+                <h1 className="  space-y-2  ">
+                    <span className="text-lg font-semibold pl-2">Select Religious Values</span>
                     <Select
                         name="select"
                         options={[
-                            { vaue: 'op1', label: '--select--' },
+                            { vaue: 'op1', label: '--Select--' },
                             { vaue: 'op2', label: 'Islam is truth' },
                             { vaue: 'op3', label: 'Very islamic' },
                             { vaue: 'op4', label: 'Pray 5 times a day' },
@@ -138,7 +138,7 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                 </h1>
             </div>
 
-            <div className="flex flex-row py-20 space-x-6 ">
+            <div className="flex flex-row py-14 space-x-6 font-semibold ">
                 <div className="w-full flex gap-8 hover:bg-primary-background hover:text-white hover:rounded">
                     <Button text="Previous" rounded onClick={() => setNextStep(1)} />
                 </div>

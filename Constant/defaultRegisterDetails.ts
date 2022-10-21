@@ -24,6 +24,7 @@ const defaultRegister: TypeUser = {
     willingToMarryFrom: null,
     workLocation: '',
     wearsHijab: 'None',
+    phoneNo: 12345,
 };
 
 export default defaultRegister;
