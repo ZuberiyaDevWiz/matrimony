@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Button from 'components/Form/Button';
 import Register from './Register';
 
 const SectionOne = () => (
@@ -11,6 +12,28 @@ const SectionOne = () => (
                     className="absolute object-cover "
                     alt="section one picture"
                 />
+                <div>
+                    <ul className="text-black no-underline rounded-full opacity-80 font-bold px-6 cursor-pointer bg-white absolute  flex justify-end top-6 right-16 items-center w-fit">
+                        <li className="p-4 block hover:text-secondary-text transition duration-300">
+                            Success Story
+                        </li>
+                        <li className="p-4 hover:text-secondary-text transition duration-300">
+                            About Us
+                        </li>
+                        <li className="p-4 hover:text-secondary-text !hover:underline-offset-1 transition duration-300 ">
+                            Featured Profiles
+                        </li>
+                        <li className="p-4 hover:text-secondary-text transition duration-300">
+                            Services
+                        </li>
+                        <li className="p-4 hover:text-secondary-text transition duration-300">
+                            Sign In
+                        </li>
+                        <div className="p-4">
+                            <Button text="Register" additionalStyles="px-4 text-secondary-text" />
+                        </div>
+                    </ul>
+                </div>
                 <div className="absolute mt-[5%] ml-10 ">
                     <Register />
                 </div>

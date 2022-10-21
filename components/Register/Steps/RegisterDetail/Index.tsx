@@ -95,6 +95,7 @@ const RegisterDetails: FC<{
                             options={[
                                 { key: 'op1', value: '--select--' },
                                 { key: 'op2', value: 'Sunni' },
+
                                 { key: 'op3', value: 'Shia' },
                                 { key: 'op4', value: 'Others' },
                             ]}

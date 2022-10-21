@@ -70,6 +70,7 @@ const Login = () => {
                 <div className="flex">
                     <input type="checkbox" />
                     <p>keep me logged in</p>
+
                     <Link href="/forgotPassword">
                         <p className="pl-32 text-blue-700 cursor-pointer">Forgot password?</p>
                     </Link>

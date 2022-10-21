@@ -20,7 +20,7 @@ const WhyUs: FC = () => (
             </div>
             <div className="grid grid-cols-3 gap-4 px-6 w-[75%] my-10">
                 <div className="w-fit flex flex-col items-center  my-auto justify-around space-y-6 ">
-                    <div className="p-6 pt-7 w-24 h-24 divide-x-2 rounded-full shadow-2xl bg-white ">
+                    <div className="p-6 pt-6 w-24 h-24 divide-x-2 rounded-full shadow-2xl bg-white ">
                         <Image src="/icons/icon-1.png" alt="Icons One" width="60px" height="60px" />
                     </div>
                     <div className="space-y-4">
@@ -37,7 +37,7 @@ const WhyUs: FC = () => (
                 </div>
                 <div className="flex flex-col items-center justify-between  my-auto space-y-6 ">
                     <div className="p-6  w-24 h-24 rounded-full shadow-2xl bg-white">
-                        <Image src="/icons/icon-2.png" alt="Icons Two" width="60px" height="60px" />
+                        <Image src="/icons/icon-3.png" alt="Icons Two" width="60px" height="60px" />
                     </div>
                     <div className="space-y-4">
                         <h2 className="text-center font-bold text-primary-background">

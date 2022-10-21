@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
@@ -23,7 +24,7 @@ const Slider: FC<SliderProps> = (props) => {
                     draggable
                     navigation
                     slidesPerView={4}
-                    spaceBetween={10}
+                    spaceBetween={80}
                 >
                     <div>
                         {couples.map((couple) => (
