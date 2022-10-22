@@ -2,7 +2,7 @@ import { useState, FC, SetStateAction, Dispatch } from 'react';
 import clx from 'utils/clx';
 import Dashboard from './Dashboard';
 import MyProfile from './Myprofile';
-import MyPhotos from './Myphotos';
+import MyPhotos from './MyPhotos/PhotoAlbum';
 import PartnerPreferences from './PartnerPreferences';
 import Settings from './Settings';
 import More from './More';
@@ -12,24 +12,24 @@ const SubProfileNavbar1: FC<{ setNavStep: Dispatch<SetStateAction<number>> }> = 
 }) => {
     const [next, setNext] = useState(1);
 
-    const NavbarSteps = () => {
-        switch (next) {
-            case 1:
-                return <Dashboard setNext={setNext} />;
-            case 2:
-                return <MyProfile setNext={setNext} />;
-            case 3:
-                return <MyPhotos setNext={setNext} />;
-            case 4:
-                return <PartnerPreferences setNext={setNext} />;
-            case 5:
-                return <Settings setNext={setNext} />;
-            case 6:
-                return <More setNext={setNext} />;
-            default:
-                <Dashboard setNext={setNext} />;
-        }
-    };
+    // const NavbarSteps = () => {
+    //     switch (next) {
+    //         case 1:
+    //             return <Dashboard setNext={setNext} />;
+    //         case 2:
+    //             return <MyProfile setNext={setNext} />;
+    //         case 3:
+    //             return <MyPhotos setNext={setNext} />;
+    //         case 4:
+    //             return <PartnerPreferences setNext={setNext} />;
+    //         case 5:
+    //             return <Settings setNext={setNext} />;
+    //         case 6:
+    //             return <More setNext={setNext} />;
+    //         default:
+    //             <Dashboard setNext={setNext} />;
+    //     }
+    // };
 
     return (
         <section className="shadow-2xl bg-gray-300 space-x-20 px-10 py-10 text-lg ">
@@ -88,7 +88,7 @@ const SubProfileNavbar1: FC<{ setNavStep: Dispatch<SetStateAction<number>> }> = 
                 More
             </button>
 
-            {NavbarSteps()}
+            {/* {NavbarSteps()} */}
         </section>
     );
 };

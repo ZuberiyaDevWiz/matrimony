@@ -56,7 +56,7 @@ const Register = () => {
                     />
                     {/* <Input placeholder='Enter your Email' label='EMAIL ADDRESS' type='email' required rounded additionalStyles='text-sm'/> */}
                     <div className="w-[10%] flex gap-2">
-                        <div className="w-[25%]">
+                        <div className="w-[30%]">
                             <Select
                                 name="code"
                                 label="CODE"
@@ -66,7 +66,7 @@ const Register = () => {
                                 }))}
                             />
                         </div>
-                        <div className="w-[75%]">
+                        <div className="w-[100%]">
                             <Input
                                 placeholder="Enter Mobile Number"
                                 label="MOBILE NUMBER"
