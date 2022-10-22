@@ -14,7 +14,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
     return (
         <section className="shadow-2xl px-10 ">
             <div className="my-8 ">
-                <h1 className=" text-lg font-semibold">
+                <h1 className=" text-xl font-semibold text-primary-background">
                     Please provide us your professional details
                 </h1>
             </div>
@@ -212,14 +212,11 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                 </div>
             </div>
             <div className="flex flex-row py-14 font-semibold space-x-6 ">
-                <div className="w-full flex gap-8 text-primary-text">
-                    <Button
-                        text="Previous"
-                        additionalStyles="text-black"
-                        rounded
-                        onClick={() => setNextStep(2)}
-                    />
-                    <Button text="Continue" color="one" rounded onClick={() => setNextStep(5)} />
+                <div className="w-[49%] flex gap-8  hover:bg-primary-background hover:text-white hover:rounded">
+                    <Button text="Previous" rounded onClick={() => setNextStep(2)} />
+                </div>
+                <div className="w-[49%] flex gap-8  hover:bg-primary-background hover:text-white hover:rounded ">
+                    <Button text="Continue" rounded onClick={() => setNextStep(5)} />
                 </div>
             </div>
         </section>

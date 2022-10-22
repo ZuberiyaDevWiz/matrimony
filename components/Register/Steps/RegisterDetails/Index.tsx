@@ -90,7 +90,6 @@ const RegisterDetails: FC<{
                             text="Next"
                             rounded
                             additionalStyles="font-semibold text-white"
-                            onClick={() => setNextStep(2)}
                         />
                     </div>
                 </div>
