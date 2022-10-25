@@ -1,22 +1,34 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import { FormEvent } from 'react';
+import { FormEvent, ChangeEvent } from 'react';
 import Input from 'components/Form/Input';
 import Select from 'components/Form/Select';
 import Button from 'components/Form/Button';
 import Link from 'next/link';
 import Router from 'next/router';
-import { countries } from 'Constant/Countries';
+import { Countries } from 'Constant/Countries';
+import { useRegister } from 'store';
 
 const Register = () => {
+    const { registerDetails, setRegister } = useRegister((state) => state);
+
     const registerHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        Router.push('/loginOtp');
+    };
+
+    const clickHandler = () => {
+        if (registerDetails.phoneNo > 10 && registerDetails.phoneNo < 10) {
+            console.log('please enter a valid number');
+        }
+    };
+
+    const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setRegister(e.target.name, e.target.value);
     };
 
     return (
         <form onSubmit={registerHandler} className="shadow-2xl bg-black bg-opacity-50 rounded-md ">
             <div className="items-center w-96 h-[80vh] text-white">
-                <div className="p-5  ">
+                <div className="p-5 ">
                     <p className="text-center font-bold text-2xl text-primary-text tracking-wider pb-4">
                         Register for Free
                     </p>
@@ -48,7 +60,7 @@ const Register = () => {
                             <Select
                                 name="code"
                                 label="CODE"
-                                options={countries.map((code) => ({
+                                options={Countries.map((code) => ({
                                     key: code.code,
                                     value: code.code,
                                 }))}
@@ -59,8 +71,11 @@ const Register = () => {
                                 placeholder="Enter Mobile Number"
                                 label="MOBILE NUMBER"
                                 type="number"
+                                name="phoneNo"
                                 required
                                 rounded
+                                value={registerDetails.phoneNo}
+                                changeHandler={changeHandler}
                                 additionalStyles="text-sm"
                             />
                         </div>
@@ -84,7 +99,7 @@ const Register = () => {
                         </p>
                     </div>
                     <div className="py-6 ">
-                        <Button text="REGISTER" color="one" submit rounded />
+                        <Button text="REGISTER" color="one" submit rounded onClick={clickHandler} />
                     </div>
                 </div>
             </div>

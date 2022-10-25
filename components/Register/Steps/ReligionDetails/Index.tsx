@@ -1,6 +1,6 @@
-import { useState, FC, Dispatch, SetStateAction } from 'react';
+import { FC, Dispatch, SetStateAction } from 'react';
 import Button from 'components/Form/Button';
-import Select from 'components/Form/Select';
+import Select from 'react-select';
 import { useRegister } from 'store';
 import clx from 'utils/clx';
 
@@ -8,95 +8,142 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
     setNextStep,
 }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [show, setShow] = useState(false);
-    const [info, setInfo] = useState({
-        marryFrom: '',
-    });
 
     const { registerDetails, setRegister } = useRegister((state) => state);
 
     return (
         <section className="shadow-2xl px-10 ">
-            <div className="mt-8 ">
-                <h1 className=" text-lg font-semibold">Please provide us with Religion Details</h1>
+            <div className="my-10">
+                <h1 className=" text-xl font-semibold text-primary-background">
+                    Please provide us with Religion Details
+                </h1>
             </div>
-            <div className="my-6 font-semibold space-x-4">
-                <span>Division:</span>
-                <span>Muslim - Labbay</span>
-            </div>
-            <div className="grid grid-cols-2 gap-8">
-                <div className="col-span-1 space-y-4">
-                    <p className="text-lg">Willing to marry from</p>
-                    <div className="w-full flex gap-4 ">
+
+            <div className="grid grid-cols-2 gap-8 py-6">
+                <div className="col-span-1 space-y-2">
+                    <p className="font-semibold text-lg pl-2">Willing to marry from ?</p>
+                    <div className="w-full flex ">
                         <Button
-                            rounded
                             text="Same Division"
-                            additionalStyles={clx(
+                            additionalButtonStyles={clx(
+                                'rounded-l-md border-r-1 border-[#cccccc]',
                                 registerDetails.willingToMarryFrom === 'Same Division' &&
-                                    'bg-blue-500'
+                                    'bg-primary-background text-white '
                             )}
                             onClick={() => setRegister('willingToMarryFrom', 'Same Division')}
                         />
                         <Button
-                            rounded
                             text="Other Division Also"
-                            additionalStyles={clx(
+                            additionalButtonStyles={clx(
+                                'rounded-r-md border-l-0 border-[#cccccc]',
                                 registerDetails.willingToMarryFrom === 'Other Division also' &&
-                                    'bg-blue-500'
+                                    'bg-primary-background text-white'
                             )}
                             onClick={() => setRegister('willingToMarryFrom', 'Other Division also')}
                         />
                     </div>
                 </div>
 
-                <div className="col-span-1 space-y-4">
-                    <p className="text-lg">Do you wear</p>
-                    <div className=" w-full flex gap-4">
-                        <Button rounded text="Hijab" additionalStyles="bg-none" />
-                        <Button rounded text="Niqab" />
-                        <Button rounded text="None" />
+                <div className="col-span-1 space-y-2">
+                    <p className="font-semibold text-lg pl-2">Do you wear ?</p>
+                    <div className="w-full flex ">
+                        <Button
+                            text="Hijab"
+                            additionalButtonStyles={clx(
+                                'rounded-l-md border-r-1  border-[#cccccc]',
+                                registerDetails.wearsHijab === 'Hijab' &&
+                                    'bg-primary-background text-white'
+                            )}
+                            onClick={() => setRegister('wearsHijab', 'Hijab')}
+                        />
+                        <Button
+                            text="Niqab"
+                            additionalButtonStyles={clx(
+                                'rounded-l-0 border-l-0 border-r-1 border-[#cccccc]',
+                                registerDetails.wearsHijab === 'Niqab' &&
+                                    'bg-primary-background text-white'
+                            )}
+                            onClick={() => setRegister('wearsHijab', 'Niqab')}
+                        />
+                        <Button
+                            text="None"
+                            additionalButtonStyles={clx(
+                                'rounded-r-md border-l-0  border-[#cccccc]',
+                                registerDetails.wearsHijab === 'None' &&
+                                    'bg-primary-background text-white'
+                            )}
+                            onClick={() => setRegister('wearsHijab', 'None')}
+                        />
+                    </div>
+                </div>
+                <div className="col-span-1 space-y-2">
+                    <p className="font-semibold text-lg pl-2">Read Quran</p>
+                    <div className="flex justify-between ">
+                        <div className="w-full space-y-4">
+                            <Button
+                                text="Regularly"
+                                additionalButtonStyles={clx(
+                                    'rounded-l-md border-r-1 border-[#cccccc]',
+                                    registerDetails.ReadsQuran === 'Regularly' &&
+                                        'bg-primary-background text-white'
+                                )}
+                                onClick={() => setRegister('ReadsQuran', 'Regularly')}
+                            />
+
+                            <Button
+                                text="Occasionally"
+                                additionalButtonStyles={clx(
+                                    'rounded-l-md border-r-1 border-[#cccccc]',
+                                    registerDetails.ReadsQuran === 'Occasionally' &&
+                                        'bg-primary-background text-white'
+                                )}
+                                onClick={() => setRegister('ReadsQuran', 'Occasionally')}
+                            />
+                        </div>
+                        <div className="w-full space-y-4">
+                            <Button
+                                text="Only Jumah/Friday"
+                                additionalButtonStyles={clx(
+                                    'rounded-r-md border-l-0 border-[#cccccc]',
+                                    registerDetails.ReadsQuran === 'Only Jumah/Friday' &&
+                                        'bg-primary-background text-white'
+                                )}
+                                onClick={() => setRegister('ReadsQuran', 'Only Jumah/Friday')}
+                            />
+                            <Button
+                                text="Never Read"
+                                additionalButtonStyles={clx(
+                                    'rounded-r-md border-l-0 border-[#cccccc]',
+                                    registerDetails.ReadsQuran === 'Never Read' &&
+                                        'bg-primary-background text-white'
+                                )}
+                                onClick={() => setRegister('ReadsQuran', 'Never Read')}
+                            />
+                        </div>
                     </div>
                 </div>
 
-                <div className="col-span-1 space-y-4">
-                    <p className="text-lg">Read Quran</p>
-                    <div className="flex justify-between gap-4">
-                        <div className="w-full space-y-4">
-                            <Button rounded text="Regularly" />
-                            <Button rounded text="Occasionally" />
-                        </div>
-                        <div className="w-full space-y-4">
-                            <Button rounded text="Only Jumah/Friday" />
-                            <Button rounded text="Never Read" />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="">
+                <h1 className="  space-y-2  ">
+                    <span className="text-lg font-semibold pl-2">Select Religious Values</span>
                     <Select
-                        label="Religious Values"
                         name="select"
                         options={[
-                            { key: 'op1', value: 'Select religious values' },
-                            { key: 'op2', value: 'Islam is truth' },
-                            { key: 'op3', value: 'Very islamic' },
-                            { key: 'op4', value: 'Pray 5 times a day' },
-                            { key: 'op4', value: 'Go to Jumma Namaz' },
+                            { vaue: 'op1', label: '--Select--' },
+                            { vaue: 'op2', label: 'Islam is truth' },
+                            { vaue: 'op3', label: 'Very islamic' },
+                            { vaue: 'op4', label: 'Pray 5 times a day' },
+                            { vaue: 'op4', label: 'Go to Jumma Namaz' },
                         ]}
-                        additionalStyles="text-lg font-bold"
                     />
-                </div>
+                </h1>
             </div>
 
-            <div className="flex flex-row py-8 space-x-6 ">
-                <div className="w-full flex gap-8 text-primary-text">
-                    <Button
-                        text="Previous"
-                        additionalStyles="text-black"
-                        rounded
-                        onClick={() => setNextStep(1)}
-                    />
-                    <Button text="Continue" color="one" rounded onClick={() => setNextStep(3)} />
+            <div className="flex flex-row py-14 space-x-6 font-semibold ">
+                <div className="w-full flex gap-8 hover:bg-primary-background hover:text-white hover:rounded">
+                    <Button text="Previous" rounded onClick={() => setNextStep(1)} />
+                </div>
+                <div className="w-full flex gap-8 hover:bg-primary-background hover:text-white hover:rounded">
+                    <Button text="Continue" rounded onClick={() => setNextStep(3)} />
                 </div>
             </div>
         </section>
