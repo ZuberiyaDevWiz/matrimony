@@ -21,14 +21,14 @@ const Login = () => {
 
     return (
         <section className="flex w-full h-screen">
-            <div className="w-1/2 ">
+            <div className=" ">
                 <Image
                     src="/images/img-7.jpeg"
                     alt="login image"
                     width={600}
                     height={570}
                     layout="fixed"
-                    className=" object-cover"
+                    className=" object-cover h-screen"
                 />
             </div>
             <div className="w-1/2 mx-36 mt-5 ">
