@@ -1,6 +1,5 @@
 /* eslint-disable import/prefer-default-export */
 export const Division = [
-    '--select--',
     'Alavi-Bohra',
     'Abbasi',
     'Arab',

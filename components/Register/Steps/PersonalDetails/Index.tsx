@@ -1,9 +1,8 @@
-import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import Button from 'components/Form/Button';
 import Input from 'components/Form/Input';
-import { useState, FC, Dispatch, SetStateAction } from 'react';
-import Select from 'components/Form/Select';
-import { countries } from 'Constant/Countries';
+import { Height } from 'Constant/Height';
+import { FC, Dispatch, SetStateAction } from 'react';
+import ReactSelect from 'react-select';
 import { useRegister } from 'store';
 import clx from 'utils/clx';
 
@@ -11,6 +10,7 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
     setNextStep,
 }) => {
     const { registerDetails, setRegister, step, setStep } = useRegister((state) => state);
+
     return (
         <section className="shadow-2xl px-10 ">
             <div className="my-8 ">
@@ -159,20 +159,22 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                         />
                     </div>
                 </div>
-                <div className="">
-                    <Select
-                        label="Height"
-                        additionalStyles={clx('text-lg font-bold')}
-                        options={[
-                            { key: 'op1', value: '---Feet/Inches---' },
-                            { key: 'op2', value: '4 feet' },
-                            { key: 'op3', value: '4 feet 1 inches' },
-                            { key: 'op4', value: '4 feet 2 inches' },
-                            { key: 'op4', value: '4 feet 3 inches' },
-                            { key: 'op4', value: '4 feet 4 inches' },
-                            { key: 'op4', value: '4 feet 5 inches' },
-                        ]}
+                <div className="space-y-2 ">
+                    <span className="text-lg font-semibold pl-2">Height</span>
+                    <ReactSelect
+                        isMulti={false}
                         name="select"
+                        value={{
+                            label: registerDetails.height,
+                            value: registerDetails.height,
+                        }}
+                        options={Height.map((x) => ({
+                            label: x,
+                            value: x,
+                        }))}
+                        onChange={(e) => {
+                            if (e) setRegister('height', e?.value);
+                        }}
                     />
                 </div>
 

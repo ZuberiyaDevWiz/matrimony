@@ -1,5 +1,6 @@
 const defaultRegister: TypeUser = {
-    annualIncome: 0,
+    annualIncome: '',
+    currency: '',
     citizenShip: '',
     division: '',
     dob: new Date(),
@@ -25,6 +26,7 @@ const defaultRegister: TypeUser = {
     workLocation: '',
     wearsHijab: 'None',
     phoneNo: 12345,
+    briefNote: '',
 };
 
 export default defaultRegister;

@@ -3,9 +3,14 @@ import Button from 'components/Form/Button';
 // import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import { FC, Dispatch, SetStateAction } from 'react';
 import { useRegister } from 'store';
-import Select from 'react-select';
-import { countries } from 'Constant/Countries';
 import clx from 'utils/clx';
+import ReactSelect from 'react-select';
+import { Countries } from 'Constant/Countries';
+import { Education } from 'Constant/Education';
+import Occupation from 'Constant/Occupation';
+import Currency from 'Constant/Currency';
+import AnnualIncome from 'Constant/AnnualIncome';
+import ResidingState from 'Constant/ResidingState';
 
 const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
     setNextStep,
@@ -22,18 +27,21 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
             <div className="grid grid-cols-2 gap-8">
                 <div className="col-span-1 space-y-4">
                     <span className="text-lg font-semibold pl-4">Highest Education</span>
-
-                    <Select
+                    <ReactSelect
+                        isMulti={false}
                         name="select"
-                        options={[
-                            { key: 'op1', value: '---Select---' },
-                            { key: 'op2', value: '4 feet' },
-                            { key: 'op3', value: '4 feet 1 inches' },
-                            { key: 'op4', value: '4 feet 2 inches' },
-                            { key: 'op4', value: '4 feet 3 inches' },
-                            { key: 'op4', value: '4 feet 4 inches' },
-                            { key: 'op4', value: '4 feet 5 inches' },
-                        ]}
+                        value={{
+                            label: registerDetails.highestEducation,
+                            value: registerDetails.highestEducation,
+                        }}
+                        options={Education.map((z) => ({
+                            label: z,
+                            value: z,
+                        }))}
+                        onChange={(e) => {
+                            if (e) setRegister('highestEducation', e?.value);
+                        }}
+                        isOptionDisabled={(option) => option.value === '-ENGINEERING-'}
                     />
                 </div>
 
@@ -102,17 +110,20 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                 </div>
                 <div className="col-span-1 space-y-4">
                     <span className="text-lg font-semibold pl-4">Occupation</span>
-                    <Select
+                    <ReactSelect
+                        isMulti={false}
                         name="select"
-                        options={[
-                            { key: 'op1', value: '---Select---' },
-                            { key: 'op2', value: '4 feet' },
-                            { key: 'op3', value: '4 feet 1 inches' },
-                            { key: 'op4', value: '4 feet 2 inches' },
-                            { key: 'op4', value: '4 feet 3 inches' },
-                            { key: 'op4', value: '4 feet 4 inches' },
-                            { key: 'op4', value: '4 feet 5 inches' },
-                        ]}
+                        value={{
+                            label: registerDetails.occupation,
+                            value: registerDetails.occupation,
+                        }}
+                        options={Occupation.map((z) => ({
+                            label: z,
+                            value: z,
+                        }))}
+                        onChange={(e) => {
+                            if (e) setRegister('occupation', e?.value);
+                        }}
                     />
                 </div>
                 <div className="col-span-1 ">
@@ -120,34 +131,40 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                         <div className="flex gap-4 ">
                             <div className="w-full space-y-4">
                                 <span className="text-lg font-semibold pl-4">Select Currency</span>
-                                <Select
+                                <ReactSelect
+                                    isMulti={false}
                                     name="select"
-                                    options={[
-                                        { key: 'op1', value: '---Select Currency---' },
-                                        { key: 'op2', value: '4 feet' },
-                                        { key: 'op3', value: '4 feet 1 inches' },
-                                        { key: 'op4', value: '4 feet 2 inches' },
-                                        { key: 'op4', value: '4 feet 3 inches' },
-                                        { key: 'op4', value: '4 feet 4 inches' },
-                                        { key: 'op4', value: '4 feet 5 inches' },
-                                    ]}
+                                    value={{
+                                        label: registerDetails.currency,
+                                        value: registerDetails.currency,
+                                    }}
+                                    options={Currency.map((z) => ({
+                                        label: z,
+                                        value: z,
+                                    }))}
+                                    onChange={(e) => {
+                                        if (e) setRegister('currency', e?.value);
+                                    }}
                                 />
                             </div>
                             <div className="w-full space-y-4">
                                 <span className="text-lg font-semibold pl-4">
-                                    Select Amount Per Annum
+                                    Select Annual Income
                                 </span>
-                                <Select
+                                <ReactSelect
+                                    isMulti={false}
                                     name="select"
-                                    options={[
-                                        { key: 'op1', value: '---Select Amount---' },
-                                        { key: 'op2', value: '4 feet' },
-                                        { key: 'op3', value: '4 feet 1 inches' },
-                                        { key: 'op4', value: '4 feet 2 inches' },
-                                        { key: 'op4', value: '4 feet 3 inches' },
-                                        { key: 'op4', value: '4 feet 4 inches' },
-                                        { key: 'op4', value: '4 feet 5 inches' },
-                                    ]}
+                                    value={{
+                                        label: registerDetails.annualIncome,
+                                        value: registerDetails.annualIncome,
+                                    }}
+                                    options={AnnualIncome.map((z) => ({
+                                        label: z,
+                                        value: z,
+                                    }))}
+                                    onChange={(e) => {
+                                        if (e) setRegister('annualIncome', e?.value);
+                                    }}
                                 />
                             </div>
                         </div>
@@ -156,58 +173,75 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
 
                 <div className="col-span-1 space-y-4">
                     <span className="text-lg font-semibold pl-4">Work Location</span>
-                    <Select
+                    <ReactSelect
+                        isMulti={false}
                         name="select"
-                        options={[
-                            { key: 'op1', value: '---Select---' },
-                            { key: 'op2', value: '4 feet' },
-                            { key: 'op3', value: '4 feet 1 inches' },
-                            { key: 'op4', value: '4 feet 2 inches' },
-                            { key: 'op4', value: '4 feet 3 inches' },
-                            { key: 'op4', value: '4 feet 4 inches' },
-                            { key: 'op4', value: '4 feet 5 inches' },
-                        ]}
+                        value={{
+                            label: registerDetails.workLocation,
+                            value: registerDetails.workLocation,
+                        }}
+                        options={Countries.map((z) => ({
+                            label: z.name,
+                            value: z.name,
+                        }))}
+                        onChange={(e) => {
+                            if (e) setRegister('workLocation', e?.value);
+                        }}
                     />
                 </div>
                 <div className="col-span-1 space-y-4">
                     <span className="text-lg font-semibold pl-4">Residing State</span>
-                    <Select
+                    <ReactSelect
+                        isMulti={false}
                         name="select"
-                        options={[
-                            { key: 'op1', value: '---Select---' },
-                            { key: 'op2', value: '4 feet' },
-                            { key: 'op3', value: '4 feet 1 inches' },
-                            { key: 'op4', value: '4 feet 2 inches' },
-                            { key: 'op4', value: '4 feet 3 inches' },
-                            { key: 'op4', value: '4 feet 4 inches' },
-                            { key: 'op4', value: '4 feet 5 inches' },
-                        ]}
+                        value={{
+                            label: registerDetails.residingState,
+                            value: registerDetails.residingState,
+                        }}
+                        options={ResidingState.map((z) => ({
+                            label: z,
+                            value: z,
+                        }))}
+                        onChange={(e) => {
+                            if (e) setRegister('residingState', e?.value);
+                        }}
                     />
                 </div>
 
                 <div className="col-span-1 space-y-4">
                     <span className="text-lg font-semibold pl-4">Residing City</span>
-                    <Select
+                    <ReactSelect
+                        isMulti={false}
                         name="select"
-                        options={[
-                            { key: 'op1', value: '---Select---' },
-                            { key: 'op2', value: '4 feet' },
-                            { key: 'op3', value: '4 feet 1 inches' },
-                            { key: 'op4', value: '4 feet 2 inches' },
-                            { key: 'op4', value: '4 feet 3 inches' },
-                            { key: 'op4', value: '4 feet 4 inches' },
-                            { key: 'op4', value: '4 feet 5 inches' },
-                        ]}
+                        value={{
+                            label: registerDetails.highestEducation,
+                            value: registerDetails.highestEducation,
+                        }}
+                        options={Education.map((z) => ({
+                            label: z,
+                            value: z,
+                        }))}
+                        onChange={(e) => {
+                            if (e) setRegister('highestEducation', e?.value);
+                        }}
                     />
                 </div>
                 <div className="col-span-1 space-y-4">
                     <span className="text-lg font-semibold pl-4">Citizenship</span>
-                    <Select
+                    <ReactSelect
+                        isMulti={false}
                         name="select"
-                        options={countries.map((c) => ({
-                            key: c.name,
-                            value: c.name,
+                        value={{
+                            label: registerDetails.citizenShip,
+                            value: registerDetails.citizenShip,
+                        }}
+                        options={Countries.map((z) => ({
+                            label: z.name,
+                            value: z.name,
                         }))}
+                        onChange={(e) => {
+                            if (e) setRegister('citizenShip', e?.value);
+                        }}
                     />
                 </div>
             </div>

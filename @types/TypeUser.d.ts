@@ -29,12 +29,14 @@ declare global {
             | 'Not Working'
             | null;
         occupation: string;
-        annualIncome: number;
+        currency: string;
+        annualIncome: string;
         workLocation: string;
         residingState: string;
         residingCity: string;
         citizenShip: string;
         phoneNo: number;
+        briefNote: string;
     }
 }
 

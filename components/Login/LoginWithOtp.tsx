@@ -1,9 +1,9 @@
-import { FormEvent } from 'react';
 import Input from 'components/Form/Input';
+import { FormEvent } from 'react';
 import Button from 'components/Form/Button';
 import Router from 'next/router';
 import Select from 'components/Form/Select';
-import { countries } from 'Constant/Countries';
+import { Countries } from 'Constant/Countries';
 
 const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ const LoginWithOtp = () => (
                     <Select
                         name="code"
                         label="CODE"
-                        options={countries.map((code) => ({
+                        options={Countries.map((code) => ({
                             key: code.code,
                             value: code.code,
                         }))}

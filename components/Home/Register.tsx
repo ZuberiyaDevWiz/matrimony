@@ -5,7 +5,7 @@ import Select from 'components/Form/Select';
 import Button from 'components/Form/Button';
 import Link from 'next/link';
 import Router from 'next/router';
-import { countries } from 'Constant/Countries';
+import { Countries } from 'Constant/Countries';
 import { useRegister } from 'store';
 
 const Register = () => {
@@ -60,7 +60,7 @@ const Register = () => {
                             <Select
                                 name="code"
                                 label="CODE"
-                                options={countries.map((code) => ({
+                                options={Countries.map((code) => ({
                                     key: code.code,
                                     value: code.code,
                                 }))}
