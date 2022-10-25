@@ -1,18 +1,17 @@
 import { FC, Dispatch, SetStateAction, useState } from 'react';
 import Button from 'components/Form/Button';
 
-const PhotoAlbum: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ setNextStep }) => (
+const MyAlbum: FC<{ setNextPhoto: Dispatch<SetStateAction<number>> }> = ({ setNextPhoto }) => (
     <>
-        <h1>Photo Album</h1>
         <div className="pt-20 w-1/2 text-white">
             <Button
                 text="Myphotos"
                 color="one"
                 onClick={() => {
-                    setNextStep(4);
+                    setNextPhoto(2);
                 }}
             />
         </div>
     </>
 );
-export default PhotoAlbum;
+export default MyAlbum;
