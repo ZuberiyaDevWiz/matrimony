@@ -178,7 +178,7 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     />
                 </div>
 
-                <Input label="Weight" placeholder="Enter weight.." rounded />
+                <Input label="Weight" placeholder="Enter weight.." rounded required />
             </div>
 
             <div className="flex flex-row py-14 space-x-6 font-semibold">

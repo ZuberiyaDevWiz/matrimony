@@ -27,6 +27,7 @@ const defaultRegister: TypeUser = {
     wearsHijab: 'None',
     phoneNo: 12345,
     briefNote: '',
+    select: '',
 };
 
 export default defaultRegister;

@@ -6,23 +6,26 @@ import Button from 'components/Form/Button';
 import Link from 'next/link';
 import Router from 'next/router';
 import { Countries } from 'Constant/Countries';
-import { useRegister } from 'store';
+import { useRegister, USeForgotPassword } from 'store';
+import axios from 'axios';
 
 const Register = () => {
     const { registerDetails, setRegister } = useRegister((state) => state);
+    const phoneNumber = USeForgotPassword((state: any) => state.phoneNumber);
+    const setPhoneNumber = USeForgotPassword((state: any) => state.setPhoneNumber);
 
     const registerHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-    };
-
-    const clickHandler = () => {
-        if (registerDetails.phoneNo > 10 && registerDetails.phoneNo < 10) {
-            console.log('please enter a valid number');
+        if (phoneNumber.length === 10) {
+            Router.push('/register');
+        } else {
+            alert('please enter valid phone number');
         }
     };
 
     const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setRegister(e.target.name, e.target.value);
+        setPhoneNumber(e.target.value);
     };
 
     return (
@@ -48,14 +51,16 @@ const Register = () => {
                     />
                     <Input
                         placeholder="Enter your Name"
+                        name=""
                         label="NAME"
                         type="text"
                         required
                         rounded
                         additionalStyles="text-sm"
+                        changeHandler={changeHandler}
                     />
                     {/* <Input placeholder='Enter your Email' label='EMAIL ADDRESS' type='email' required rounded additionalStyles='text-sm'/> */}
-                    <div className="w-[10%] flex gap-2">
+                    <div className="w-[100%] flex gap-2">
                         <div className="w-[30%]">
                             <Select
                                 name="code"
@@ -81,7 +86,7 @@ const Register = () => {
                         </div>
                     </div>
                     <div className="flex items-baseline justify-start pr-14 pt-3 pl-3">
-                        <input type="checkbox" />
+                        <input type="checkbox" required />
                         <p className="ml-1">
                             I Accept the{' '}
                             <Link href="/">
@@ -99,7 +104,7 @@ const Register = () => {
                         </p>
                     </div>
                     <div className="py-6 ">
-                        <Button text="REGISTER" color="one" submit rounded onClick={clickHandler} />
+                        <Button text="REGISTER" color="one" submit rounded />
                     </div>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import { FC, Dispatch, SetStateAction, FormEvent, useEffect } from 'react';
 import Button from 'components/Form/Button';
 import { useRegister } from 'store';
-import Router from 'next/router';
 import axios from 'axios';
 
 const BreifIntro: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ setNextStep }) => {
@@ -10,6 +9,7 @@ const BreifIntro: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ set
         const body = {
             firstName: 'zuberiya2',
             lastName: 'fathima',
+            select: 'sdksm',
             email: 'zub123',
             dob: new Date('12/11/2022'),
             password: '123456',
@@ -50,7 +50,7 @@ const BreifIntro: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ set
         if (!registerDetails.briefNote) {
             setRegister(
                 'briefNote',
-                `My name is ${registerDetails.firstName} ${registerDetails.lastName} staying at ${registerDetails.residingCity}. I am a simple and practical person with a positive attitude. My beliefs are both modern and traditional. I believe we need to progress and evolve as a society but not lose our traditional moral values. I am currently working for ${registerDetails.employedAt} in ${registerDetails.residingCity} as a ${registerDetails.occupation} I have completed  ${registerDetails.highestEducation}`
+                `${registerDetails.select} ${registerDetails.firstName} ${registerDetails.lastName} staying at ${registerDetails.residingCity}. I am a simple and practical person with a positive attitude. My beliefs are both modern and traditional. I believe we need to progress and evolve as a society but not lose our traditional moral values. I am currently working for ${registerDetails.employedAt} in ${registerDetails.residingCity} as a ${registerDetails.occupation} I have completed  ${registerDetails.highestEducation}`
             );
         }
     });

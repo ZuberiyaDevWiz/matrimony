@@ -64,8 +64,8 @@ const Login = () => {
                         )}
                     </div>
                     <div className="flex flex-cols">
-                        <div className="flex items-start">
-                            <input type="checkbox" />
+                        <div className="flex ">
+                            <input type="checkbox" required />
                             <p className="whitespace-nowrap">keep me logged in</p>
                         </div>
                         <div>
