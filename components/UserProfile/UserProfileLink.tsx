@@ -11,7 +11,7 @@ interface UserProfileLinkProps {
 const UserProfileLink: FC<UserProfileLinkProps> = ({ title, url, additionalStyles }) => (
     <>
         <Link href={url}>
-            <div className="text-red-400">{title}</div>
+            <div className="hover:text-sky-400 cursor-pointer">{title}</div>
         </Link>
     </>
 );
