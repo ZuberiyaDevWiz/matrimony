@@ -55,7 +55,7 @@ const Register = () => {
                         additionalStyles="text-sm"
                     />
                     {/* <Input placeholder='Enter your Email' label='EMAIL ADDRESS' type='email' required rounded additionalStyles='text-sm'/> */}
-                    <div className="w-full flex gap-2">
+                    <div className="w-full h-screen flex gap-2">
                         <div className="w-[30%]">
                             <Select
                                 name="code"

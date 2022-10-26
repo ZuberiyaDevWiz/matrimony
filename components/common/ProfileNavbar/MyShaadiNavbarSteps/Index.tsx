@@ -1,7 +1,7 @@
 import { useState, FC, SetStateAction, Dispatch } from 'react';
 import clx from 'utils/clx';
 import Dashboard from './Dashboard';
-import MyProfile from './Myprofile';
+import MyProfile from './MyProfile';
 import PartnerPreferences from './PartnerPreferences';
 import Settings from './Settings';
 import More from './More';

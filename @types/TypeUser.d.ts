@@ -7,7 +7,7 @@ declare global {
         email: string;
         dob: Date;
         password: string;
-        gender: 'MALE' | 'FEMALE';
+        gender: string;
         section: string;
         division: string;
         willingToMarryFrom: 'Same Division' | 'Other Division also' | null;

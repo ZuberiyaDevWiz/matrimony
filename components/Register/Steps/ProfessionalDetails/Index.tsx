@@ -6,11 +6,13 @@ import { useRegister } from 'store';
 import clx from 'utils/clx';
 import ReactSelect from 'react-select';
 import { Countries } from 'Constant/Countries';
-import { Education } from 'Constant/Education';
-import Occupation from 'Constant/Occupation';
-import Currency from 'Constant/Currency';
-import AnnualIncome from 'Constant/AnnualIncome';
-import ResidingState from 'Constant/ResidingState';
+import {
+    AnnualIncome,
+    Currency,
+    Education,
+    Occupation,
+    ResidingState,
+} from 'Constant/ProfessionalLinks';
 
 const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
     setNextStep,

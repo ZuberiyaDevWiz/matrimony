@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import ForgotPasswords from 'components/ForgotPassword/Index';
+import ForgotPassword from 'components/ForgotPassword/Forgot';
 
-const passwordPage: FC = () => <ForgotPasswords />;
+const passwordPage: FC = () => <ForgotPassword />;
 
 export default passwordPage;

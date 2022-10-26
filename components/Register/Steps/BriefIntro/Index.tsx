@@ -8,15 +8,15 @@ const BreifIntro: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ set
     const submitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const body = {
-            firstName: 'zuberiya2',
-            lastName: 'fathima',
-            email: 'zub123',
+            firstName: '',
+            lastName: '',
+            email: '',
             dob: new Date('12/11/2022'),
-            password: '123456',
-            gender: 'FEMALE',
-            section: 'jndjwsnjn',
-            division: 'jnfjnejfnw',
-            willingToMarryFrom: 'Same Division',
+            password: '',
+            gender: '',
+            section: '',
+            division: '',
+            willingToMarryFrom: '',
             wearsHijab: 'Hijab',
             ReadsQuran: 'Only Jumah/Friday',
             maritialStatus: 'unmarried',
