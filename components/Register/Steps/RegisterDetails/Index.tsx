@@ -139,7 +139,6 @@ const RegisterDetails: FC<{
                             text="Next"
                             rounded
                             additionalStyles="font-semibold text-white"
-                            onClick={clickHandler}
                         />
                     </div>
                 </div>

@@ -58,7 +58,7 @@ const BreifIntro: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ set
     return (
         <section className="shadow-2xl px-10">
             <div className="my-8 ">
-                <h1 className=" text-lg font-semibold">
+                <h1 className=" text-xl font-semibold text-primary-background py-3">
                     Write a breif introduction about you in your own words
                 </h1>
             </div>
@@ -73,15 +73,12 @@ const BreifIntro: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ set
                         Hello.
                     </textarea>
                 </div>
-                <div className="flex flex-row py-14 space-x-6 ">
-                    <div className="w-full flex gap-8 font-semibold text-primary-text">
-                        <Button
-                            text="Previous"
-                            color="one"
-                            rounded
-                            onClick={() => setNextStep(4)}
-                        />
-                        <Button text="Complete Registration" rounded color="one" submit />
+                <div className=" flex flex-row py-8 space-x-6 ">
+                    <div className=" w-[49%] flex gap-8 hover:bg-primary-background hover:text-white hover:rounded">
+                        <Button text="Previous" onClick={() => setNextStep(4)} rounded />
+                    </div>
+                    <div className="w-[49%] flex gap-8 hover:bg-primary-background hover:text-white hover:rounded">
+                        <Button text="Complete Registration" submit rounded />
                     </div>
                 </div>
             </form>
