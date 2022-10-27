@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { FC } from 'react';
-import UseracSetting from 'components/Usersetting/UseracSettings';
+import UserSetting from 'components/UserSetting/Settings/Index';
 
-const UseraccountPage: FC = () => <UseracSetting />;
+const UserSettingPage: FC = () => <UserSetting />;
 
-export default UseraccountPage;
+export default UserSettingPage;
