@@ -51,12 +51,13 @@ const Register = () => {
                     />
                     <Input
                         placeholder="Enter your Name"
-                        name=""
+                        name="fullname"
                         label="NAME"
                         type="text"
                         required
                         rounded
                         additionalStyles="text-sm"
+                        value={registerDetails.fullname}
                         changeHandler={changeHandler}
                     />
                     {/* <Input placeholder='Enter your Email' label='EMAIL ADDRESS' type='email' required rounded additionalStyles='text-sm'/> */}

@@ -3,6 +3,7 @@
 declare global {
     interface TypeUser {
         select: string;
+        fullname: string;
         firstName: string;
         lastName: string;
         email: string;

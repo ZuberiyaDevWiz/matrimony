@@ -3,7 +3,7 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from 'react';
-import SubmitEmail from './SubmitEmail';
+import SubmitEmail from './PhoneNumber';
 import OTP from './Otp';
 import NewPassword from './NewPassword';
 
