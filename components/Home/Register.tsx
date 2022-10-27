@@ -6,30 +6,33 @@ import Button from 'components/Form/Button';
 import Link from 'next/link';
 import Router from 'next/router';
 import { Countries } from 'Constant/Countries';
-import { useRegister } from 'store';
+import { useRegister, USeForgotPassword } from 'store';
+import axios from 'axios';
 
 const Register = () => {
     const { registerDetails, setRegister } = useRegister((state) => state);
+    const phoneNumber = USeForgotPassword((state: any) => state.phoneNumber);
+    const setPhoneNumber = USeForgotPassword((state: any) => state.setPhoneNumber);
 
     const registerHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-    };
-
-    const clickHandler = () => {
-        if (registerDetails.phoneNo > 10 && registerDetails.phoneNo < 10) {
-            console.log('please enter a valid number');
+        if (phoneNumber.length === 10) {
+            Router.push('/register');
+        } else {
+            alert('please enter valid phone number');
         }
     };
 
     const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setRegister(e.target.name, e.target.value);
+        setPhoneNumber(e.target.value);
     };
 
     return (
         <form onSubmit={registerHandler} className="shadow-2xl bg-black bg-opacity-50 rounded-md ">
             <div className="items-center w-96 h-[80vh] text-white">
                 <div className="p-5 ">
-                    <p className="text-center font-bold text-2xl text-primary-text tracking-wider pb-4">
+                    <p className="text-center font-bold text-2xl text-primary-text tracking-wider pb-6">
                         Register for Free
                     </p>
                     <Select
@@ -48,14 +51,17 @@ const Register = () => {
                     />
                     <Input
                         placeholder="Enter your Name"
+                        name="fullname"
                         label="NAME"
                         type="text"
                         required
                         rounded
                         additionalStyles="text-sm"
+                        value={registerDetails.fullname}
+                        changeHandler={changeHandler}
                     />
                     {/* <Input placeholder='Enter your Email' label='EMAIL ADDRESS' type='email' required rounded additionalStyles='text-sm'/> */}
-                    <div className="w-full h-screen flex gap-2">
+                    <div className="w-full flex gap-2">
                         <div className="w-[30%]">
                             <Select
                                 name="code"
@@ -80,8 +86,8 @@ const Register = () => {
                             />
                         </div>
                     </div>
-                    <div className="flex items-baseline justify-start pr-14 pt-3 pl-3">
-                        <input type="checkbox" />
+                    <div className="flex items-baseline justify-start pr-14 pt-6 pl-3">
+                        <input type="checkbox" required />
                         <p className="ml-1">
                             I Accept the{' '}
                             <Link href="/">
@@ -98,8 +104,8 @@ const Register = () => {
                             </Link>
                         </p>
                     </div>
-                    <div className="py-6 ">
-                        <Button text="REGISTER" color="one" submit rounded onClick={clickHandler} />
+                    <div className="py-6">
+                        <Button text="REGISTER" color="one" submit rounded />
                     </div>
                 </div>
             </div>
