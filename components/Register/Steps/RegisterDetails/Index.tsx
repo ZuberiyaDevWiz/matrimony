@@ -3,8 +3,7 @@
 import { FormEvent, FC, Dispatch, SetStateAction, ChangeEvent, useState } from 'react';
 import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
-import { Division } from 'Constant/Division';
-import { Section } from 'Constant/Section';
+import { Division, Section, GenderLink } from 'Constant/RegisterLinks';
 import { useRegister } from 'store';
 import ReactSelect from 'react-select';
 
@@ -13,17 +12,16 @@ const RegisterDetails: FC<{
 }> = ({ setNextStep }) => {
     const { registerDetails, setRegister, step, setStep } = useRegister((state) => state);
 
-    const registerHandler = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault;
-    };
+    const clickHandler = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
 
-    const clickHandler = () => {
-        if (registerDetails.division && registerDetails.section) {
+        if (registerDetails.gender && registerDetails.division && registerDetails.section) {
             setNextStep(2);
-            return;
         }
         // eslint-disable-next-line no-alert
-        return alert('Please enter all the details');
+        else {
+            alert('Please enter all the details');
+        }
     };
     const changeHandler = (e: ChangeEvent<HTMLInputElement>) =>
         setRegister(e.target.name, e.target.value);
@@ -56,6 +54,26 @@ const RegisterDetails: FC<{
                             value={registerDetails.lastName}
                             changeHandler={changeHandler}
                         />
+                        <Input
+                            name="email"
+                            placeholder="Enter Email"
+                            type="email"
+                            required
+                            rounded
+                            label="Enter Email"
+                            value={registerDetails.email}
+                            changeHandler={changeHandler}
+                        />
+                        <Input
+                            name="password"
+                            placeholder="Enter Password"
+                            type="password"
+                            required
+                            rounded
+                            label="Enter Password"
+                            value={registerDetails.password}
+                            changeHandler={changeHandler}
+                        />
                         <div className="  space-y-2  ">
                             <span className="text-lg font-semibold pl-2">Gender</span>
                             <ReactSelect
@@ -66,17 +84,10 @@ const RegisterDetails: FC<{
                                     label: registerDetails.gender,
                                     value: registerDetails.gender,
                                 }}
-                                options={[
-                                    {
-                                        label: 'MALE',
-
-                                        value: 'MALE',
-                                    },
-                                    {
-                                        label: 'FEMALE',
-                                        value: 'FEMALE',
-                                    },
-                                ]}
+                                options={GenderLink.map((v) => ({
+                                    label: v,
+                                    value: v,
+                                }))}
                                 onChange={(e) => {
                                     if (e) setRegister('gender', e?.value);
                                 }}
@@ -110,7 +121,7 @@ const RegisterDetails: FC<{
                                 onChange={(e) => {
                                     if (e) setRegister('section', e?.value);
                                 }}
-                            />{' '}
+                            />
                         </div>
                         <div className="  space-y-2  ">
                             <span className="text-lg font-semibold pl-2">Division</span>

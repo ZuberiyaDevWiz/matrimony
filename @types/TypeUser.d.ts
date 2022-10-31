@@ -9,11 +9,12 @@ declare global {
         email: string;
         dob: Date;
         password: string;
-        gender: 'MALE' | 'FEMALE';
+        gender: string;
         section: string;
         division: string;
         willingToMarryFrom: 'Same Division' | 'Other Division also' | null;
         wearsHijab?: 'Hijab' | 'Niqab' | 'None';
+
         ReadsQuran: 'Regularly' | 'Only Jumah/Friday' | 'Occasionally' | 'Never Read' | null;
         ReligiousValues: string;
         maritialStatus: 'Unmarried' | 'Married' | 'Widow' | 'Separated' | 'Divorced' | null;

@@ -32,7 +32,7 @@ const Register = () => {
         <form onSubmit={registerHandler} className="shadow-2xl bg-black bg-opacity-50 rounded-md ">
             <div className="items-center w-96 h-[80vh] text-white">
                 <div className="p-5 ">
-                    <p className="text-center font-bold text-2xl text-primary-text tracking-wider pb-4">
+                    <p className="text-center font-bold text-2xl text-primary-text tracking-wider pb-6">
                         Register for Free
                     </p>
                     <Select
@@ -61,7 +61,7 @@ const Register = () => {
                         changeHandler={changeHandler}
                     />
                     {/* <Input placeholder='Enter your Email' label='EMAIL ADDRESS' type='email' required rounded additionalStyles='text-sm'/> */}
-                    <div className="w-[100%] flex gap-2">
+                    <div className="w-full flex gap-2">
                         <div className="w-[30%]">
                             <Select
                                 name="code"
@@ -86,7 +86,7 @@ const Register = () => {
                             />
                         </div>
                     </div>
-                    <div className="flex items-baseline justify-start pr-14 pt-3 pl-3">
+                    <div className="flex items-baseline justify-start pr-14 pt-6 pl-3">
                         <input type="checkbox" required />
                         <p className="ml-1">
                             I Accept the{' '}
@@ -104,7 +104,7 @@ const Register = () => {
                             </Link>
                         </p>
                     </div>
-                    <div className="py-6 ">
+                    <div className="py-6">
                         <Button text="REGISTER" color="one" submit rounded />
                     </div>
                 </div>

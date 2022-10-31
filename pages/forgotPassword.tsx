@@ -1,4 +1,4 @@
-import ForgotPassword from 'components/ForgotPassword/Index';
+import ForgotPassword from 'components/ForgotPassword/Forgot';
 
 const ForgotPasswordPage = () => (
     <>
