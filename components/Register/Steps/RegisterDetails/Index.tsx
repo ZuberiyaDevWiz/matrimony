@@ -107,7 +107,6 @@ const RegisterDetails: FC<{
                         <div className="  space-y-2  ">
                             <span className="text-lg font-semibold pl-2">Section</span>
                             <ReactSelect
-                                isMulti={false}
                                 name="select"
                                 placeholder="--Select--"
                                 value={{
@@ -126,19 +125,31 @@ const RegisterDetails: FC<{
                         <div className="  space-y-2  ">
                             <span className="text-lg font-semibold pl-2">Division</span>
                             <ReactSelect
-                                isMulti={false}
                                 name="Select"
                                 placeholder="--Select--"
                                 value={{
-                                    label: registerDetails.division,
-                                    value: registerDetails.division,
+                                    label:
+                                        registerDetails?.division.length > 0
+                                            ? registerDetails.division
+                                            : undefined,
+                                    value:
+                                        registerDetails?.division.length > 0
+                                            ? registerDetails.division
+                                            : undefined,
                                 }}
-                                options={Division.map((v) => ({
-                                    label: v,
-                                    value: v,
-                                }))}
+                                options={[
+                                    {
+                                        label: '-Select',
+                                        value: '-Select',
+                                    },
+                                    ...Division.map((e) => ({
+                                        value: e,
+                                        label: e,
+                                    })),
+                                ]}
+                                isOptionDisabled={(option) => option.label === '-Select'}
                                 onChange={(e) => {
-                                    if (e) setRegister('division', e?.value);
+                                    if (e?.value) setRegister('division', e?.value);
                                 }}
                             />{' '}
                         </div>

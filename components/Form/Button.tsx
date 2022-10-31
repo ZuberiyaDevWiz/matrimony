@@ -27,7 +27,7 @@ const Button: React.FC<ButtonProps> = (props) => {
                 color === 'one'
                     ? 'bg-primary-background hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-700 '
                     : color === 'two'
-                    ? 'bg-blue-400 hover:bg-blue-500 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-600 '
+                    ? 'bg-white hover:bg-primary-background hover:text-white active:bg-red-700  focus:outline-none focus:ring focus:ring-red-700 '
                     : color === 'three'
                     ? 'bg-green-400 hover:bg-green-500 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-600 '
                     : color === 'four'

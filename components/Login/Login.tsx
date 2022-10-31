@@ -2,8 +2,10 @@
 import Input from 'components/Form/Input';
 import Button from 'components/Form/Button';
 import Image from 'next/image';
+import CheckBox from 'components/Form/Checkbox';
+import Navbar from 'components/common/Navbar/Navbar';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, ChangeEvent } from 'react';
 import Router from 'next/router';
 import Link from 'next/link';
 
@@ -19,83 +21,83 @@ const otpHandler = () => {
 const Login = () => {
     const [show, setShow] = useState(false);
 
-    return (
-        <section className="flex w-full h-screen">
-            <div className=" ">
-                <Image
-                    src="/images/img-7.jpeg"
-                    alt="login image"
-                    width={600}
-                    height={570}
-                    layout="fixed"
-                    className=" object-cover h-screen"
-                />
-            </div>
-            <div className="w-1/2 mx-36 mt-5 ">
-                <h1 className="font-bold text-[24px] text-center mb-4">Login</h1>
-                <form onSubmit={submitHandler}>
-                    <div className="w-full mb-4 ">
-                        <Input
-                            label="Enter Email or Mobile"
-                            placeholder="Email or Mobile.."
-                            required
-                            rounded
-                            type="email"
-                        />
-                    </div>
-                    <div className="w-full relative mb-4 ">
-                        <Input
-                            label="Password"
-                            placeholder="Password"
-                            required
-                            rounded
-                            type={show ? 'text' : 'password'}
-                        />
-                        {show ? (
-                            <AiOutlineEye
-                                onClick={() => setShow(!show)}
-                                className="absolute top-1/2 translate-y-0.5 right-3"
-                            />
-                        ) : (
-                            <AiOutlineEyeInvisible
-                                onClick={() => setShow(!show)}
-                                className="absolute top-1/2 translate-y-0.5 right-3"
-                            />
-                        )}
-                    </div>
-                    <div className="flex flex-cols">
-                        <div className="flex ">
-                            <input type="checkbox" required />
-                            <p className="whitespace-nowrap">keep me logged in</p>
-                        </div>
-                        <div>
-                            <Link href="/forgotPassword">
-                                <p className="pl-32 text-blue-700 cursor-pointer">
-                                    Forgot password?
-                                </p>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className=" py-7 w-full mx-auto  ">
-                        <Button text="Login" color="two" rounded submit />
-                    </div>
-                </form>
-                <div className="flex text-xs space-x-4 items-center w-1/2 mx-auto">
-                    <hr className="w-full h-[2px] bg-black opacity-20" />
-                    <p>OR</p>
-                    <hr className="w-full h-[2px] bg-black opacity-20" />
-                </div>
-                <div className="w-full mt-4 mx-auto pb-4">
-                    <Button text="Login with OTP" color="two" rounded onClick={otpHandler} />
-                </div>
+    const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        e.target.value;
+    };
 
-                <div className="flex justify-center space-x-2">
-                    <p>Don't have an account? </p>
-                    <Link href="register">
-                        <span className="hover:underline cursor-pointer hover:underline-offset-2 tracking-wide">
-                            Create an account
-                        </span>
-                    </Link>
+    return (
+        <section>
+            <div>
+                <Navbar />
+            </div>
+            <div className="container mx-auto w-full h-fit bg-gray-400">
+                <div className="flex justify-center px-6">
+                    <div className="w-full h-screen xl:w-3/4 lg:w-11/12 flex">
+                        <Image src="/images/img-4.jpg" alt="imageLogin" width="500" height="500" />
+                        <div className="w-full lg:w-1/2 bg-white p-5 ">
+                            <div className="px-8 mb-4 text-center">
+                                <h3 className="pt-4 mb-2 text-2xl font-semibold">
+                                    Hello, Welcome back!
+                                </h3>
+                                <p className="mb-4 text-base text-gray-700">
+                                    please enter your details
+                                </p>
+                            </div>
+
+                            <form
+                                className="px-8 pt-6 pb-4 mb-4 space-y-2 bg-white"
+                                onSubmit={submitHandler}
+                            >
+                                <div>
+                                    <Input
+                                        label="Email"
+                                        placeholder="Enter your Email.."
+                                        rounded
+                                        required
+                                        changeHandler={changeHandler}
+                                    />
+                                </div>
+                                <div className="">
+                                    <Input
+                                        label="Password"
+                                        placeholder="Enter your Password.."
+                                        type="password"
+                                        rounded
+                                        required
+                                        changeHandler={changeHandler}
+                                    />
+                                </div>
+                                <span className="pl-2 ">
+                                    <CheckBox name="checkbox" label="" options={['Remember Me']} />
+                                </span>
+                                <div className="my-6 py-4 text-center">
+                                    <Button
+                                        text="Login"
+                                        color="one"
+                                        rounded
+                                        submit
+                                        additionalButtonStyles="text-white font-bold"
+                                    />
+                                </div>
+                                <hr className="mb-6 border-t" />
+                                <div className="my-6 py-4 text-center">
+                                    <Button
+                                        onClick={otpHandler}
+                                        text="Login with OTP"
+                                        color="two"
+                                        rounded
+                                        additionalButtonStyles="text-black font-semibold no-fill"
+                                    />
+                                </div>
+                                <div className="text-center text-sm text-blue-500 align-baseline hover:text-blue-800">
+                                    <Link href="/forgotPassword">Forgot Password</Link>
+                                </div>
+                                <div className="text-center text-sm text-blue-500 align-baseline hover:text-blue-800">
+                                    <Link href="/register">Don't have an account? Sign up</Link>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

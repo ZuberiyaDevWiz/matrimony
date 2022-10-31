@@ -37,7 +37,7 @@ const Input: FC<InputProps> = (props) => {
     return (
         <div>
             <label htmlFor={name}>
-                <p className="font-medium text-sm pl-3 py-2 ">{label}</p>
+                <p className="font-medium text-base pl-3 py-2 ">{label}</p>
                 <div className="">
                     <input
                         name={name}
@@ -51,7 +51,7 @@ const Input: FC<InputProps> = (props) => {
                         width={width}
                         height={height}
                         className={clx(
-                            'w-full h-10 pl-3 border-[1px] border-gray-500 text-black text-base',
+                            'w-full h-10 pl-3 border-[1px] border-gray-500 text-black text-sm',
                             rounded ? '!rounded-md' : '!rounded',
                             additionalStyles || null
                         )}
