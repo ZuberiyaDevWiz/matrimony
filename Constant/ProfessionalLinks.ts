@@ -1,3 +1,5 @@
+import { CityProp } from 'store/slices/useRegister';
+
 export const Occupation = [
     '--Select--',
     '-Accounting, Banking & Finance-',
@@ -233,12 +235,14 @@ export const AnnualIncome = [
 ];
 
 export const ResidingState = [
-    '--Select--',
-    'Andhra Pradesh',
     'Arunachal Pradesh',
     'Assam',
+    'Andhra Pradesh',
     'Bihar',
     'Chhattisgarh',
+    'Dadra and Nagar Haveli',
+    'Daman and Diu',
+    'Delhi',
     'Goa',
     'Gujarat',
     'Haryana',
@@ -253,21 +257,14 @@ export const ResidingState = [
     'Meghalaya',
     'Mizoram',
     'Nagaland',
-    'Odisha',
+    'Orissa',
+    'Pondicherry Puduche',
     'Punjab',
     'Rajasthan',
     'Sikkim',
     'Tamil Nadu',
-    'Telangana',
     'Tripura',
-    'Uttarakhand',
     'Uttar Pradesh',
+    'Uttarakhand',
     'West Bengal',
-    'Andaman and Nicobar Islands',
-    'Chandigarh',
-    'Dadra and Nagar Haveli',
-    'Daman and Diu',
-    'Delhi',
-    'Lakshadweep',
-    'Puducherry',
 ];

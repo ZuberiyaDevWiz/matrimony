@@ -14,7 +14,6 @@ const UserAccount: FC = () => {
                         <h1 className="text-xl text-gray-400 font-bold mb-3">My Account</h1>
                         <div className="flex justify-between pl-5">
                             <h3 className="text-xl">Email</h3>
-
                             <Link href="/">
                                 <span className="text-base font-bold cursor-pointer">Edit</span>
                             </Link>

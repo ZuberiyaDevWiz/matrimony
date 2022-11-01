@@ -7,11 +7,14 @@ interface checkboxProps {
 }
 
 const CheckBox: FC<checkboxProps> = ({ name, label, options }) => (
-    <div className="mt-3">
+    <div className="">
         <label htmlFor={name}>{label}</label>
         {options.map((option) => (
             <div key={option}>
-                <input type="checkbox" name={name} className="focus:box-border" />
+                <div className=" my-auto flex flex-row">
+                    <input type="checkbox" name={name} className="focus:box-border" />
+                    <span className="pl-2 ">{options}</span>
+                </div>
             </div>
         ))}
     </div>

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { FC } from 'react';
-import UserProfileStatus from 'components/Usersetting/Settings/UserProfileStatus';
+import UserProfileStatus from 'components/UserProfile/AccountSetting/UserProfileStatus';
 
 const UserProfileStatusPage: FC = () => <UserProfileStatus />;
 

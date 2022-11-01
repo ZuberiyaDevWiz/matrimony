@@ -13,11 +13,13 @@ import {
     Occupation,
     ResidingState,
 } from 'Constant/ProfessionalLinks';
+import citiesjson from 'Constant/cities.json';
 
 const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
     setNextStep,
 }) => {
     const { registerDetails, setRegister } = useRegister((state) => state);
+    // console.log(citiesjson[registerDetails.residingState]);
     return (
         <section className="shadow-2xl px-10 ">
             <div className="my-8 ">
@@ -200,10 +202,10 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                             label: registerDetails.residingState,
                             value: registerDetails.residingState,
                         }}
-                        options={ResidingState.map((z) => ({
-                            label: z,
-                            value: z,
-                        }))}
+                        // options={ResidingState.map((z) => ({
+                        //     label: z,
+                        //     value: z,
+                        // }))}
                         onChange={(e) => {
                             if (e) setRegister('residingState', e?.value);
                         }}
@@ -219,13 +221,13 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                             label: registerDetails.highestEducation,
                             value: registerDetails.highestEducation,
                         }}
-                        options={Education.map((z) => ({
-                            label: z,
-                            value: z,
-                        }))}
-                        onChange={(e) => {
-                            if (e) setRegister('highestEducation', e?.value);
-                        }}
+                        // options={citiesjson[registerDetails?.residingState]?.map((city) => ({
+                        //     value: city,
+                        //     label: city,
+                        // }))}
+                        // onChange={(e) => {
+                        //     if (e) setRegister('', e?.value);
+                        // }}
                     />
                 </div>
                 <div className="col-span-1 space-y-4">

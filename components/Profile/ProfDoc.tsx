@@ -1,5 +1,5 @@
 import { FC, Dispatch, SetStateAction } from 'react';
-import UploadFile from 'components/Form/UploadFile';
+import UploadFile from 'components/Form/FileInput';
 import Button from 'components/Form/Button';
 
 const ProfDoc: FC<{ setProfNext: Dispatch<SetStateAction<number>> }> = ({ setProfNext }) => (
@@ -15,7 +15,7 @@ const ProfDoc: FC<{ setProfNext: Dispatch<SetStateAction<number>> }> = ({ setPro
             License
         </p>
 
-        <UploadFile label="Select Document" />
+        <UploadFile label="Select Document" multiple={false} />
         <p className="text-xs text-gray-700 font-semibold">
             *must be less than 15 MB and in jpg, gif, png, bmp or tiff format
         </p>

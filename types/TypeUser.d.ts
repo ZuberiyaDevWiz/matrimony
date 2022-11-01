@@ -1,4 +1,47 @@
+/* eslint-disable no-redeclare */
+/* eslint-disable import/no-unresolved */
 // import { Document } from 'mongoose';
+
+import { States } from '@type/TypeUser';
+
+export type States =
+    | 'Andhra Pradesh'
+    | 'Arunachal Pradesh'
+    | 'Assam'
+    | 'Bihar'
+    | 'Chhattisgarh'
+    | 'Dadra and Nagar Haveli'
+    | 'Daman and Diu'
+    | 'Delhi'
+    | 'Goa'
+    | 'Gujarat'
+    | 'Haryana'
+    | 'Himachal Pradesh'
+    | 'Jammu and Kashmir'
+    | 'Jharkhand'
+    | 'Karnataka'
+    | 'Kerala'
+    | 'Madhya Pradesh'
+    | 'Maharashtra'
+    | 'Manipur'
+    | 'Meghalaya'
+    | 'Mizoram'
+    | 'Nagaland'
+    | 'Orissa'
+    | 'Pondicherry Puduche'
+    | 'Punjab'
+    | 'Rajasthan'
+    | 'Sikkim'
+    | 'Tamil Nadu'
+    | 'Telangana    '
+    | 'Tripura'
+    | 'Uttar Pradesh'
+    | 'Uttarakhand'
+    | 'West Bengal'
+    | 'Andaman and Nicobar Islands'
+    | 'Chandigarh'
+    | 'Lakshadweep'
+    | 'Puducherry';
 
 declare global {
     interface TypeUser {
@@ -35,7 +78,7 @@ declare global {
         currency: string;
         annualIncome: string;
         workLocation: string;
-        residingState: string;
+        residingState: States;
         residingCity: string;
         citizenShip: string;
         phoneNo: number;

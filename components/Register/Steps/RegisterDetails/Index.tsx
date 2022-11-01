@@ -12,14 +12,16 @@ const RegisterDetails: FC<{
 }> = ({ setNextStep }) => {
     const { registerDetails, setRegister, step, setStep } = useRegister((state) => state);
 
-    const clickHandler = (e: FormEvent<HTMLFormElement>) => {
+    const submitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (registerDetails.gender && registerDetails.division && registerDetails.section) {
+        if (
+            registerDetails.gender !== '--Select--' &&
+            registerDetails.division !== '--Select--' &&
+            registerDetails.section !== '--Select--'
+        ) {
             setNextStep(2);
-        }
-        // eslint-disable-next-line no-alert
-        else {
+        } else {
             alert('Please enter all the details');
         }
     };
@@ -27,7 +29,7 @@ const RegisterDetails: FC<{
         setRegister(e.target.name, e.target.value);
 
     return (
-        <form onSubmit={clickHandler}>
+        <form onSubmit={submitHandler}>
             <section className="bg-white mt-[2px] shadow-2xl">
                 <div className="flex flex-col px-10 ">
                     <p className="mt-8 pb-5 text-xl font-semibold text-primary-background ">
@@ -78,20 +80,25 @@ const RegisterDetails: FC<{
                             <span className="text-lg font-semibold pl-2">Gender</span>
                             <ReactSelect
                                 isMulti={false}
-                                name="select"
-                                placeholder="--Select--"
+                                name="Select"
                                 value={{
                                     label: registerDetails.gender,
                                     value: registerDetails.gender,
                                 }}
-                                options={GenderLink.map((v) => ({
-                                    label: v,
-                                    value: v,
-                                }))}
+                                options={[
+                                    {
+                                        label: '--Select--',
+                                        value: '--Select--',
+                                    },
+                                    ...GenderLink.map((e) => ({
+                                        label: e,
+                                        value: e,
+                                    })),
+                                ]}
+                                isOptionDisabled={(option) => option.label === '--Select--'}
                                 onChange={(e) => {
                                     if (e) setRegister('gender', e?.value);
                                 }}
-                                // isOptionDisabled={(option) => option.value === 'FEMALE'}
                             />{' '}
                         </div>
                         <Input
@@ -107,17 +114,22 @@ const RegisterDetails: FC<{
                         <div className="  space-y-2  ">
                             <span className="text-lg font-semibold pl-2">Section</span>
                             <ReactSelect
-                                isMulti={false}
-                                name="select"
-                                placeholder="--Select--"
+                                name="Select"
                                 value={{
                                     label: registerDetails.section,
                                     value: registerDetails.section,
                                 }}
-                                options={Section.map((v) => ({
-                                    label: v,
-                                    value: v,
-                                }))}
+                                options={[
+                                    {
+                                        label: '--Select--',
+                                        value: '--Select--',
+                                    },
+                                    ...Section.map((e) => ({
+                                        value: e,
+                                        label: e,
+                                    })),
+                                ]}
+                                isOptionDisabled={(option) => option.value === '--Select--'}
                                 onChange={(e) => {
                                     if (e) setRegister('section', e?.value);
                                 }}
@@ -126,19 +138,30 @@ const RegisterDetails: FC<{
                         <div className="  space-y-2  ">
                             <span className="text-lg font-semibold pl-2">Division</span>
                             <ReactSelect
-                                isMulti={false}
                                 name="Select"
-                                placeholder="--Select--"
                                 value={{
-                                    label: registerDetails.division,
-                                    value: registerDetails.division,
+                                    label:
+                                        registerDetails?.division.length > 0
+                                            ? registerDetails.division
+                                            : undefined,
+                                    value:
+                                        registerDetails?.division.length > 0
+                                            ? registerDetails.division
+                                            : undefined,
                                 }}
-                                options={Division.map((v) => ({
-                                    label: v,
-                                    value: v,
-                                }))}
+                                options={[
+                                    {
+                                        label: '--Select--',
+                                        value: '--Select--',
+                                    },
+                                    ...Division.map((e) => ({
+                                        value: e,
+                                        label: e,
+                                    })),
+                                ]}
+                                isOptionDisabled={(option) => option.label === '--Select--'}
                                 onChange={(e) => {
-                                    if (e) setRegister('division', e?.value);
+                                    if (e?.value) setRegister('division', e?.value);
                                 }}
                             />{' '}
                         </div>
