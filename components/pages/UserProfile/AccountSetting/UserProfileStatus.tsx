@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import SettingLayout from 'layouts/SettingSideBar';
+import SettingLayout from 'Layouts/SettingSideBar';
 
 const UserProfileStatus: FC = () => (
     <SettingLayout pageTitle="Helloo">

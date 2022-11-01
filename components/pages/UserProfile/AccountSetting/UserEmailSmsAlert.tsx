@@ -2,7 +2,7 @@ import { FC } from 'react';
 import CheckBox from 'components/Form/Checkbox';
 import Radio from 'components/Form/Radio';
 import Button from 'components/Form/Button';
-import SettingLayout from 'layouts/SettingSideBar';
+import SettingLayout from 'Layouts/SettingSideBar';
 
 // eslint-disable-next-line arrow-body-style
 const UserEmailAlert: FC = () => {

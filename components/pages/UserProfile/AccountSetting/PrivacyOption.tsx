@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import { UserPrivacyList } from 'constants/SettingLinks';
-import SettingLayout from 'layouts/SettingSideBar';
+import SettingLayout from 'Layouts/SettingSideBar';
 
 const PrivacyOption: FC = () => (
     <SettingLayout pageTitle="Hello">
