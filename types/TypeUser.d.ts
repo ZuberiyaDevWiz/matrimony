@@ -80,5 +80,3 @@ declare global {
         briefNote: string;
     }
 }
-
-export type AuthKeyT = string;

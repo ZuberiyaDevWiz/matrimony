@@ -15,7 +15,7 @@ const ProfDoc: FC<{ setProfNext: Dispatch<SetStateAction<number>> }> = ({ setPro
             License
         </p>
 
-        <UploadFile label="Select Document" />
+        <UploadFile label="Select Document" multiple />
         <p className="text-xs text-gray-700 font-semibold">
             *must be less than 15 MB and in jpg, gif, png, bmp or tiff format
         </p>

@@ -1,6 +1,6 @@
-// import { States } from '@types/TypeUser';
+import { States } from 'types/TypeUser';
 
-import { AuthKeyT } from 'types/TypeUser';
+// import { AuthKeyT } from 'types/TypeUser';
 
 export const Occupation = [
     '--Select--',
@@ -236,7 +236,7 @@ export const AnnualIncome = [
     'Not applicable',
 ];
 
-export const ResidingState: AuthKeyT[] = [
+export const ResidingState: States[] = [
     'Andhra Pradesh',
     'Arunachal Pradesh',
     'Assam',
@@ -261,7 +261,7 @@ export const ResidingState: AuthKeyT[] = [
     'Rajasthan',
     'Sikkim',
     'Tamil Nadu',
-    'Telangana',
+    // 'Telangana',
     'Tripura',
     'Uttarakhand',
     'Uttar Pradesh',
