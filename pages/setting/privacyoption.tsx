@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { FC } from 'react';
-import PrivacyOption from 'components/UserProfile/AccountSetting/PrivacyOption';
+import PrivacyOption from 'components/pages/UserProfile/AccountSetting/PrivacyOption';
 
 const PrivacyOptionPage: FC = () => <PrivacyOption />;
 

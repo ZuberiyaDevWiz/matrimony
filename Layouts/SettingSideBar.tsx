@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import clx from 'utils/clx';
-import UserSettingLink from 'components/UserSetting/UserSettingLink';
+// import UserSettingLink from 'components/Usersetting/UserSettingLink';
 import Link from 'next/link';
 
 const links = [
@@ -33,7 +33,6 @@ interface SliderProps {
     pageTitle: string;
 }
 
-// eslint-disable-next-line arrow-body-style
 const SettingLayout: FC<SliderProps> = ({ children, pageTitle }) => {
     const router = useRouter();
     const { pathname } = router;

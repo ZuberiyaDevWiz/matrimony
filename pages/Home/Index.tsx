@@ -1,16 +1,18 @@
-import WhyUs from 'components/Home/WhyUs';
-import WhyChooseUs from 'components/Home/WhyChooseUs';
-import Register from 'components/Home/Register';
-import SectionOne from 'components/Home/SectionOne';
-import SectionTwo from 'components/Home/SectionTwo';
+import WhyUs from 'components/pages/Home/WhyUs';
+import WhyChooseUs from 'components/pages/Home/WhyChooseUs';
+import SectionOne from 'components/pages/Home/SectionOne';
+import SectionTwo from 'components/pages/Home/SectionTwo';
+import FeaturedProfiles from 'components/pages/Home/FeaturedProfiles';
+import SpecialService from 'components/pages/Home/SpecialService';
 
 const Home = () => (
     <section>
-        <Register />
         <SectionOne />
-        <WhyChooseUs />
         <SectionTwo />
+        <WhyChooseUs />
+        <FeaturedProfiles />
         <WhyUs />
+        <SpecialService />
     </section>
 );
 

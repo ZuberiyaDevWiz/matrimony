@@ -7,7 +7,7 @@ interface InputProps {
     placeholder: string;
     changeHandler?: (e: ChangeEvent<HTMLInputElement>) => void;
     type?: 'text' | 'number' | 'email' | 'password' | 'date' | string;
-    value?: string | number | Date;
+    value?: string | number;
     label: string;
     required?: boolean;
     minLength?: number;
@@ -37,7 +37,7 @@ const Input: FC<InputProps> = (props) => {
     return (
         <div>
             <label htmlFor={name}>
-                <p className="font-medium text-base pl-3 py-2 ">{label}</p>
+                <p className="font-medium text-sm pl-3 py-2 ">{label}</p>
                 <div className="">
                     <input
                         name={name}

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { FC } from 'react';
-import ContactFilter from 'components/UserProfile/AccountSetting/ContactFilter';
+import ContactFilter from 'components/pages/UserProfile/AccountSetting/ContactFilter';
 
 const ContactFilterPage: FC = () => <ContactFilter />;
 
