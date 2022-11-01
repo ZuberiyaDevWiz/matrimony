@@ -77,7 +77,7 @@ const defaultState: Props = {
     setReEnterPassword: () => {},
 };
 
-const USeForgotPassword = create<Props>()(
+const useForgotPassword = create<Props>()(
     persist(
         (set) => ({
             ...defaultState,
@@ -93,4 +93,4 @@ const USeForgotPassword = create<Props>()(
     )
 );
 
-export default USeForgotPassword;
+export default useForgotPassword;
