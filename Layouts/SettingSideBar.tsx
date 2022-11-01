@@ -32,7 +32,6 @@ interface SliderProps {
     pageTitle: string;
 }
 
-// eslint-disable-next-line arrow-body-style
 const SettingLayout: FC<SliderProps> = ({ children, pageTitle }) => {
     const router = useRouter();
     const { pathname } = router;

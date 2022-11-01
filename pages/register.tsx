@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import RegisterHome from 'components/Register/Index';
+import RegisterHome from 'components/pages/Register/Index';
 
 const RegisterPage: FC = () => (
     <section className="relative h-[200vh]  ">

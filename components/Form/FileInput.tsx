@@ -4,7 +4,7 @@ interface UploadFileProps {
     label?: string;
     title?: string;
     fileTypes?: string;
-    multiple: boolean;
+    multiple?: boolean;
 }
 
 const UploadFile: FC<UploadFileProps> = ({ label, fileTypes, title, multiple }) => (
