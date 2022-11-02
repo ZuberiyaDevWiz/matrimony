@@ -86,4 +86,4 @@ export const Section = [
     'Shia Ithna ashariyyah',
 ];
 
-export const GenderLink = ['Male', 'Female'];
+export const Gender = ['Male', 'Female'];

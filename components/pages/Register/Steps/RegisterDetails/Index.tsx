@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/jsx-key */
 import { FormEvent, FC, Dispatch, SetStateAction, ChangeEvent, useState } from 'react';
-import Input from 'components/Form/Input';
-import Button from 'components/Form/Button';
-import { Division, Section, GenderLink } from 'constants/RegisterLinks';
+import Input from 'components/form/Input';
+import Button from 'components/form/Button';
+import { Division, Section, Gender } from 'constants/registerData';
 import { useRegister } from 'store';
 import ReactSelect from 'react-select';
+import toast from 'react-hot-toast';
 
 const RegisterDetails: FC<{
     setNextStep: Dispatch<SetStateAction<number>>;
@@ -22,7 +23,7 @@ const RegisterDetails: FC<{
         ) {
             setNextStep(2);
         } else {
-            alert('Please enter all the details');
+            toast.error('Please enter all the details');
         }
     };
     const changeHandler = (e: ChangeEvent<HTMLInputElement>) =>
@@ -90,7 +91,7 @@ const RegisterDetails: FC<{
                                         label: '--Select--',
                                         value: '--Select--',
                                     },
-                                    ...GenderLink.map((e) => ({
+                                    ...Gender.map((e) => ({
                                         label: e,
                                         value: e,
                                     })),

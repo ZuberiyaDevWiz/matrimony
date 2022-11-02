@@ -1,19 +1,18 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 // import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import { FC, Dispatch, SetStateAction } from 'react';
 import { useRegister } from 'store';
 import clx from 'utils/clx';
 import ReactSelect from 'react-select';
-import { countries } from 'constants/Countries';
+import { countries } from 'constants/registerLinks/countries';
 import {
     AnnualIncome,
     Currency,
     Education,
     Occupation,
     ResidingState,
-} from 'constants/ProfessionalLinks';
-import citiesjson from 'constants/cities.json';
+} from 'constants/professionalLinks';
 
 const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
     setNextStep,

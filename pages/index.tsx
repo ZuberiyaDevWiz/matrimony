@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Home from './Home/Index';
+import Home from './home/Index';
 
 const Homepage: NextPage = () => <Home />;
 

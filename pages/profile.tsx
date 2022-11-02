@@ -1,4 +1,4 @@
-import Profile from 'components/pages/Profile/Index';
+import Profile from 'components/pages/profile/Index';
 
 const ProfilePage = () => (
     <>

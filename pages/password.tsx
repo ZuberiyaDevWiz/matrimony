@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import ForgotPassword from 'components/pages/ForgotPassword/Forgot';
+import ForgotPassword from 'components/pages/forgotPassword/ForgotPassword';
 
 const passwordPage: FC = () => <ForgotPassword />;
 

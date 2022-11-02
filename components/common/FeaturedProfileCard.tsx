@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 
 export interface FeaturedProfilesProps {
     img: string;

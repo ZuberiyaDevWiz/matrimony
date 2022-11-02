@@ -1,7 +1,6 @@
 // import { CityProp } from 'store/slices/useRegister';
 
 export const Occupation = [
-    '--Select--',
     '-Accounting, Banking & Finance-',
     'Banking Professional',
     'Chartered Accountant',
@@ -123,7 +122,6 @@ export const Occupation = [
 
 /* eslint-disable import/prefer-default-export */
 export const Education = [
-    '--Select--',
     '-ENGINEERING-',
     'B.E / B.Tech',
     'M.E / M.Tech',
