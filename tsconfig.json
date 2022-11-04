@@ -16,6 +16,12 @@
         "incremental": true,
         "baseUrl": "."
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/common/ProfileSideBar"],
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "components/common/ProfileSideBar",
+        "constants/defaultProfile.Detailsts"
+    ],
     "exclude": ["node_modules"]
 }

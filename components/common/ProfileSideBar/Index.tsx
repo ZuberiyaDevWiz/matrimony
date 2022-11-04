@@ -1,4 +1,4 @@
-import { SidebarLinks } from 'constants/Links';
+import { SidebarLinks } from 'constants/links';
 
 const Sidebar = () => (
     <>

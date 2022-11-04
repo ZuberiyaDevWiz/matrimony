@@ -1,4 +1,8 @@
+/* eslint-disable no-redeclare */
+/* eslint-disable import/no-unresolved */
 // import { Document } from 'mongoose';
+
+import { States } from '@type/TypeUser';
 
 export type States =
     | 'Andhra Pradesh'
@@ -43,6 +47,7 @@ declare global {
     interface TypeUser {
         select: string;
         fullname: string;
+        age: number;
         firstName: string;
         lastName: string;
         email: string;
@@ -52,13 +57,14 @@ declare global {
         section: string;
         division: string;
         willingToMarryFrom: 'Same Division' | 'Other Division also' | null;
-        wearsHijab?: 'Hijab' | 'Niqab' | 'None';
+        wearsHijab?: 'Hijab' | 'Niqab' | 'None' | null;
+
         ReadsQuran: 'Regularly' | 'Only Jumah/Friday' | 'Occasionally' | 'Never Read' | null;
         ReligiousValues: string;
-        maritialStatus: 'Unmarried' | 'Married' | 'Widow' | 'Separated' | 'Divorced' | null;
+        maritalStatus: 'Unmarried' | 'Married' | 'Widow' | 'Separated' | 'Divorced' | null;
         familyStatus: 'Middle Class' | ' Upper Middle Class' | 'Rich/Affluent' | null;
-        familyType: 'Joint Family' | 'Nuclear Family' | 'None';
-        physicalStatus: 'Normal' | 'PhysicallyChallenged';
+        familyType: 'Joint Family' | 'Nuclear Family' | 'None' | null;
+        physicalStatus: 'Normal' | 'PhysicallyChallenged' | null;
         height: string;
         highestEducation: string;
         employedAt:

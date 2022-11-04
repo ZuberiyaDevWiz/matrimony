@@ -1,11 +1,11 @@
 import create from 'zustand';
 import { persist } from 'zustand/middleware';
 import defaultRegister from 'constants/defaultRegisterDetails';
-import { CityProp } from 'store/types/TypeCityProps';
+import { CityProp } from 'types/TypeCityProps';
 
 interface TypeRegister {
     registerDetails: TypeUser;
-    setRegister: (key: string, value: string | number | boolean | Date | CityProp) => void;
+    setRegister: (key: string, value: string | number | boolean | Date | CityProp | null) => void;
     step: number;
     setStep: (value: number) => void;
 }
@@ -17,7 +17,10 @@ const useRegister = create<TypeRegister>()(
 
             step: 0,
 
-            setRegister: (key: string, value: string | number | boolean | Date | CityProp) => {
+            setRegister: (
+                key: string,
+                value: string | number | boolean | Date | CityProp | null
+            ) => {
                 set((state: TypeRegister) => ({
                     registerDetails: { ...state.registerDetails, [key]: value },
                 }));

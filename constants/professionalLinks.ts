@@ -3,7 +3,6 @@ import { States } from 'types/TypeUser';
 // import { AuthKeyT } from 'types/TypeUser';
 
 export const Occupation = [
-    '--Select--',
     '-Accounting, Banking & Finance-',
     'Banking Professional',
     'Chartered Accountant',
@@ -125,7 +124,6 @@ export const Occupation = [
 
 /* eslint-disable import/prefer-default-export */
 export const Education = [
-    '--Select--',
     '-ENGINEERING-',
     'B.E / B.Tech',
     'M.E / M.Tech',
@@ -240,8 +238,12 @@ export const ResidingState: States[] = [
     'Andhra Pradesh',
     'Arunachal Pradesh',
     'Assam',
+    'Andhra Pradesh',
     'Bihar',
     'Chhattisgarh',
+    'Dadra and Nagar Haveli',
+    'Daman and Diu',
+    'Delhi',
     'Goa',
     'Gujarat',
     'Haryana',
@@ -257,20 +259,14 @@ export const ResidingState: States[] = [
     'Mizoram',
     'Nagaland',
     'Orissa',
+    'Pondicherry Puduche',
     'Punjab',
     'Rajasthan',
     'Sikkim',
     'Tamil Nadu',
     // 'Telangana',
     'Tripura',
-    'Uttarakhand',
     'Uttar Pradesh',
+    'Uttarakhand',
     'West Bengal',
-    'Andaman and Nicobar Islands',
-    'Chandigarh',
-    'Dadra and Nagar Haveli',
-    'Daman and Diu',
-    'Delhi',
-    'Lakshadweep',
-    'Pondicherry Puduche',
 ];

@@ -64,6 +64,7 @@ export const Section = [
     'Arain',
     'Awan',
     'Bengali',
+
     'Dawoodi Bohra',
     'Dekkani',
     'Dudekula',
@@ -79,6 +80,7 @@ export const Section = [
     'Rajput',
     'Rowther',
     'Shafi',
+    'Sunni',
     'Sheikh',
     'Shia',
     'Shia Bohra',
@@ -86,4 +88,4 @@ export const Section = [
     'Shia Ithna ashariyyah',
 ];
 
-export const GenderLink = ['Male', 'Female'];
+export const Gender = ['Male', 'Female'];

@@ -1,5 +1,5 @@
 import { FC, Dispatch, SetStateAction, useState } from 'react';
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 
 const MyPhotos: FC<{ setNext: Dispatch<SetStateAction<number>> }> = ({ setNext }) => (
     // const [nextPhoto, setNextPhoto] = useState(1);
