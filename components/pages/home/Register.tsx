@@ -45,7 +45,6 @@ const Register = () => {
                         </p>
                         <div className="text-black">
                             <Select
-                                name="select"
                                 options={[
                                     { value: 'op1', label: '--Select--' },
                                     { value: 'op2', label: 'Self' },
@@ -86,6 +85,7 @@ const Register = () => {
                                         label: code.code,
                                         value: code.code,
                                     }))}
+                                    placeholder="+91"
                                 />
                             </div>
                             <div className="w-[100%]">

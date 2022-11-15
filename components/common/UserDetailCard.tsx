@@ -1,13 +1,14 @@
 import Button from 'components/form/Button';
-import { FormEvent, useEffect } from 'react';
 import Image from 'next/image';
-import { useRegister } from 'store/index';
+import { FormEvent } from 'react';
+import { useRegister } from 'store';
 import { MdVerifiedUser } from 'react-icons/md';
 import { GoLocation } from 'react-icons/go';
 import { BsFillChatQuoteFill } from 'react-icons/bs';
 import Navbar from './Navbar/Navbar';
 
-const UserProfileCard = () => {
+/* eslint-disable arrow-body-style */
+const UserDetailCard = () => {
     const submitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     };
@@ -51,17 +52,15 @@ const UserProfileCard = () => {
                         </button>
                     </div>
                 </div>
-                <div className="border-[1px] border-gray-300 flex flex-row">
-                    <div>
-                        <Image
-                            src="/images/img-11.jpeg"
-                            alt="card-pic"
-                            width="300"
-                            height="450"
-                            className="object-cover"
-                        />
-                    </div>
-                    <div className="px-4 w-full">
+                <div className="border-[1px] mb-6 border-gray-300 flex flex-row">
+                    <Image
+                        src="/images/img-11.jpeg"
+                        alt="card-pic"
+                        width="300"
+                        height="550"
+                        className="object-cover  "
+                    />
+                    <div className="px-6 w-full">
                         <div className="flex justify-between items-center border-b-[1px] border-gray-300 py-4">
                             <div className="flex flex-col gap-1 ">
                                 <div className="flex space-x-2">
@@ -97,7 +96,6 @@ const UserProfileCard = () => {
                                     {`${
                                         new Date().getFullYear() - new Date(dob).getFullYear()
                                     } years, ${height}`}
-                                    5ft 6inch
                                 </span>
                                 <span className="text-base font-light">
                                     {' '}
@@ -119,10 +117,6 @@ const UserProfileCard = () => {
                                 repudiandae unde ipsa harum repellat?
                             </p>
                         </div>
-                        <div className="flex w-full gap-4 py-6 text-lg text-black">
-                            <Button text="View Profile" color="two" additionalButtonStyles="py-1" />
-                            <Button text="Connect" color="two" />
-                        </div>
                     </div>
                 </div>
             </form>
@@ -130,4 +124,4 @@ const UserProfileCard = () => {
     );
 };
 
-export default UserProfileCard;
+export default UserDetailCard;

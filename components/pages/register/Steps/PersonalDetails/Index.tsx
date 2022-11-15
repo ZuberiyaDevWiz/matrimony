@@ -4,6 +4,7 @@ import { Height } from 'constants/registerLinks/height';
 import { FC, Dispatch, SetStateAction, FormEvent } from 'react';
 import toast from 'react-hot-toast';
 import ReactSelect from 'react-select';
+import { Languages } from 'constants/professionalLinks';
 import { useRegister } from 'store';
 import clx from 'utils/clx';
 
@@ -16,12 +17,10 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
         e.preventDefault();
 
         if (
-            !(
-                registerDetails.maritalStatus &&
-                registerDetails.familyStatus &&
-                registerDetails.familyType &&
-                registerDetails.physicalStatus
-            )
+            !registerDetails.maritalStatus ||
+            !registerDetails.familyStatus ||
+            !registerDetails.familyType ||
+            !registerDetails.physicalStatus
         ) {
             return toast.error('please fill out all the fields');
         }
@@ -181,6 +180,31 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                             />
                         </div>
                     </div>
+                    <div className="w-full space-y-4">
+                        <span className="text-lg font-semibold pl-4">Select Currency</span>
+                        <ReactSelect
+                            isMulti={false}
+                            name="select"
+                            value={{
+                                label: registerDetails.language,
+                                value: registerDetails.language,
+                            }}
+                            options={[
+                                {
+                                    label: '--Select--',
+                                    value: '--Select--',
+                                },
+                                ...Languages.map((z) => ({
+                                    label: z.name,
+                                    value: z.name,
+                                })),
+                            ]}
+                            onChange={(e) => {
+                                if (e) setRegister('language', e?.value);
+                            }}
+                            isOptionDisabled={(option) => option.label === '--Select--'}
+                        />
+                    </div>
                     <div className="space-y-2 ">
                         <span className="text-lg font-semibold pl-2">Height</span>
                         <ReactSelect
@@ -190,17 +214,30 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                                 label: registerDetails.height,
                                 value: registerDetails.height,
                             }}
-                            options={Height.map((x) => ({
-                                label: x,
-                                value: x,
-                            }))}
+                            options={[
+                                {
+                                    label: '--Select--',
+                                    value: '--Select--',
+                                },
+                                ...Height.map((h) => ({
+                                    label: h,
+                                    value: h,
+                                })),
+                            ]}
                             onChange={(e) => {
                                 if (e) setRegister('height', e?.value);
                             }}
+                            isOptionDisabled={(option) => option.label === '--Select--'}
                         />
                     </div>
 
-                    <Input label="Weight" placeholder="Enter weight.." rounded required />
+                    <Input
+                        label="Weight"
+                        placeholder="Enter weight.."
+                        rounded
+                        required
+                        type="number"
+                    />
                 </div>
 
                 <div className="flex flex-row py-14 space-x-6 font-semibold">

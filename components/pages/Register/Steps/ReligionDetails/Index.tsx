@@ -22,6 +22,10 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
         ) {
             return toast.error('please fill out all the fields');
         }
+
+        if (registerDetails.ReligiousValues === '--Select--') {
+            return toast.error('please fill out all the fields');
+        }
         setNextStep(3);
     };
 

@@ -55,6 +55,9 @@ declare global {
         password: string;
         gender: string;
         section: string;
+        language: string;
+        name: string;
+        nativeName: string;
         division: string;
         willingToMarryFrom: 'Same Division' | 'Other Division also' | null;
         wearsHijab?: 'Hijab' | 'Niqab' | 'None' | null;
