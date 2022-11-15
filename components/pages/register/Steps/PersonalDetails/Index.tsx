@@ -194,10 +194,6 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                                     label: '--Select--',
                                     value: '--Select--',
                                 },
-                                ...Languages.map((z) => ({
-                                    label: z.name,
-                                    value: z.name,
-                                })),
                             ]}
                             onChange={(e) => {
                                 if (e) setRegister('language', e?.value);
