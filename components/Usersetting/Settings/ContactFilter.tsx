@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { FC } from 'react';
-import { UserMemberList } from 'Constant/SettingLinks';
+import { UserMemberList } from 'Constant/settingLinks';
 import SettingLayout from 'Layouts/SettingSideBar';
 import Row from './Row';
 

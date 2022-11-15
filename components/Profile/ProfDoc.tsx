@@ -1,6 +1,6 @@
 import { FC, Dispatch, SetStateAction } from 'react';
-import UploadFile from 'components/Form/UploadFile';
-import Button from 'components/Form/Button';
+import UploadFile from 'components/form/UploadFile';
+import Button from 'components/form/Button';
 
 const ProfDoc: FC<{ setProfNext: Dispatch<SetStateAction<number>> }> = ({ setProfNext }) => (
     <section className="shadow-2xl bg-gray-300 mx-auto w-[35%] px-4 py-6">

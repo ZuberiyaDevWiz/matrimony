@@ -1,9 +1,9 @@
-import Input from 'components/Form/Input';
+import Input from 'components/form/Input';
 import { FormEvent } from 'react';
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 import Router from 'next/router';
-import Select from 'components/Form/Select';
-import { Countries } from 'Constant/Countries';
+import Select from 'components/form/Select';
+import { Countries } from 'Constant/countries';
 
 const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

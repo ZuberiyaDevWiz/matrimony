@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import CheckBox from 'components/Form/Checkbox';
-import Radio from 'components/Form/Radio';
-import Button from 'components/Form/Button';
+import CheckBox from 'components/form/Checkbox';
+import Radio from 'components/form/Radio';
+import Button from 'components/form/Button';
 import SettingLayout from 'Layouts/SettingSideBar';
 
 // eslint-disable-next-line arrow-body-style

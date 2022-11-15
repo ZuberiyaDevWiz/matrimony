@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { FormEvent, ChangeEvent } from 'react';
-import Input from 'components/Form/Input';
-import Select from 'components/Form/Select';
-import Button from 'components/Form/Button';
+import Input from 'components/form/Input';
+import Select from 'components/form/Select';
+import Button from 'components/form/Button';
 import Link from 'next/link';
 import Router from 'next/router';
-import { Countries } from 'Constant/Countries';
+import { Countries } from 'Constant/countries';
 import { useRegister, USeForgotPassword } from 'store';
 import axios from 'axios';
 

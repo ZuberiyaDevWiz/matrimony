@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FC, Dispatch, SetStateAction, FormEvent } from 'react';
-import Input from 'components/Form/Input';
-import Button from 'components/Form/Button';
+import Input from 'components/form/Input';
+import Button from 'components/form/Button';
 import Router from 'next/router';
 import Link from 'next/link';
 

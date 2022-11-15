@@ -2,7 +2,7 @@
 /* eslint-disable import/named */
 import Link from 'next/link';
 import { FC } from 'react';
-import { UserPrivacyList } from 'Constant/SettingLinks';
+import { UserPrivacyList } from 'Constant/settingLinks';
 import SettingLayout from 'Layouts/SettingSideBar';
 import Row from './Row';
 

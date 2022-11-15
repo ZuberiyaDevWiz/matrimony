@@ -1,5 +1,5 @@
 import { FC, Dispatch, SetStateAction, FormEvent, useEffect } from 'react';
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 import { useRegister } from 'store';
 import axios from 'axios';
 

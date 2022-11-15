@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState, FC, Dispatch, SetStateAction } from 'react';
-import Input from 'components/Form/Input';
-import Button from 'components/Form/Button';
+import Input from 'components/form/Input';
+import Button from 'components/form/Button';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import Router from 'next/router';
 

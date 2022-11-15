@@ -1,6 +1,6 @@
 import { useState, FC, Dispatch, SetStateAction } from 'react';
-import Select from 'components/Form/Select';
-import Button from 'components/Form/Button';
+import Select from 'components/form/Select';
+import Button from 'components/form/Button';
 
 const ProfileNavbar: FC<{ setNavStep: Dispatch<SetStateAction<number>> }> = ({ setNavStep }) => (
     <>

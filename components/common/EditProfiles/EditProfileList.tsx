@@ -1,5 +1,5 @@
-import Radio from 'components/Form/Radio';
-import CheckBox from 'components/Form/Checkbox';
+import Radio from 'components/form/Radio';
+import CheckBox from 'components/form/Checkbox';
 import { FaQuestionCircle } from 'react-icons/fa';
 import Link from 'next/link';
 import { CgGirl, CgBoy } from 'react-icons/cg';

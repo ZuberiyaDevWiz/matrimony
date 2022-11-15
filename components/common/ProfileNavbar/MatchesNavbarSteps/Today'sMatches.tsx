@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FC, Dispatch, SetStateAction } from 'react';
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 
 const TodayMatches: FC<{ setNext: Dispatch<SetStateAction<number>> }> = ({ setNext }) => (
     <section className="shadow-2xl bg-gray-300 w-[50%] mx-auto p-10 py-10">

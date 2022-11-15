@@ -1,6 +1,6 @@
 import { FC, Dispatch, SetStateAction, FormEvent, ChangeEvent } from 'react';
-import Input from 'components/Form/Input';
-import Button from 'components/Form/Button';
+import Input from 'components/form/Input';
+import Button from 'components/form/Button';
 import { USeForgotPassword, useRegister } from 'store';
 
 const PhoneNumber: FC<{ setNext: Dispatch<SetStateAction<number>> }> = ({ setNext }) => {

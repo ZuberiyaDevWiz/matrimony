@@ -14,7 +14,7 @@ import {
     usercareerList,
     userpersonalList,
     userworkingList,
-} from 'Constant/UserProfileLinks';
+} from 'Constant/userProfileLinks';
 import UserProfileLink from './UserProfileLink';
 
 const UserProfile: FC = () => {

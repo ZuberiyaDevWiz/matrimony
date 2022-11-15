@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import Input from 'components/Form/Input';
-import Button from 'components/Form/Button';
+import Input from 'components/form/Input';
+import Button from 'components/form/Button';
 import Image from 'next/image';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { useState, FormEvent } from 'react';

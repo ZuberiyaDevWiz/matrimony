@@ -3,7 +3,7 @@
 import { FC, useState } from 'react';
 import SettingLayoutEdit from 'Layouts/EditProfileSideBar';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
-import Radio from 'components/Form/Radio';
+import Radio from 'components/form/Radio';
 import Navbar from '../Navbar/Navbar';
 import ProfileEdit from './EditProfileList';
 import {

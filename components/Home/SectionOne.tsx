@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 import Register from './Register';
 
 const SectionOne = () => (

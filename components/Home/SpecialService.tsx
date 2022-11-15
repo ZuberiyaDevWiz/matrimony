@@ -1,5 +1,5 @@
 import SpecialServiceCard from 'components/common/Slider/SpecialServiceCard';
-import { PurchaseCard } from 'Constant/PurchaseCard';
+import { PurchaseCard } from 'Constant/purchaseCard';
 // import { BsArrowLeftCircleFill } from 'react-icons/bs';
 
 const SpecialService = () => (

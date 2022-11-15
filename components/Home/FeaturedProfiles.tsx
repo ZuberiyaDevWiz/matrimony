@@ -1,8 +1,8 @@
 import { useState, FC } from 'react';
 import FeaturedCard from 'components/common/Slider/FeaturedCard';
-import { FeaturedCardDetails } from 'Constant/FeaturedCardDetails';
-import { FeaturedCardMenDetails } from 'Constant/FeaturedCardMenDetails';
-import Button from 'components/Form/Button';
+import { FeaturedCardDetails } from 'Constant/featuredCardDetails';
+import { FeaturedCardMenDetails } from 'Constant/featuredCardMenDetails';
+import Button from 'components/form/Button';
 
 // eslint-disable-next-line arrow-body-style
 const FeaturedProfiles: FC = () => {

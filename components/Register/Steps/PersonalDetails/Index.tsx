@@ -1,6 +1,6 @@
-import Button from 'components/Form/Button';
-import Input from 'components/Form/Input';
-import { Height } from 'Constant/Height';
+import Button from 'components/form/Button';
+import Input from 'components/form/Input';
+import { Height } from 'Constant/height';
 import { FC, Dispatch, SetStateAction } from 'react';
 import ReactSelect from 'react-select';
 import { useRegister } from 'store';

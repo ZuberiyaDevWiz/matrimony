@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { FC } from 'react';
 import Link from 'next/link';
-import { SocialMediaLinks } from 'Constant/SocialMediaLinks';
+import { SocialMediaLinks } from 'Constant/socialMediaLinks';
 import FooterLink from './FooterLink';
 
 const Footer: FC = () => (

@@ -1,6 +1,6 @@
 import { FC, Dispatch, SetStateAction, FormEvent, useRef } from 'react';
-import Input from 'components/Form/Input';
-import Button from 'components/Form/Button';
+import Input from 'components/form/Input';
+import Button from 'components/form/Button';
 import { USeForgotPassword } from 'store';
 
 const OTP: FC<{
