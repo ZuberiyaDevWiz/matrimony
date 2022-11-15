@@ -4,18 +4,18 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import UserProfileLink from './UserProfileLink';
 import {
-    UserProfileList,
     UserBasicList,
     UserBasicList1,
+    UserProfileList,
     communityList,
     familyList,
     familysiblingList,
     usercareerList,
-    userworkingList,
     userpersonalList,
-} from './UserProfileList';
+    userworkingList,
+} from 'Constant/UserProfileLinks';
+import UserProfileLink from './UserProfileLink';
 
 const UserProfile: FC = () => {
     return (

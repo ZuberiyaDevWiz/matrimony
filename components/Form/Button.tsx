@@ -3,15 +3,17 @@ import clx from 'utils/clx';
 
 interface ButtonProps {
     text: string;
-    color?: 'one' | 'two' | 'three' | 'four' | 'five';
+    color?: 'one' | 'two' | 'three' | 'four' | 'five' | 'six';
     rounded?: boolean;
     onClick?: () => void;
     submit?: boolean;
     additionalStyles?: string;
+    additionalButtonStyles?: string;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
-    const { text, color, onClick, submit, rounded, additionalStyles } = props;
+    const { text, color, onClick, submit, rounded, additionalStyles, additionalButtonStyles } =
+        props;
 
     return (
         <button
@@ -20,7 +22,8 @@ const Button: React.FC<ButtonProps> = (props) => {
             type={submit ? 'submit' : 'button'}
             className={clx(
                 'w-full py-2 border-[1px]  text-md border-gray-500 ',
-                rounded ? '!rounded-md' : '!rounded ',
+                rounded ? '!rounded-md' : ' ',
+                additionalButtonStyles || null,
                 color === 'one'
                     ? 'bg-primary-background hover:bg-red-600 active:bg-red-700 focus:outline-none focus:ring focus:ring-red-700 '
                     : color === 'two'
@@ -30,9 +33,11 @@ const Button: React.FC<ButtonProps> = (props) => {
                     : color === 'four'
                     ? 'bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-700 focus:outline-none focus:ring focus:ring-yellow-600 '
                     : color === 'five'
+                    ? 'bg-white hover:bg-white active:bg-white focus:outline-none focus:ring focus:ring-white '
+                    : color === 'six'
             )}
         >
-            <span className={clx('text-lg', additionalStyles || null)}>{text}</span>
+            <span className={clx(additionalStyles || null)}>{text}</span>
         </button>
     );
 };

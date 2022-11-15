@@ -1,16 +1,22 @@
-import { FC, Dispatch, SetStateAction } from 'react';
+import { FC, Dispatch, SetStateAction, useState } from 'react';
 import Button from 'components/Form/Button';
 
 const MyPhotos: FC<{ setNext: Dispatch<SetStateAction<number>> }> = ({ setNext }) => (
-    <div className="pt-20 w-1/2 text-white">
-        <Button
-            text="Myphotos"
-            color="one"
-            onClick={() => {
-                setNext(4);
-            }}
-        />
-    </div>
-);
+    // const [nextPhoto, setNextPhoto] = useState(1);
 
+    // const MyPhotosSteps = () => {
+    //     switch (nextPhoto) {
+    //         case 1:
+    //             return <MyAlbum setNextPhoto={setNextPhoto} />;
+    //         case 2:
+    //             return <PhotoSetting setNextPhoto={setNextPhoto} />;
+    //         default:
+    //             <MyAlbum setNextPhoto={setNextPhoto} />;
+    //     }
+    // };
+
+    <>
+        <h1>hello</h1>
+    </>
+);
 export default MyPhotos;

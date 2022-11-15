@@ -7,11 +7,11 @@ interface checkboxProps {
 }
 
 const CheckBox: FC<checkboxProps> = ({ name, label, options }) => (
-    <div className="mt-3">
-        <label htmlFor={name}>{label}</label>
+    <div className="">
         {options.map((option) => (
             <div key={option}>
                 <input type="checkbox" name={name} className="focus:box-border" />
+                <label htmlFor={name}>{label}</label>
             </div>
         ))}
     </div>

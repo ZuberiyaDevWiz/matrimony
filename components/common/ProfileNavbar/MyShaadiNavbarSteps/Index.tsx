@@ -2,10 +2,10 @@ import { useState, FC, SetStateAction, Dispatch } from 'react';
 import clx from 'utils/clx';
 import Dashboard from './Dashboard';
 import MyProfile from './Myprofile';
-import MyPhotos from './Myphotos';
 import PartnerPreferences from './PartnerPreferences';
 import Settings from './Settings';
 import More from './More';
+import MyPhotos from './MyPhotos';
 
 const SubProfileNavbar1: FC<{ setNavStep: Dispatch<SetStateAction<number>> }> = ({
     setNavStep,

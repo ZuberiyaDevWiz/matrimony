@@ -10,14 +10,16 @@ const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     Router.push('/login');
 };
 
-const VerifyMobile: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ setNextStep }) => (
+const VerifyMobile = () => (
     <form onSubmit={submitHandler}>
         <section className="shadow-2xl bg-gray-300 w-[30%] mx-auto my-6 px-6">
-            <h1 className="font-bold text-lg py-8">Please verify your mobile number</h1>
-            <div className="flex space-x-56 pb-4">
-                <p className="text-lg">we have sent a PIN </p>
+            <h1 className="font-bold text-lg py-8 text-primary-background">
+                Please verify your mobile number
+            </h1>
+            <div className="flex space-x-32 pb-4">
+                <p className="text-lg">We have sent a PIN </p>
                 <Link href="/">
-                    <span className="text-blue-700"> Edit</span>
+                    <span className="text-blue-700 cursor-pointer"> Edit</span>
                 </Link>
             </div>
             <div className="flex items-center space-x-10  ">
