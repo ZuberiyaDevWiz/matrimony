@@ -5,7 +5,7 @@ import MyProfile from './Myprofile';
 import PartnerPreferences from './PartnerPreferences';
 import Settings from './Settings';
 import More from './More';
-import MyPhotos from './MyPhotos';
+import MyPhotos from './Myphotos';
 
 const SubProfileNavbar1: FC<{ setNavStep: Dispatch<SetStateAction<number>> }> = ({
     setNavStep,

@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import { UserMemberList } from 'constants/SettingLinks';
-import SettingLayout from 'layouts/SettingSideBar';
+import SettingLayout from 'Layouts/SettingSideBar';
 
 // eslint-disable-next-line arrow-body-style
 const ContactFilter: FC = () => {

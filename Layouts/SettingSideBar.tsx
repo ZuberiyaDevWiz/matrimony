@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import { useRouter } from 'next/router';
+import Navbar from 'components/common/Navbar/Navbar';
 import clx from 'utils/clx';
-// import UserSettingLink from 'components/Usersetting/UserSettingLink';
 import Link from 'next/link';
 
 const links = [
@@ -19,9 +19,18 @@ const links = [
         link: '/setting/useraccount',
     },
     {
+        title: 'Contact Filter',
+        link: '/setting/contactfilter',
+    },
+    {
         title: 'My Email / SMS Alert',
         link: '/setting/useremail',
     },
+    {
+        title: 'My Privacy',
+        link: '/setting/privacyoption',
+    },
+
     {
         title: 'Profile Status',
         link: '/setting/userprofile-status',
@@ -33,6 +42,7 @@ interface SliderProps {
     pageTitle: string;
 }
 
+// eslint-disable-next-line arrow-body-style
 const SettingLayout: FC<SliderProps> = ({ children, pageTitle }) => {
     const router = useRouter();
     const { pathname } = router;

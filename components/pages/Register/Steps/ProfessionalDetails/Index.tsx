@@ -1,18 +1,12 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 // import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
 import { FC, Dispatch, SetStateAction } from 'react';
 import { useRegister } from 'store';
 import clx from 'utils/clx';
 import ReactSelect from 'react-select';
-import { countries } from 'constants/Countries';
-import {
-    AnnualIncome,
-    Currency,
-    Education,
-    Occupation,
-    ResidingState,
-} from 'constants/ProfessionalLinks';
+import { Countries } from 'constants/Countries';
+import { AnnualIncome, Currency, Education, Occupation, State } from 'constants/ProfessionalLinks';
 import citiesjson from 'constants/cities.json';
 
 const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({
@@ -184,7 +178,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                             label: registerDetails.workLocation,
                             value: registerDetails.workLocation,
                         }}
-                        options={countries.map((z) => ({
+                        options={Countries.map((z) => ({
                             label: z.name,
                             value: z.name,
                         }))}
@@ -239,7 +233,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                             label: registerDetails.citizenShip,
                             value: registerDetails.citizenShip,
                         }}
-                        options={countries.map((z) => ({
+                        options={Countries.map((z) => ({
                             label: z.name,
                             value: z.name,
                         }))}

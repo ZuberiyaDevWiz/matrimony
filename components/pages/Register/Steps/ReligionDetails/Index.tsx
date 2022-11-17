@@ -1,5 +1,5 @@
 import { FC, Dispatch, SetStateAction } from 'react';
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 import Select from 'react-select';
 import { useRegister } from 'store';
 import clx from 'utils/clx';

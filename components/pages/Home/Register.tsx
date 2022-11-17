@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { FormEvent, ChangeEvent } from 'react';
-import Input from 'components/Form/Input';
+import Input from 'components/form/Input';
 import Select from 'react-select';
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 import Link from 'next/link';
 import Router from 'next/router';
-import { countries } from 'constants/Countries';
+import { Countries } from 'constants/Countries';
 import { useRegister } from 'store';
 import toast from 'react-hot-toast';
 
@@ -67,7 +67,7 @@ const Register = () => {
                         <div className="w-[30%]">
                             <Select
                                 name="code"
-                                options={countries.map((code) => ({
+                                options={Countries.map((code) => ({
                                     key: code.code,
                                     value: code.code,
                                 }))}

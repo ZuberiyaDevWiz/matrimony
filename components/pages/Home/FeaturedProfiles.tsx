@@ -2,7 +2,7 @@ import { useState, FC } from 'react';
 import FeaturedCard from 'components/common/Slider/FeaturedCard';
 import { FeaturedCardDetails } from 'constants/FeaturedCardDetails';
 import { FeaturedCardMenDetails } from 'constants/FeaturedCardMenDetails';
-import Button from 'components/Form/Button';
+import Button from 'components/form/Button';
 
 const FeaturedProfiles: FC = () => {
     const [show, setShow] = useState(true);

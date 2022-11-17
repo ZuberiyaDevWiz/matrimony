@@ -1,6 +1,6 @@
 /* eslint-disable arrow-body-style */
 import { FC } from 'react';
-import SettingLayout from 'layouts/SettingSideBar';
+import SettingLayout from 'Layouts/SettingSideBar';
 
 // eslint-disable-next-line import/order
 import Link from 'next/link';

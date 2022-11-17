@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/jsx-key */
 import { FormEvent, FC, Dispatch, SetStateAction, ChangeEvent, useState } from 'react';
-import Input from 'components/Form/Input';
-import Button from 'components/Form/Button';
+import Input from 'components/form/Input';
+import Button from 'components/form/Button';
 import { Division, Section, GenderLink } from 'constants/RegisterLinks';
 import { useRegister } from 'store';
 import ReactSelect from 'react-select';

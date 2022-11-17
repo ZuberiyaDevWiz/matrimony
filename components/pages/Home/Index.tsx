@@ -1,3 +1,5 @@
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-named-as-default */
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
 import WhyChooseUs from './WhyChooseUs';
@@ -7,12 +9,14 @@ import SpecialService from './SpecialService';
 
 const Home = () => (
     <section>
-        <SectionOne />
-        <SectionTwo />
-        <WhyChooseUs />
-        <FeaturedProfiles />
-        <WhyUs />
-        <SpecialService />
+        <div className="h-full w-full">
+            <SectionOne />
+            <SectionTwo />
+            <WhyChooseUs />
+            <FeaturedProfiles />
+            <WhyUs />
+            <SpecialService />
+        </div>
     </section>
 );
 

@@ -1,4 +1,4 @@
-import LoginWithOtp from 'components/pages/Login/LoginWithOtp';
+import LoginWithOtp from 'components/pages/login/LoginWithOtp';
 
 const LoginWithOtpPage = () => (
     <>

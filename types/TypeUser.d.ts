@@ -73,7 +73,7 @@ declare global {
         currency: string;
         annualIncome: string;
         workLocation: string;
-        residingState: States;
+        residingState: string;
         residingCity: string;
         citizenShip: string;
         phoneNo: number;

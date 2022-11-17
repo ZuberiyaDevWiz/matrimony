@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-export const countries = [
+export const Countries = [
     {
         code: ' +91',
         name: '---Select---',

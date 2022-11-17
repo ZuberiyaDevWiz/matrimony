@@ -1,4 +1,4 @@
-import VerifyMobile from 'components/pages/Login/VerifyMobile';
+import VerifyMobile from 'components/pages/login/VerifyMobile';
 
 const verifyMobilePage = () => (
     <>
