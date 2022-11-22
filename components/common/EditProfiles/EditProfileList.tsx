@@ -105,7 +105,7 @@ const ProfileEdit = [
 export const ReligiousBackground = [
     {
         id: 1,
-        title: 'Religion',
+        title: <p className="mt-3">Religion</p>,
         value: (
             <select className="md:w-52 w-full border border-gray-400">
                 <option>Muslim</option>
@@ -167,13 +167,14 @@ export const ReligiousBackground = [
                     <input
                         type="text"
                         className="md:w-52 w-full border border-gray-400"
-                        value=""
                         name="dfdf"
                     />
                     <div className="py-4">
                         <CheckBox
-                            options={['send']}
-                            label=" Not particular about my Partner's Caste / Sect (Caste No Bar) "
+                            options={[
+                                'Not particular about my Partners Caste / Sect (Caste No Bar) ',
+                            ]}
+                            label=" Not particular about my Partners Caste / Sect (Caste No Bar)  "
                             name="df"
                         />
                     </div>
@@ -186,7 +187,7 @@ export const ReligiousBackground = [
 export const FamilDetails = [
     {
         id: 1,
-        title: 'Fathers Status',
+        title: <p className="mt-3">Fathers Status</p>,
         value: (
             <select className="md:w-52 w-full border border-gray-400">
                 <option>Select</option>
@@ -223,7 +224,7 @@ export const FamilDetails = [
                     <option>Vizag</option>
                 </select>
                 <span className="pl-5 text-sky-500 font-bold">
-                    <CheckBox options={['send']} label="Same as him" name="df" />
+                    <CheckBox options={['Same as him']} label=" Same as him" name="df" />
                 </span>
             </>
         ),
@@ -236,7 +237,6 @@ export const FamilDetails = [
                 type="text"
                 className="md:w-52 w-full border border-gray-400"
                 placeholder="Enter Native Place"
-                value=""
                 name="dfdf"
             />
         ),
@@ -246,48 +246,54 @@ export const FamilDetails = [
         title: 'No. of Siblings',
         value: (
             <>
-                <div className="flex  items-center">
-                    <div className="inline-grid">
+                <div className="flex text-center">
+                    <div className="grid grid-cols-1">
                         <input
-                            type="text"
+                            type="number"
                             className="w-8 border border-gray-400 text-center"
-                            value=""
                             name="dfdf"
                             placeholder="0"
                         />
-                        <p className="">Not Married</p>
+
+                        <p className="block">Not Married</p>
                     </div>
-                    <CgBoy className="text-6xl text-sky-400" />
-                    <div className="md:inline-grid">
-                        <input
-                            type="text"
-                            className="w-8 border border-gray-400 text-center"
-                            value=""
-                            name="dfdf"
-                            placeholder="0"
-                        />
-                        <p className="">Married</p>
+                    <div className="grid grid-cols-1">
+                        <CgBoy className=" text-sky-400 text-6xl" />
                     </div>
-                    <div className="inline-grid pl-7">
+                    <div className="grid grid-cols-1">
                         <input
-                            type="text"
+                            type="number"
                             className="w-8 border border-gray-400 text-center"
-                            value=""
                             name="dfdf"
                             placeholder="0"
                         />
-                        <p className="">Not Married</p>
+
+                        <p className="block">Married</p>
                     </div>
-                    <CgGirl className="text-6xl text-rose-300" />
-                    <div className="inline-grid text-center ">
+                </div>
+                <div className="flex mt-2">
+                    <div className="grid grid-cols-1">
                         <input
-                            type="text"
+                            type="number"
                             className="w-8 border border-gray-400 text-center"
-                            value=""
                             name="dfdf"
                             placeholder="0"
                         />
-                        <p className="">Married</p>
+
+                        <p className="block">Not Married</p>
+                    </div>
+                    <div className="grid grid-cols-1">
+                        <CgGirl className=" text-pink-400 text-6xl" />
+                    </div>
+                    <div className="grid grid-cols-1">
+                        <input
+                            type="number"
+                            className="w-8 border border-gray-400 text-center"
+                            name="dfdf"
+                            placeholder="0"
+                        />
+
+                        <p className="block">Married</p>
                     </div>
                 </div>
             </>
@@ -301,7 +307,12 @@ export const FamilDetails = [
     {
         id: 6,
         title: 'Family values',
-        value: <Radio name="familyvalues" options={[' Traditional', ' Moderate', ' Liberal']} />,
+
+        value: (
+            <div className=" md:text-[11px] lg:text-base m-0">
+                <Radio name="familyvalues" options={[' Traditional', ' Moderate', ' Liberal']} />
+            </div>
+        ),
     },
     {
         id: 7,
@@ -315,10 +326,10 @@ export const FamilDetails = [
                 </select>
 
                 <br />
-                <span className="pl-3 text-sky-400 flex font-bold">
+                <span className=" pt-3 text-sky-400 flex font-bold">
                     <Link href="/">Add more family details</Link>
                 </span>
-                <p className="pl-3">& get values to our Select and VIP Members</p>
+                <p>& get values to our Select and VIP Members</p>
             </>
         ),
     },
@@ -327,9 +338,9 @@ export const FamilDetails = [
 export const MoreReligious = [
     {
         id: 1,
-        title: 'Namaaz / Salaah',
+        title: <p className="mt-3">Namaaz / Salaah</p>,
         value: (
-            <select className="w-52 border border-gray-400">
+            <select className="md:w-52 w-full border border-gray-400">
                 <option>Select</option>
                 <option>5 Alhamdullah</option>
                 <option>4</option>
@@ -343,11 +354,12 @@ export const MoreReligious = [
     {
         id: 2,
         title: (
-            <>
-                <p className="flex">
-                    Zakaat <FaQuestionCircle />
+            <div className="flex">
+                <p className="flex">Zakaat</p>
+                <p className="pl-2 mt-[5px] text-gray-400">
+                    <FaQuestionCircle />
                 </p>
-            </>
+            </div>
         ),
         value: <Radio name="zakaat" options={[' Yes', ' No']} />,
     },
@@ -363,7 +375,7 @@ export const EducationDetails = [
         id: 1,
         title: 'Highest Qualification',
         value: (
-            <select className="w-52 border border-gray-400">
+            <select className="md:w-52 w-full border border-gray-400">
                 <option>BE / B.Tech</option>
                 <option>Bsc / Bacholar of Science</option>
                 <option>ME / M.Tech</option>
@@ -378,12 +390,12 @@ export const EducationDetails = [
             <>
                 <input
                     type="text"
-                    className="w-52 border border-gray-400"
-                    value="Jawaharlal Nehru Krishi"
+                    className="md:w-52 w-full border border-gray-400"
+                    placeholder="Enter college name"
                     name="dfdf"
                 />
                 <br />
-                <span className=" text-sky-500 font-bold pl-2">
+                <span className=" text-sky-500 font-bold">
                     <Link className="" href="/">
                         Add Another
                     </Link>
@@ -395,7 +407,7 @@ export const EducationDetails = [
         id: 3,
         title: 'Working With ',
         value: (
-            <select className="w-52 border border-gray-400">
+            <select className="md:w-52 w-full border border-gray-400">
                 <option>Private Company</option>
                 <option>Business</option>
                 <option>Goverment</option>
@@ -408,7 +420,7 @@ export const EducationDetails = [
         id: 4,
         title: 'Working As',
         value: (
-            <select className="w-52 border border-gray-400">
+            <select className="md:w-52 w-full border border-gray-400">
                 <option>Software Developer / Programmer</option>
                 <option>IT - Information Technology</option>
                 <option>Accounting</option>
@@ -423,8 +435,8 @@ export const EducationDetails = [
         value: (
             <input
                 type="text"
-                className="w-52 border border-gray-400"
-                value="webranc"
+                className="md:w-52 w-full border border-gray-400"
+                placeholder="Enter Company name"
                 name="dfdf"
             />
         ),
@@ -435,20 +447,23 @@ export const EducationDetails = [
         value: (
             <>
                 <>
-                    <select className="w-52 border border-gray-400">
+                    <select className="md:w-52 w-full border border-gray-400">
                         <option>INR 2 Lakh to 4 Lakh</option>
                         <option>INR 4 Lakh to 5 Lakh</option>
                         <option>INR 5 Lakh to 7 Lakh</option>
                         <option>INR 7 Lakh to 10 Lakh</option>
                     </select>
-
-                    <span className="pl-2">
-                        <CheckBox options={['send']} label=" Keep this private" name="df" />
-                    </span>
+                    <div className="flex pt-2">
+                        <CheckBox
+                            options={['Keep this private']}
+                            label=" Keep this private "
+                            name="df"
+                        />
+                        <div className="pt-1">
+                            <FcPrivacy />
+                        </div>
+                    </div>
                 </>
-                <span className="text-2xl">
-                    <FcPrivacy />
-                </span>
             </>
         ),
     },
@@ -459,7 +474,7 @@ export const LocationDetails = [
         id: 1,
         title: 'Country Living in',
         value: (
-            <select className="w-52 border border-gray-400">
+            <select className="md:w-52 w-full border border-gray-400">
                 <option>India</option>
                 <option>Canada</option>
                 <option>Australia</option>
@@ -472,7 +487,7 @@ export const LocationDetails = [
         title: ' State Living in',
         value: (
             <>
-                <select className="w-52 border border-gray-400">
+                <select className="md:w-52 w-full border border-gray-400">
                     <option>Karnataka</option>
                     <option>Tamil Nadu</option>
                     <option>Andra Pradesh</option>
@@ -490,7 +505,7 @@ export const LocationDetails = [
         ),
         value: (
             <>
-                <select className="w-52 border border-gray-400">
+                <select className="md:w-52 w-full border border-gray-400">
                     <option>Delhi</option>
                     <option>Mumbai</option>
                     <option>Bengalore / Bengaluru</option>
@@ -512,24 +527,24 @@ export const LocationDetails = [
                 <p>Available options</p>
                 <div className="flex">
                     <div className="flex justify-start">
-                        <div className="h-24 w-52 mr-7 pl-2 border border-gray-300 overflow-y-scroll">
-                            <CheckBox options={['send']} label="Australia" name="df" />
-                            <CheckBox options={['send']} label="Canada" name="df" />
-                            <CheckBox options={['send']} label="New Zealand" name="df" />
-                            <CheckBox options={['send']} label="Turkey" name="df" />
-                            <CheckBox options={['send']} label="Pakistan" name="df" />
-                            <CheckBox options={['send']} label="America" name="df" />
-                            <CheckBox options={['send']} label="Italy" name="df" />
-                            <CheckBox options={['send']} label="Frence" name="df" />
-                            <CheckBox options={['send']} label="England" name="df" />
-                            <CheckBox options={['send']} label="Saudi" name="df" />
+                        <div className="h-24 w-38 md:w-32  xl-40 xl:w-48 mr-1 lg:mr-6 xl:pl-2 border border-gray-300 overflow-y-scroll">
+                            <CheckBox options={['Australia']} label=" Australia" name="df" />
+                            <CheckBox options={['Canada']} label=" Canada" name="df" />
+                            <CheckBox options={['New Zealand']} label=" New Zealand" name="df" />
+                            <CheckBox options={['Turkey']} label=" Turkey" name="df" />
+                            <CheckBox options={['Pakistan']} label=" Pakistan" name="df" />
+                            <CheckBox options={['America']} label=" America" name="df" />
+                            <CheckBox options={['Italy']} label=" Italy" name="df" />
+                            <CheckBox options={['Frence']} label=" Frence" name="df" />
+                            <CheckBox options={['England']} label=" England" name="df" />
+                            <CheckBox options={['Saudi']} label=" Saudi" name="df" />
                         </div>
                     </div>
 
                     <div>
-                        <p className=" mt-[-25px]">My Selection(s)</p>
-                        <div className="h-24 pl-2 border w-52 border-gray-300 overflow-y-scroll">
-                            <CheckBox options={['send']} label="India" name="df" />
+                        <p className=" mt-[-24px] ">Selected</p>
+                        <div className="h-24 xl:pl-2 md:w-20  border w-32 xl:w-40 lg:w-32 border-gray-300 overflow-y-scroll">
+                            <CheckBox options={['India']} label=" India" name="df" />
                         </div>
                     </div>
                 </div>
@@ -540,7 +555,7 @@ export const LocationDetails = [
         id: 5,
         title: 'Ethnic Origin',
         value: (
-            <select className="w-52 border border-gray-400">
+            <select className="md:w-52 w-full border border-gray-400">
                 <option>India</option>
                 <option>Canada</option>
                 <option>Australia</option>
@@ -551,7 +566,14 @@ export const LocationDetails = [
     {
         id: 6,
         title: 'Zip/Pin Code',
-        value: <input type="text" className="w-52 border border-gray-400" value="" name="dfdf" />,
+        value: (
+            <input
+                type="text"
+                className="md:w-52 w-full border border-gray-400"
+                placeholder="Pincode"
+                name="dfdf"
+            />
+        ),
     },
 ];
 export default ProfileEdit;
