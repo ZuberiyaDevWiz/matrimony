@@ -37,7 +37,7 @@ const Input: FC<InputProps> = (props) => {
     return (
         <div>
             <label htmlFor={name}>
-                <p className="font-medium text-base pl-3 py-2 ">{label}</p>
+                <p className="font-medium text-base pl-3 ">{label}</p>
                 <div className="">
                     <input
                         name={name}

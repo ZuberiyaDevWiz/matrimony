@@ -1,6 +1,8 @@
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { RiHeartsFill } from 'react-icons/ri';
+import { AiOutlineClose } from 'react-icons/ai';
+import { GoThreeBars } from 'react-icons/go';
 import Register from './Register';
 
 const SectionLink: FC<{ text: string }> = ({ text }) => (
@@ -12,16 +14,16 @@ const SectionOne = () => (
         <div className=" h-fit ">
             <div className="h-screen border-b-8">
                 <Image
-                    src="/images/img-3.jpeg"
+                    src="/images/img-11.jpg"
                     layout="fill"
                     className="object-cover "
                     alt="section one picture"
                 />
 
                 <div className=" ">
-                    <ul className="text-black no-underline opacity-80 font-bold px-6  bg-white w-full flex justify-between items-center ">
+                    <ul className="text-black no-underline opacity-80 font-bold lg:px-6 px-2  bg-white w-full flex justify-between items-center ">
                         <div>
-                            <p className="italic text-[16px] md:text-2xl font-bold mr-3 pl-6 cursor-pointer">
+                            <p className="italic text-[16px] md:text-2xl font-bold mr-3 lg:pl-6 cursor-pointer">
                                 <span className="flex">
                                     Islamic
                                     <span className="text-rose-300">
@@ -34,7 +36,7 @@ const SectionOne = () => (
                                 </span>
                             </p>
                         </div>
-                        <div className="flex items-center">
+                        <div className="lg:flex items-center hidden">
                             <SectionLink text="Success Stories" />
                             <li className="p-4 hover:text-secondary-text transition cursor-pointer duration-300">
                                 About Us
@@ -56,9 +58,10 @@ const SectionOne = () => (
                                 </button>
                             </div>
                         </div>
+                        <GoThreeBars className="text-2xl z-10 absolute right-0 lg:hidden" />
                     </ul>
                 </div>
-                <div className=" mt-48 relative  ">
+                <div className=" md:mt-[450px] mt-[200px] z-10 relative  ">
                     <Register />
                 </div>
             </div>
