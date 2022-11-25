@@ -19,14 +19,31 @@ const SpecialServiceCard: FC<ServiceProps> = (props) => {
         <section>
             <div>
                 <Swiper
-                    className=" p-10  rounded-b-md rounded-tr-md  "
+                    className=" p-10 rounded-b-md rounded-tr-md  "
                     modules={[Navigation]}
                     draggable
                     navigation
-                    slidesPerView={4}
-                    spaceBetween={80}
+                    spaceBetween={70}
+                    breakpoints={{
+                        '640': {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        '768': {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        '1024': {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
+                        '2560': {
+                            slidesPerView: 6,
+                            spaceBetween: 20,
+                        },
+                    }}
                 >
-                    <div>
+                    <div className="">
                         {services.map((service) => (
                             <SwiperSlide key={service.title}>
                                 <SpecialServices title={service.title} img={service.img} />

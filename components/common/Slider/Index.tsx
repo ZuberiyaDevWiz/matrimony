@@ -15,18 +15,36 @@ interface SliderProps {
 
 const Slider: FC<SliderProps> = (props) => {
     const { couples, slidesPerView } = props;
+
     return (
         <section>
             <div>
                 <Swiper
-                    className=" p-10  rounded-b-md rounded-tr-md  "
+                    className=" p-10 w-full  rounded-b-md rounded-tr-md "
                     modules={[Navigation]}
                     draggable
                     navigation
-                    slidesPerView={4}
-                    spaceBetween={80}
+                    spaceBetween={0}
+                    breakpoints={{
+                        '640': {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        '768': {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        '1024': {
+                            slidesPerView: 5,
+                            spaceBetween: 20,
+                        },
+                        '2560': {
+                            slidesPerView: 6,
+                            spaceBetween: 20,
+                        },
+                    }}
                 >
-                    <div>
+                    <div className="">
                         {couples.map((couple) => (
                             <SwiperSlide key={couple.title}>
                                 <CoupleStoriesCard

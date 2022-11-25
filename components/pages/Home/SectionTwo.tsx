@@ -12,9 +12,11 @@ const SectionTwo = () => (
                 Over Thousands of Success Stories
             </h5>
         </div>
-        <div className="my-10">
+        <div className="">
             {/* <BsArrowLeftCircleFill /> */}
-            <Slider slidesPerView={6} couples={CoupleCard} />
+            <div className="">
+                <Slider slidesPerView={4} couples={CoupleCard} />
+            </div>
         </div>
     </div>
 );
