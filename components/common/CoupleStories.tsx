@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import Image from 'next/image';
 
 export interface CoupleStoriesProps {
@@ -9,8 +9,9 @@ export interface CoupleStoriesProps {
 
 const CoupleStoriesCard: FC<CoupleStoriesProps> = (props) => {
     const { img, title, message } = props;
+
     return (
-        <div className="bg-white text-black w-64 h-full text-ellipsis overflow-hidden  shadow-2xl smooth scale-90 py-2 rounded-md cursor-pointer  ">
+        <div className="bg-white text-black w-64 h-full text-ellipsis pb-10 shadow-2xl smooth scale-90 py-2 rounded-md cursor-pointer  ">
             <Image
                 src={img}
                 alt={title}
@@ -19,13 +20,20 @@ const CoupleStoriesCard: FC<CoupleStoriesProps> = (props) => {
                 layout="responsive"
                 className="rounded-t-md smooth object-cover  "
             />
+
             <div>
-                <h2 className="font-bold text-lg py-2 text-primary-background text-center">
+                <h2 className="font-bold text-lg py-2 text-primary-background bg-white text-center">
                     {title}
                 </h2>
-                <p className="text-justify font-normal px-4 line-clamp-2 hover:line-clamp-none w-full transition-transform">
-                    {message}
-                </p>
+                <div className=" relative z-6 px-4 hover:h-[256px] b-0 r-0 hover:text-white -mt-[300px] h-[256px] hover:bg-black text-transparent hover:opacity-70 ">
+                    <div className="text-center">{title}</div>
+                    <p
+                        className="text-justify font-normal 
+                 w-full transition-transform "
+                    >
+                        {message}
+                    </p>
+                </div>
             </div>
         </div>
     );
