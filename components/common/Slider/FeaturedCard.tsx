@@ -20,8 +20,25 @@ const FeaturedCard: FC<FeaturedCardProps> = (props) => {
                 <Swiper
                     className=" p-10  rounded-b-md rounded-tr-md"
                     draggable
-                    slidesPerView={5}
                     spaceBetween={100}
+                    breakpoints={{
+                        '640': {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        '768': {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        '1024': {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
+                        '2560': {
+                            slidesPerView: 6,
+                            spaceBetween: 20,
+                        },
+                    }}
                 >
                     <div>
                         {couplesCard.map((coupleCard) => (

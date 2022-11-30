@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { FormEvent, ChangeEvent } from 'react';
 import Input from 'components/form/Input';
+import PhoneInput from 'react-phone-input-2';
 import Select from 'react-select';
 import Button from 'components/form/Button';
 import Link from 'next/link';
@@ -31,12 +32,12 @@ const Register = () => {
             <div className="m-auto lg:w-4/5 md:w-full w-11/12">
                 <form
                     onSubmit={registerHandler}
-                    className="shadow-2xl bg-black bg-opacity-75 rounded-md "
+                    className="shadow-2xl bg-black bg-opacity-80 rounded-md "
                 >
-                    <div className="item-center px-3 md:py-7 py-3 rounded sm:grid sm:grid-cols-5  md:flex md:justify-evenly ">
+                    <div className="item-center px-3 md:py-3 md:pt-7 rounded sm:grid sm:grid-cols-5  md:flex md:justify-evenly ">
                         <div>
                             <p className="text-white md:text-xl text-base">Profile for</p>
-                            <div className="">
+                            <div className=" mb-3">
                                 <Select
                                     name="select"
                                     placeholder="Profile for..."
@@ -57,7 +58,7 @@ const Register = () => {
                                 />
                             </div>
                         </div>
-                        <div className="">
+                        <div className=" mb-3">
                             <p className=" md:text-xl text-base text-white">Enter Name</p>
                             <div className="lg:w-52 xl:w-60">
                                 <Input
@@ -75,7 +76,7 @@ const Register = () => {
                         </div>
                         <div>
                             <p className="  md:text-xl text-base text-white">Code</p>
-                            <div className="">
+                            <div className="mb-3">
                                 <Select
                                     name="code"
                                     options={Countries.map((code) => ({
@@ -105,13 +106,30 @@ const Register = () => {
                                 />
                             </div>
                         </div>
+
                         <button
                             type="button"
                             name="register"
-                            className="bg-red-600 hover:bg-white hover:text-red-600 mt-7 font-bold md:h-10 h-10 text-center items-center  text-white px-10 border border-gray-400"
+                            className="bg-red-600 hover:bg-white hover:text-red-600 mt-7 font-bold md:h-10 h-10 text-center items-center w-full md:w-auto  text-white px-10 border border-gray-400"
                         >
                             Register
                         </button>
+                    </div>
+                    <div className=" md:py-2 pb-1 md:text-center px-3 md:items-center ">
+                        <p className="mb-3 text-white">
+                            <input type="checkbox" required />I Accept the
+                            <Link href="/">
+                                <span className="ml-1 text-orange-400 underline cursor-pointer">
+                                    Terms & conditions
+                                </span>
+                            </Link>
+                            <span> and </span>
+                            <Link href="/">
+                                <span className="ml-1 text-orange-400 underline cursor-pointer">
+                                    Privacy and Policy
+                                </span>
+                            </Link>
+                        </p>
                     </div>
                 </form>
             </div>

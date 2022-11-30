@@ -10,44 +10,68 @@ const SectionLink: FC<{ text: string }> = ({ text }) => (
     <li className="p-4 block hover:text-secondary-text transition duration-300">{text}</li>
 );
 
-const SectionOne = () => (
-    <section>
-        <div className=" h-fit ">
-            <div className=" border-b-8">
+const SectionOne = () => {
+    const [isActiveMenu, setActiveMune] = useState(false);
+
+    return (
+        <section>
+            <div className=" lg:fixed lg:z-20 lg:w-full bg-white opacity-95">
+                <ul className="text-black h-12 lg:h-auto no-underline opacity-100 font-bold lg:px-6 px-2  bg-white w-full flex justify-between items-center ">
+                    <div>
+                        <p className="italic text-[20px] md:text-2xl font-bold mr-3 lg:pl-6 cursor-pointer">
+                            <span className="flex">
+                                Islamic
+                                <span className="text-rose-300">
+                                    <RiHeartsFill />
+                                </span>
+                                Matrimony
+                                <span className=" italic text-[10px] md:text-[15px] mt-[12px]">
+                                    .com
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                    <div className="lg:flex  items-center hidden">
+                        <MenuBar />
+                    </div>
+                    <div className=" hidden bg-red-700 p-7 fixed z-30 right-0">
+                        <button
+                            type="button"
+                            name="register"
+                            className=" px-4 text-white bg-red-700 r-0"
+                        >
+                            Register
+                        </button>
+                    </div>
+
+                    <GoThreeBars
+                        className="text-2xl z-10 absolute text-transparent right-0 lg:hidden block"
+                        onClick={() => setActiveMune(!isActiveMenu)}
+                    />
+                    {isActiveMenu ? (
+                        <AiOutlineClose className="text-2xl lg:hidden block" />
+                    ) : (
+                        <GoThreeBars className="text-2xl lg:hidden block" />
+                    )}
+                </ul>
+            </div>
+            {isActiveMenu && (
+                <div className="lg:hidden block absolute bg-slate-200 w-full list-none z-10">
+                    <MenuBar />
+                </div>
+            )}
+            <div className="relative w-full md:h-[46rem] h-[30rem]">
                 <Image
                     src="/images/img-12.jpg"
                     layout="fill"
-                    className="object-cover "
+                    className="object-cover absolute "
                     alt="section one picture"
                 />
-                <div className=" ">
-                    <ul className="text-black no-underline opacity-80 font-bold lg:px-6 px-2  bg-white w-full flex justify-between items-center ">
-                        <div>
-                            <p className="italic text-[16px] md:text-2xl font-bold mr-3 lg:pl-6 cursor-pointer">
-                                <span className="flex">
-                                    Islamic
-                                    <span className="text-rose-300">
-                                        <RiHeartsFill />
-                                    </span>
-                                    Matrimony
-                                    <span className=" italic text-[10px] md:text-[15px] mt-[6px]">
-                                        .com
-                                    </span>
-                                </span>
-                            </p>
-                        </div>
-                        <div className="lg:flex items-center hidden">
-                            <MenuBar />
-                        </div>
-                        <GoThreeBars className="text-2xl z-10 absolute right-0 lg:hidden block" />
-                    </ul>
-                </div>
-
-                <div className=" md:mt-[520px] mt-[290px] relative ">
-                    <Register />
-                </div>
             </div>
-        </div>
-    </section>
-);
+            <div className=" md:mt-[-180px] mt-[-420px] relative">
+                <Register />
+            </div>
+        </section>
+    );
+};
 export default SectionOne;

@@ -5,15 +5,15 @@ const SectionLink: FC<{ text: string }> = ({ text }) => (
 );
 
 const MenuBar = () => (
-    <div className="lg:flex items-center hidden">
+    <div className="lg:flex items-center ">
         <SectionLink text="Success Stories" />
-        <li className="p-4 hover:text-secondary-text transition cursor-pointer duration-300">
+        <li className="p-4 hover:text-secondary-text transition cursor-pointer lg:border-none border-y border-red-600 duration-300">
             About Us
         </li>
-        <li className="p-4 hover:text-secondary-text cursor-pointer !hover:underline-offset-1 transition duration-300 ">
+        <li className="p-4 hover:text-secondary-text cursor-pointer border-b lg:border-none border-red-600 !hover:underline-offset-1 transition duration-300 ">
             Featured Profiles
         </li>
-        <li className="p-4 hover:text-secondary-text cursor-pointer transition duration-300">
+        <li className="p-4 hover:text-secondary-text cursor-pointer border-b lg:border-none border-red-600 transition duration-300">
             Services
         </li>
 
@@ -21,7 +21,7 @@ const MenuBar = () => (
             <button
                 type="button"
                 name="register"
-                className="border border-gray-700 px-3 py-2 text-red-700 hover:text-white hover:bg-red-700"
+                className="border border-gray-700 px-3 py-2 text-white bg-red-700 lg:bg-white lg:text-red-700 lg:hover:text-white lg:hover:bg-red-700"
             >
                 Login
             </button>
