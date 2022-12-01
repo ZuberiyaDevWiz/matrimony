@@ -9,7 +9,7 @@ export interface SpecialServicesProps {
 const SpecialServices: FC<SpecialServicesProps> = (props) => {
     const { img, title } = props;
     return (
-        <div className="bg-white text-black w-64 h-full text-ellipsis overflow-hidden  shadow-2xl smooth scale-90 py-2 rounded-md cursor-pointer  ">
+        <div className="bg-white text-black h-full text-ellipsis overflow-hidden  shadow-2xl smooth scale-90 py-2 rounded-md cursor-pointer  ">
             <Image
                 src={img}
                 alt={title}

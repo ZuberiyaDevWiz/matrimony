@@ -22,20 +22,25 @@ const FeaturedCard: FC<FeaturedCardProps> = (props) => {
                     draggable
                     spaceBetween={100}
                     breakpoints={{
+                        '320': {
+                            slidesPerView: 1.2,
+                            spaceBetween: 10,
+                        },
+
                         '640': {
-                            slidesPerView: 2,
+                            slidesPerView: 2.2,
                             spaceBetween: 20,
                         },
                         '768': {
-                            slidesPerView: 3,
+                            slidesPerView: 3.2,
                             spaceBetween: 20,
                         },
                         '1024': {
-                            slidesPerView: 4,
+                            slidesPerView: 4.2,
                             spaceBetween: 20,
                         },
                         '2560': {
-                            slidesPerView: 6,
+                            slidesPerView: 6.2,
                             spaceBetween: 20,
                         },
                     }}

@@ -10,9 +10,12 @@ export interface CoupleStoriesProps {
 const CoupleStoriesCard: FC<CoupleStoriesProps> = (props) => {
     const { img, title, message } = props;
 
+    const [showMessage, setShowMessage] = useState(false);
+
     return (
-        <div className="bg-white text-black w-64 h-full text-ellipsis shadow-2xl smooth scale-90 py-2 rounded-md cursor-pointer  ">
+        <div className="bg-white relative text-black h-full text-ellipsis shadow-2xl smooth scale-90  rounded-md cursor-pointer  ">
             <Image
+                onClick={() => setShowMessage(!showMessage)}
                 src={img}
                 alt={title}
                 width="150"
@@ -20,12 +23,22 @@ const CoupleStoriesCard: FC<CoupleStoriesProps> = (props) => {
                 layout="responsive"
                 className="rounded-t-md smooth object-cover  "
             />
-            <div className="p-4">
-                <p>{message}</p>
-                <h2 className="font-bold text-lg py-2 text-primary-background bg-white text-center">
+
+            <div className="py-2">
+                <h2 className="font-bold relative  text-lg text-primary-background bg-white  text-center">
                     {title}
                 </h2>
             </div>
+            {showMessage && (
+                <div className="absolute z-10 opacity-50 text-justify text-white p-3 bg-black bottom-10">
+                    <p>{message}</p>
+                </div>
+            )}
+            {/*
+            <div className=" p-3 absolute text-justify bg-black opacity-70  text-white  ">
+                <div className=""></div>
+            </div>
+    */}
         </div>
     );
 };
