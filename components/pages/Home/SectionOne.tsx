@@ -1,6 +1,8 @@
+/* eslint-disable no-func-assign */
 import Image from 'next/image';
 import { FC, useState } from 'react';
 import { RiHeartsFill } from 'react-icons/ri';
+import { useScrollPosition } from 'components/common/Slider/ScrollBar';
 import { AiOutlineClose } from 'react-icons/ai';
 import { GoThreeBars } from 'react-icons/go';
 import Register from './Register';
@@ -10,8 +12,15 @@ const SectionLink: FC<{ text: string }> = ({ text }) => (
     <li className="p-4 block hover:text-secondary-text transition duration-300">{text}</li>
 );
 
+function className(...classes: any[]) {
+    return classes.filter(Boolean).join(' ');
+}
+
 const SectionOne = () => {
     const [isActiveMenu, setActiveMune] = useState(false);
+
+    const scrollPosition = useScrollPosition();
+    console.log(scrollPosition);
 
     return (
         <section>
@@ -25,23 +34,30 @@ const SectionOne = () => {
                                     <RiHeartsFill />
                                 </span>
                                 Matrimony
-                                <span className=" italic text-[10px] md:text-[15px] mt-[12px]">
+                                <span className=" italic text-[10px] md:text-[15px] mt-[12px] lg:mt-[7px]">
                                     .com
                                 </span>
                             </span>
                         </p>
                     </div>
-                    <div className="lg:flex  items-center hidden">
+                    <div className="lg:flex  items-center hidden ">
                         <MenuBar />
                     </div>
-                    <div className=" hidden bg-red-700 p-7 fixed z-30 right-0">
-                        <button
-                            type="button"
-                            name="register"
-                            className=" px-4 text-white bg-red-700 r-0"
+                    <div className=" bg-red-700  fixed z-30 right-0 ">
+                        <div
+                            className={className(
+                                scrollPosition > 600 ? 'mr-[0rem]' : 'mr-[-15rem]',
+                                'p-7 duration-500'
+                            )}
                         >
-                            Register
-                        </button>
+                            <button
+                                type="button"
+                                name="register"
+                                className=" px-4 text-white  bg-red-700 r-0"
+                            >
+                                Register
+                            </button>
+                        </div>
                     </div>
 
                     <GoThreeBars

@@ -58,7 +58,7 @@ const Register = () => {
                                 />
                             </div>
                         </div>
-                        <div className=" mb-3">
+                        <div className=" mb-3 ">
                             <p className=" md:text-xl text-base text-white">Enter Name</p>
                             <div className="lg:w-52 xl:w-60">
                                 <Input
@@ -74,18 +74,38 @@ const Register = () => {
                                 />
                             </div>
                         </div>
-                        <div>
-                            <p className="  md:text-xl text-base text-white">Code</p>
-                            <div className="mb-3">
-                                <Select
-                                    name="code"
-                                    options={Countries.map((code) => ({
-                                        key: code.code,
-                                        value: code.code,
-                                    }))}
-                                />
+                        <div className="">
+                            <p className="  md:text-xl text-base text-white">
+                                Code & Mobile Number
+                            </p>
+                            <div className="mb-3 flex w-full bg-white rounded">
+                                <div className="p-[1px] w-[7rem]]">
+                                    <Select
+                                        name="code"
+                                        options={Countries.map((code) => ({
+                                            key: code.code,
+                                            value: code.code,
+                                        }))}
+                                    />
+                                </div>
+                                <div className="ml-[-6px] w-full">
+                                    <Input
+                                        placeholder="Enter Mobile Number"
+                                        label=""
+                                        type="number"
+                                        name="phoneNo"
+                                        required
+                                        rounded
+                                        value={registerDetails.phoneNo}
+                                        changeHandler={changeHandler}
+                                        additionalStyles="text-sm"
+                                        maxLength={10}
+                                        minLength={10}
+                                    />
+                                </div>
                             </div>
                         </div>
+                        {/*
                         <div>
                             <p className=" lg:text-xl sm:text-xl md:text-lg text-white">
                                 Enter Mobile Number
@@ -106,6 +126,7 @@ const Register = () => {
                                 />
                             </div>
                         </div>
+                        */}
 
                         <button
                             type="button"
@@ -117,7 +138,7 @@ const Register = () => {
                     </div>
                     <div className=" md:py-2 pb-1 md:text-center px-3 md:items-center ">
                         <p className="mb-3 text-white">
-                            <input type="checkbox" required />I Accept the
+                            <input type="checkbox" required /> I Accept the
                             <Link href="/">
                                 <span className="ml-1 text-orange-400 underline cursor-pointer">
                                     Terms & conditions
