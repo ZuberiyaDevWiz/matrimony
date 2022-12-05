@@ -15,7 +15,7 @@ const FeaturedProfileCard: FC<FeaturedProfilesProps> = (props) => {
     const { img, name, age, height, graduation, place } = props;
     return (
         <section>
-            <div className="bg-orange-200 h-54 space-y-4 text-black h-full text-ellipsis overflow-visible  shadow-xl smooth scale-90 px-12 py-6 rounded-md cursor-pointer">
+            <div className="bg-orange-200 h-54 space-y-4 text-black h-full text-ellipsis overflow-visible  shadow-xl smooth scale-90 px-5 lg:px-12 py-6 rounded-md cursor-pointer">
                 <div className="blur-sm">
                     <Image
                         src={img}

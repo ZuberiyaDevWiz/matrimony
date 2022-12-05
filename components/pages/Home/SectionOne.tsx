@@ -1,6 +1,6 @@
 /* eslint-disable no-func-assign */
 import Image from 'next/image';
-import { FC, useState } from 'react';
+import { FC, useState, useRef } from 'react';
 import { RiHeartsFill } from 'react-icons/ri';
 import { useScrollPosition } from 'components/common/Slider/ScrollBar';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -20,11 +20,17 @@ const SectionOne = () => {
     const [isActiveMenu, setActiveMune] = useState(false);
 
     const scrollPosition = useScrollPosition();
-    console.log(scrollPosition);
+
+    const ScrollUp = () => {
+        window.scrollTo({
+            top: 250,
+            behavior: 'smooth',
+        });
+    };
 
     return (
         <section>
-            <div className=" lg:fixed lg:z-20 lg:w-full bg-white opacity-95">
+            <div className=" lg:fixed lg:z-20 lg:w-full opacity-95">
                 <ul className="text-black h-12 lg:h-auto no-underline opacity-100 font-bold lg:px-6 px-2  bg-white w-full flex justify-between items-center ">
                     <div>
                         <p className="italic text-[20px] md:text-2xl font-bold mr-3 lg:pl-6 cursor-pointer">
@@ -40,20 +46,26 @@ const SectionOne = () => {
                             </span>
                         </p>
                     </div>
-                    <div className="lg:flex  items-center hidden ">
+                    <div
+                        className={className(
+                            scrollPosition > 580 ? 'lg:mr-[8rem]' : 'lg:mr-[0rem]',
+                            'lg:flex  items-center hidden lg:duration-500 '
+                        )}
+                    >
                         <MenuBar />
                     </div>
-                    <div className=" bg-red-700  fixed z-30 right-0 ">
+                    <div className=" bg-red-700 hidden lg:block fixed z-30 right-0 ">
                         <div
                             className={className(
-                                scrollPosition > 600 ? 'mr-[0rem]' : 'mr-[-15rem]',
-                                'p-7 duration-500'
+                                scrollPosition > 580 ? 'lg:mr-[0rem]' : 'lg:mr-[-15rem]',
+                                'p-1 duration-500'
                             )}
                         >
                             <button
                                 type="button"
                                 name="register"
-                                className=" px-4 text-white  bg-red-700 r-0"
+                                onClick={ScrollUp}
+                                className=" px-8 py-6 bottom-0 text-white r-0 hidden lg:block "
                             >
                                 Register
                             </button>
