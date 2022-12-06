@@ -30,7 +30,19 @@ const SectionOne = () => {
 
     return (
         <section>
-            <div className=" lg:fixed lg:z-20 lg:w-full opacity-95">
+            <div className="bg-black z-10 absolute right-0 bottom-0 top-0 left-0 opacity-30  ">
+                <div className="items-center">
+                    <p className="text-white z-20 absolute ">ehferhfnfkjsnfksfnskfnaf</p>
+                </div>
+            </div>
+            <div
+                className={className(
+                    scrollPosition > 50
+                        ? 'lg:fixed lg:z-20 lg:duration-500 ease-in-out'
+                        : 'bg-white',
+                    ' lg:w-full opacity-95 '
+                )}
+            >
                 <ul className="text-black h-12 lg:h-auto no-underline opacity-100 font-bold lg:px-6 px-2  bg-white w-full flex justify-between items-center ">
                     <div>
                         <p className="italic text-[20px] md:text-2xl font-bold mr-3 lg:pl-6 cursor-pointer">
@@ -96,7 +108,7 @@ const SectionOne = () => {
                     alt="section one picture"
                 />
             </div>
-            <div className=" md:mt-[-180px] mt-[-420px] relative">
+            <div className=" md:mt-[-250px] md:mb-[60px] mt-[-440px] mb-[60px] relative">
                 <Register />
             </div>
         </section>

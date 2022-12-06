@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { FC } from 'react';
 
 const SectionLink: FC<{ text: string }> = ({ text }) => (
@@ -6,17 +7,55 @@ const SectionLink: FC<{ text: string }> = ({ text }) => (
     </li>
 );
 
+const scrollDown = () => {
+    window.scrollTo({
+        top: 450,
+        behavior: 'smooth',
+    });
+};
+
+const scrollDown1 = () => {
+    window.scrollTo({
+        top: 950,
+        behavior: 'smooth',
+    });
+};
+
+const scrollDown2 = () => {
+    window.scrollTo({
+        top: 1600,
+        behavior: 'smooth',
+    });
+};
+
+const scrollDown3 = () => {
+    window.scrollTo({
+        top: 2750,
+        behavior: 'smooth',
+    });
+};
+
 const MenuBar = () => (
     <div className="lg:flex items-center ">
-        <SectionLink text="Success Stories" />
+        <button type="button" name="successstory" className="cursor-pointer" onClick={scrollDown}>
+            <SectionLink text="Success Stories" />
+        </button>
+
         <li className="p-4 lg:p-2 xl:p-4 hover:text-secondary-text transition cursor-pointer lg:border-none border-y border-red-600 duration-300">
-            About Us
+            <button type="button" name="whyus" onClick={scrollDown1}>
+                About Us
+            </button>
         </li>
+
         <li className="p-4 lg:p-2 xl:p-4 hover:text-secondary-text cursor-pointer border-b lg:border-none border-red-600 !hover:underline-offset-1 transition duration-300 ">
-            Featured Profiles
+            <button type="button" name="whyus" onClick={scrollDown2}>
+                Featured Profiles
+            </button>
         </li>
         <li className="p-4 lg:p-2 xl:p-4 hover:text-secondary-text cursor-pointer border-b lg:border-none border-red-600 transition duration-300">
-            Services
+            <button type="button" name="whyus" onClick={scrollDown3}>
+                Services
+            </button>
         </li>
 
         <div className="p-4">

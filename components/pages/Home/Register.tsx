@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { FormEvent, ChangeEvent } from 'react';
 import Input from 'components/form/Input';
-import PhoneInput from 'react-phone-input-2';
 import Select from 'react-select';
-import Button from 'components/form/Button';
 import Link from 'next/link';
 import Router from 'next/router';
 import { Countries } from 'constants/Countries';
@@ -32,7 +30,7 @@ const Register = () => {
             <div className="m-auto lg:w-4/5 md:w-full w-11/12">
                 <form
                     onSubmit={registerHandler}
-                    className="shadow-2xl bg-black bg-opacity-80 rounded-md "
+                    className="shadow-2xl bg-black bg-opacity-50 rounded-md "
                 >
                     <div className="item-center px-3 md:py-3 md:pt-7 rounded sm:grid sm:grid-cols-5  md:flex md:justify-evenly ">
                         <div>
