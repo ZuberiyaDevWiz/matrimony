@@ -32,7 +32,7 @@ const Register = () => {
                     onSubmit={registerHandler}
                     className="shadow-2xl bg-black bg-opacity-50 rounded-md "
                 >
-                    <div className="item-center px-3 md:py-3 md:pt-7 rounded sm:grid sm:grid-cols-5  md:flex md:justify-evenly ">
+                    <div className="item-center px-3 py-4 md:py-3 md:pt-7 rounded sm:grid sm:grid-cols-5  md:flex md:justify-evenly ">
                         <div>
                             <p className="text-white md:text-xl text-base">Profile for</p>
                             <div className=" mb-3">
@@ -135,20 +135,27 @@ const Register = () => {
                         </button>
                     </div>
                     <div className=" md:py-2 pb-1 md:text-center px-3 md:items-center ">
-                        <p className="mb-3 text-white">
+                        <p className="mb-3 text-white  text-center">
                             <input type="checkbox" required /> I Accept the
                             <Link href="/">
                                 <span className="ml-1 text-orange-400 underline cursor-pointer">
                                     Terms & conditions
                                 </span>
                             </Link>
-                            <span> and </span>
+                            <span className=""> and </span>
                             <Link href="/">
                                 <span className="ml-1 text-orange-400 underline cursor-pointer">
                                     Privacy and Policy
                                 </span>
                             </Link>
                         </p>
+                        <div className="flex justify-center pb-4 lg:hidden  text-white">
+                            <p>Exsting user click to</p>{' '}
+                            <span className="text-white bg-red-700 rounded px-1">
+                                {' '}
+                                <Link href="./login">Login</Link>{' '}
+                            </span>
+                        </div>
                     </div>
                 </form>
             </div>

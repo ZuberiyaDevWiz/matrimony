@@ -30,11 +30,6 @@ const SectionOne = () => {
 
     return (
         <section>
-            <div className="bg-black z-10 absolute right-0 bottom-0 top-0 left-0 opacity-30  ">
-                <div className="items-center">
-                    <p className="text-white z-20 absolute ">ehferhfnfkjsnfksfnskfnaf</p>
-                </div>
-            </div>
             <div
                 className={className(
                     scrollPosition > 50

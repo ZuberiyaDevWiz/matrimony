@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { FC } from 'react';
+import Link from 'next/link';
 
 const SectionLink: FC<{ text: string }> = ({ text }) => (
     <li className="p-4 lg:p-2 xl:p-4 block hover:text-secondary-text transition duration-300">
@@ -59,13 +60,15 @@ const MenuBar = () => (
         </li>
 
         <div className="p-4">
-            <button
-                type="button"
-                name="register"
-                className="border border-gray-700 px-3 py-2 text-white bg-red-700 lg:bg-white lg:text-red-700 lg:hover:text-white lg:hover:bg-red-700"
-            >
-                Login
-            </button>
+            <Link href="./login">
+                <button
+                    type="button"
+                    name="register"
+                    className="border border-gray-700 px-3 py-2 text-white bg-red-700 lg:bg-white lg:text-red-700 lg:hover:text-white lg:hover:bg-red-700"
+                >
+                    Login
+                </button>
+            </Link>
         </div>
     </div>
 );
