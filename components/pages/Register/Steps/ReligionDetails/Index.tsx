@@ -10,7 +10,7 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
     const { registerDetails, setRegister } = useRegister((state) => state);
 
     return (
-        <section className="shadow-2xl px-10 ">
+        <section className="shadow-2xl md:px-10 p-4 ">
             <div className="my-10">
                 <h1 className=" text-xl font-semibold text-primary-background">
                     Please provide us with Religion Details
@@ -19,8 +19,10 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
 
             <div className="grid grid-cols-2 gap-8 py-6">
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold text-lg pl-2">Willing to marry from ?</p>
-                    <div className="w-full flex ">
+                    <p className="font-semibold md:text-lg text-[11px] pl-2">
+                        Willing to marry from ?
+                    </p>
+                    <div className="w-full md:flex ">
                         <Button
                             text="Same Division"
                             additionalButtonStyles={clx(
@@ -35,7 +37,7 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                             additionalButtonStyles={clx(
                                 'rounded-r-md border-l-0 border-[#cccccc]',
                                 registerDetails.willingToMarryFrom === 'Other Division also' &&
-                                    'bg-primary-background text-white'
+                                    'bg-primary-background text-white text-sm md:text-[16px]'
                             )}
                             onClick={() => setRegister('willingToMarryFrom', 'Other Division also')}
                         />
@@ -43,7 +45,7 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                 </div>
 
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold text-lg pl-2">Do you wear ?</p>
+                    <p className="font-semibold md:text-lg text-[11px] pl-2">Do you wear ?</p>
                     <div className="w-full flex ">
                         <Button
                             text="Hijab"
@@ -75,7 +77,7 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     </div>
                 </div>
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold text-lg pl-2">Read Quran</p>
+                    <p className="font-semibold text-lg pl-2 ">Read Quran</p>
                     <div className="flex justify-between ">
                         <div className="w-full space-y-4">
                             <Button

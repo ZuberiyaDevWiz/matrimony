@@ -12,7 +12,7 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
     const { registerDetails, setRegister } = useRegister((state) => state);
 
     return (
-        <section className="shadow-2xl px-10 ">
+        <section className="shadow-2xl ">
             <div className="my-10">
                 <h1 className=" text-xl font-semibold text-primary-background">
                     Please provide us with Religion Details
@@ -21,7 +21,7 @@ const ReligionDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
 
             <div className="grid grid-cols-2 gap-8 py-6">
                 <div className="col-span-1 space-y-2">
-                    <p className="font-semibold text-lg pl-2">Willing to marry from ?</p>
+                    <p className="md:font-semibold md:text-lg  pl-2">Willing to marry from ?</p>
                     <div className="w-full flex ">
                         <Button
                             text="Same Division"

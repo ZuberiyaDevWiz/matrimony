@@ -28,13 +28,13 @@ const RegisterHome = () => {
     };
 
     return (
-        <section className="w-[80%]  shadow-xl absolute z-30 top-[76px] left-32  pt-2 ">
-            <div className="flex justify-center ">
+        <section className="xl:w-[84%]   2xl:w-[90%]  m-auto shadow-xl md:absolute z-30 top-[76px] left-20  lg:left-28 2xl:left-32  pt-2 ">
+            <div className="justify-center ">
                 <ul className="steps w-full grid grid-cols-5 justify-between items-center  bg-white rounded-t-md ">
                     <button
                         type="button"
                         className={clx(
-                            'step transition-all text-lg font-semibold ',
+                            'step transition-all lg:text-lg text-sm font-semibold ',
                             nextStep === 1
                                 ? ' col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
                                 : ''
@@ -45,9 +45,9 @@ const RegisterHome = () => {
                     <button
                         type="button"
                         className={clx(
-                            'step transition-all text-lg font-semibold ',
+                            'step transition-all lg:text-lg text-sm font-semibold ',
                             nextStep === 2
-                                ? 'col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
+                                ? 'col-span-1 border-b-[3px]  text-secondary-text border-primary-background py-[22px]'
                                 : ''
                         )}
                     >
@@ -56,9 +56,9 @@ const RegisterHome = () => {
                     <button
                         type="button"
                         className={clx(
-                            'step transition-all text-lg font-semibold  ',
+                            'step transition-all lg:text-lg text-sm font-semibold  ',
                             nextStep === 3
-                                ? 'col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
+                                ? 'col-span-1 border-b-[3px]  text-secondary-text border-primary-background py-[22px]'
                                 : ''
                         )}
                     >
@@ -67,9 +67,9 @@ const RegisterHome = () => {
                     <button
                         type="button"
                         className={clx(
-                            'step transition-all text-lg font-semibold  ',
+                            'step transition-all lg:text-lg text-sm font-semibold  ',
                             nextStep === 4
-                                ? 'col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
+                                ? 'col-span-1 border-b-[3px]  text-secondary-text border-primary-background py-[22px]'
                                 : ''
                         )}
                     >
@@ -78,9 +78,9 @@ const RegisterHome = () => {
                     <button
                         type="button"
                         className={clx(
-                            'step transition-all text-lg font-semibold ',
+                            'step transition-all lg:text-lg w-10 md:w-auto p-5 text-center text-sm font-semibold ',
                             nextStep === 5
-                                ? 'col-span-1 border-b-[3px] text-secondary-text border-primary-background py-[22px]'
+                                ? 'col-span-1 border-b-[3px]  text-secondary-text border-primary-background py-[22px]'
                                 : ''
                         )}
                     >

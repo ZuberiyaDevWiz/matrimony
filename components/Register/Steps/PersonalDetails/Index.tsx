@@ -12,7 +12,7 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
     const { registerDetails, setRegister, step, setStep } = useRegister((state) => state);
 
     return (
-        <section className="shadow-2xl px-10 ">
+        <section className="shadow-2xl md:px-10 px-4 ">
             <div className="my-8 ">
                 <h1 className=" text-xl font-semibold text-primary-background">
                     Personal details will fetch better matching results

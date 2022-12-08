@@ -55,7 +55,7 @@ const BreifIntro: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ set
     });
 
     return (
-        <section className="shadow-2xl px-10">
+        <section className="shadow-2xl md-px-10 px-4">
             <div className="my-8 ">
                 <h1 className=" text-xl font-semibold text-primary-background py-3">
                     Write a breif introduction about you in your own words

@@ -33,11 +33,11 @@ const RegisterDetails: FC<{
     return (
         <form onSubmit={clickHandler}>
             <section className="bg-white mt-[2px] shadow-2xl">
-                <div className="flex flex-col px-10 ">
+                <div className="flex flex-col md:px-10 p-4 ">
                     <p className="mt-8 pb-5 text-xl font-semibold text-primary-background ">
                         Please provide us with your basic details
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="md:grid md:grid-cols-2 gap-4">
                         <Input
                             name="firstName"
                             placeholder="Enter First Name"

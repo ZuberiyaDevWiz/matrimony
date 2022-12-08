@@ -29,7 +29,7 @@ const Login = () => {
                 <Navbar />
             </div>
 
-            <div className=" m-auto pt-10 pb-10 bg-gradient-to-r px-2 from-violet-500 to-fuchsia-500">
+            <div className=" m-auto pt-10 pb-10 bg-gradient-to-r px-2 h-screen from-violet-500 to-fuchsia-500">
                 <div className="m-auto xl:w-2/6 lg:w-2/4 rounded-2xl bg-white opa p-1 ">
                     <div className="px-8 text-center">
                         <h3 className="pt-4 md:mb-2 lg:text-2xl font-semibold">
