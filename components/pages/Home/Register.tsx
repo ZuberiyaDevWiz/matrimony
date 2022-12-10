@@ -76,8 +76,8 @@ const Register = () => {
                             <p className="  md:text-xl text-base text-white">
                                 Code & Mobile Number
                             </p>
-                            <div className="mb-3 flex w-full bg-white rounded">
-                                <div className="p-[1px] w-[7rem]]">
+                            <div className="mb-3 flex  bg-white rounded">
+                                <div className="p-[1px] w-[7rem]] w-full">
                                     <Select
                                         name="code"
                                         options={Countries.map((code) => ({
@@ -86,6 +86,7 @@ const Register = () => {
                                         }))}
                                     />
                                 </div>
+
                                 <div className="ml-[-6px] w-full">
                                     <Input
                                         placeholder="Enter Mobile Number"
@@ -103,28 +104,6 @@ const Register = () => {
                                 </div>
                             </div>
                         </div>
-                        {/*
-                        <div>
-                            <p className=" lg:text-xl sm:text-xl md:text-lg text-white">
-                                Enter Mobile Number
-                            </p>
-                            <div className="">
-                                <Input
-                                    placeholder="Enter Mobile Number"
-                                    label=""
-                                    type="number"
-                                    name="phoneNo"
-                                    required
-                                    rounded
-                                    value={registerDetails.phoneNo}
-                                    changeHandler={changeHandler}
-                                    additionalStyles="text-sm"
-                                    maxLength={10}
-                                    minLength={10}
-                                />
-                            </div>
-                        </div>
-                        */}
 
                         <button
                             type="button"

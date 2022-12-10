@@ -70,7 +70,7 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     </div>
                 </div>
 
-                <div className="col-span-1 space-y-2">
+                <div className="col-span-1 pt-5 md:pt-0 space-y-2">
                     <p className="font-semibold text-lg pl-2">Family Status</p>
                     <div className="w-full grid grid-cols-2 space-y-4">
                         <div className="col-span-2 md:flex grid grid-cols-2">
@@ -105,7 +105,7 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     </div>
                 </div>
 
-                <div className="col-span-1 space-y-2">
+                <div className="col-span-1 pt-5 md:pt space-y-2">
                     <p className="font-semibold text-lg pl-2">Family Type</p>
                     <div className="w-full flex">
                         <Button
@@ -129,7 +129,7 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                     </div>
                 </div>
 
-                <div className="col-span-1 space-y-2">
+                <div className="col-span-1 pt-5 md:pt space-y-2">
                     <p className="font-semibold text-lg pl-2">Physical Status</p>
                     <div className="w-full flex     ">
                         <Button
@@ -152,8 +152,8 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                         />
                     </div>
                 </div>
-                <div className="space-y-2 ">
-                    <span className="text-lg font-semibold">Height</span>
+                <div className="space-y-2 pt-5 md:pt-0 ">
+                    <span className="text-lg font-semibold pl-2">Height</span>
                     <ReactSelect
                         isMulti={false}
                         name="select"
@@ -170,8 +170,10 @@ const PersonalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = (
                         }}
                     />
                 </div>
-
-                <Input label="Weight" placeholder="Enter weight.." rounded required />
+                <div className="pt-5 md:pt-0">
+                    <span className="text-lg font-semibold mb-3 pl-2">Weight</span>
+                    <Input label="" placeholder="Enter weight.." rounded required />
+                </div>
             </div>
 
             <div className="flex flex-row py-14 space-x-6 font-semibold">

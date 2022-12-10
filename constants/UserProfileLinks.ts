@@ -111,7 +111,8 @@ export const familyList = [
     },
     {
         title: 'Family Location',
-        value: ': Bengaluru, Karnataka, India',
+
+        value: ': Bengaluru, Kar, Ind',
     },
     {
         title: 'Native Place',
@@ -145,7 +146,7 @@ export const familysiblingList = [
 export const usercareerList = [
     {
         title: 'Highest Qualification',
-        value: ': B.E / B.Tech - Engineering',
+        value: ': B.E / B.Tech - Engineer',
     },
     {
         title: 'College(s) Attended',

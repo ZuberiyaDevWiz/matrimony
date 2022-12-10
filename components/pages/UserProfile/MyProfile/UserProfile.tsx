@@ -20,7 +20,7 @@ import UserProfileLink from './UserProfileLink';
 const UserProfile: FC = () => {
     return (
         <>
-            <div className="mx-10">
+            <div className="lg:mx-10">
                 <section>
                     <div className="profileName grid grid-4 mx-5 h-10 leading-10 text-center bg-slate-100">
                         <h1 className="text-slate-400 pl-4 font-bold">BIO-DATA</h1>
@@ -112,19 +112,19 @@ const UserProfile: FC = () => {
                         </div>
                     </div>
 
-                    <div className="userBasicdetails grid grid-cols-4 mx-5 my-4">
+                    <div className="userBasicdetails md:grid md:grid-cols-4  text-sm md:text-base grid grid-cols-2 mx-5 my-4">
                         <div className="space-y-1">
                             {UserBasicList.map((userbasic) => (
                                 <p>{userbasic.title}</p>
                             ))}
                         </div>
 
-                        <div className="  border-r-2 border-sky-200 space-y-1">
+                        <div className="  md:border-r-2 md:border-sky-200 space-y-1">
                             {UserBasicList.map((userbasic) => (
                                 <p>{userbasic.value}</p>
                             ))}
                         </div>
-                        <div className=" pl-4">
+                        <div className=" md:pl-4">
                             {UserBasicList1.map((userbasic1) => (
                                 <p>{userbasic1.title}</p>
                             ))}
@@ -144,7 +144,7 @@ const UserProfile: FC = () => {
                             <Link href="/">Edit</Link>
                         </div>
                     </div>
-                    <div className="religiondetails pb-3 grid grid-cols-4 mx-5  my-4">
+                    <div className="religiondetails pb-3 md:grid md:grid-cols-4  text-sm md:text-base grid grid-cols-2 mx-5  my-4">
                         <div className="">
                             {communityList.map((userreligious) => (
                                 <p>{userreligious.title}</p>
@@ -166,20 +166,20 @@ const UserProfile: FC = () => {
                             <Link href="/">Edit</Link>
                         </div>
                     </div>
-                    <div className="userFamilydetails pb-3 grid grid-cols-4  mx-5 my-4">
+                    <div className="userFamilydetails pb-3 md:grid md:grid-cols-4 grid grid-cols-2 text-sm md:text-base  mx-5 my-4">
                         <div className="">
                             {familyList.map((familylist) => (
                                 <p>{familylist.title}</p>
                             ))}
                         </div>
 
-                        <div className="border-r-2 border-sky-200">
+                        <div className="md:border-r-2 md:border-sky-200">
                             {familyList.map((famillist) => (
                                 <p>{famillist.value}</p>
                             ))}
                         </div>
 
-                        <div className="mx-5">
+                        <div className="md:mx-5">
                             {familysiblingList.map((familsibling) => (
                                 <p>{familsibling.title}</p>
                             ))}
@@ -200,20 +200,20 @@ const UserProfile: FC = () => {
                             <Link href="/">Edit</Link>
                         </div>
                     </div>
-                    <div className="userEduCarrerdetails pb-3 grid grid-cols-4 mx-5  my-4">
+                    <div className="userEduCarrerdetails pb-3 md:grid md:grid-cols-4 grid grid-cols-2 text-sm md:text-base mx-5  my-4">
                         <div className="">
                             {usercareerList.map((careerlist) => (
                                 <p>{careerlist.title}</p>
                             ))}
                         </div>
 
-                        <div className="border-r-2 border-sky-200">
+                        <div className="md:border-r-2 md:border-sky-200">
                             {usercareerList.map((careerlist) => (
                                 <p>{careerlist.value}</p>
                             ))}
                         </div>
 
-                        <div className="mx-5">
+                        <div className="md:mx-5">
                             {userworkingList.map((workinglist) => (
                                 <p>{workinglist.title}</p>
                             ))}

@@ -15,15 +15,15 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
     const { registerDetails, setRegister } = useRegister((state) => state);
     // console.log(citiesjson[registerDetails.residingState]);
     return (
-        <section className="shadow-2xl px-10 ">
+        <section className="shadow-2xl md:px-10 px-3 ">
             <div className="my-8 ">
                 <h1 className=" text-xl font-semibold text-primary-background">
                     Please provide us your professional details
                 </h1>
             </div>
 
-            <div className="grid grid-cols-2 gap-8">
-                <div className="col-span-1 space-y-4">
+            <div className="lg:grid md:grid-cols-2 gap-8">
+                <div className="col-span-1  space-y-4">
                     <span className="text-lg font-semibold pl-4">Highest Education</span>
                     <ReactSelect
                         isMulti={false}
@@ -46,7 +46,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                 <div className="col-span-1 space-y-4">
                     <p className="font-semibold text-lg pl-4">Employed In</p>
                     <div className="w-full grid grid-cols-2 space-y-4">
-                        <div className="col-span-2 flex">
+                        <div className="col-span-2 lg:flex grid grid-cols-3">
                             <Button
                                 text="Government"
                                 additionalButtonStyles={clx(
@@ -74,8 +74,6 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                                 )}
                                 onClick={() => setRegister('employedAt', 'Defence')}
                             />
-                        </div>
-                        <div className="col-span-2 flex">
                             <Button
                                 text="Business"
                                 additionalButtonStyles={clx(
@@ -128,7 +126,9 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                     <div className="w-full">
                         <div className="flex gap-4 ">
                             <div className="w-full space-y-4">
-                                <span className="text-lg font-semibold pl-4">Select Currency</span>
+                                <span className="md:text-lg text-[12px] font-semibold pl-4">
+                                    Select Currency
+                                </span>
                                 <ReactSelect
                                     isMulti={false}
                                     name="select"
@@ -146,7 +146,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                                 />
                             </div>
                             <div className="w-full space-y-4">
-                                <span className="text-lg font-semibold pl-4">
+                                <span className="md:text-lg text-[12px] font-semibold  pl-4">
                                     Select Annual Income
                                 </span>
                                 <ReactSelect
@@ -243,7 +243,7 @@ const ProfessionalDetails: FC<{ setNextStep: Dispatch<SetStateAction<number>> }>
                     />
                 </div>
             </div>
-            <div className="flex flex-row py-14 font-semibold space-x-6 ">
+            <div className="flex flex-row md:py-14 py-6  font-semibold space-x-6 ">
                 <div className="w-[49%] flex gap-8  hover:bg-primary-background hover:text-white hover:rounded">
                     <Button text="Previous" rounded onClick={() => setNextStep(2)} />
                 </div>

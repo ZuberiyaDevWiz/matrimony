@@ -3,14 +3,14 @@ import UploadFile from 'components/form/FileInput';
 import Button from 'components/form/Button';
 
 const ProfDoc: FC<{ setProfNext: Dispatch<SetStateAction<number>> }> = ({ setProfNext }) => (
-    <section className="shadow-2xl bg-gray-300 mx-auto w-[35%] px-4 py-6">
-        <h1 className="font-bold text-2xl py-4">ID Proof Required</h1>
-        <p className="font-bold text-lg">
+    <section className="shadow-2xl bg-gray-300 mx-auto lg:w-[40%] p-2 lg:py-6">
+        <h1 className="font-bold md:text-2xl text-sm lg:py-4 pb-4">ID Proof Required</h1>
+        <p className="font-bold lg:text-2xl text-sm">
             {' '}
             In order to provide a safe & authentic platform to our members, we sometimes ask users
             for verifications.
         </p>
-        <p className="py-10">
+        <p className="lg:py-10 lg:text-2xl text-sm pt-3">
             To proceed, please provide a valid ID proof, e.g. Passport, PAN card, Voter ID, Driving
             License
         </p>

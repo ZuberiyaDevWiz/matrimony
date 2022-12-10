@@ -55,15 +55,15 @@ const BreifIntro: FC<{ setNextStep: Dispatch<SetStateAction<number>> }> = ({ set
     });
 
     return (
-        <section className="shadow-2xl px-10">
+        <section className="shadow-2xl md:px-10 px-4">
             <div className="my-8 ">
                 <h1 className=" text-xl font-semibold text-primary-background py-3">
                     Write a breif introduction about you in your own words
                 </h1>
             </div>
             <form onSubmit={submitHandler}>
+                <h1 className=" text-lg font-semibold">About Your Friend</h1>
                 <div className="flex space-x-2 h-24">
-                    <h1 className=" text-lg font-semibold">About Your Friend</h1>
                     <textarea
                         className="border border-gray-500 w-full"
                         value={registerDetails.briefNote}
