@@ -150,6 +150,7 @@ export const usercareerList = [
     },
     {
         title: 'College(s) Attended',
+
         value: ': Jawaharlal Nehru Krishi Vishwa Vidyalaya',
     },
     {

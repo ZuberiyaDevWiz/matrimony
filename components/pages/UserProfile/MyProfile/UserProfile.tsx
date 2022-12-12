@@ -25,50 +25,57 @@ const UserProfile: FC = () => {
                     <div className="profileName grid grid-4 mx-5 h-10 leading-10 text-center bg-slate-100">
                         <h1 className="text-slate-400 pl-4 font-bold">BIO-DATA</h1>
                     </div>
-                    <div className="profileDetails py-4 mx-5 border-b-4 border-sky-400">
-                        <div className="grid grid-cols-5 pl-4">
-                            <div className=" ">
-                                <Image
-                                    src="/images/img-7.jpg"
-                                    alt="profile"
-                                    width="170"
-                                    height="177"
-                                />
-                            </div>
-                            <div className="">
-                                <h1 className="font-bold text-lg h-8 pr-2 leading-6 bg-sky-400 text-white">
-                                    Rasheed Khan <span className="text-xs">( S12345678 )</span>
-                                </h1>
-                                <div className="">
+                    <div className="mx-5 py-3 text-center lg:text-start  lg:flex border-b-4 border-sky-400">
+                        <Image src="/images/img-7.jpg" alt="profile" width="170" height="177" />
+                        <h1 className="font-bold text-lg h-8 pr-2 md:ml-4 leading-6 md:hidden block bg-sky-400 text-white">
+                            Rasheed Khan <span className="text-xs">( S12345678 )</span>
+                        </h1>
+                        <div className="text-start lg:ml-4 ">
+                            <h1 className="font-bold text-lg h-8 pr-2 md:block hidden leading-6 bg-sky-400 text-white">
+                                Rasheed Khan <span className="text-xs">( S12345678 )</span>
+                            </h1>
+                            <div className="grid grid-cols-2 lg:space-x-7 mb-4 lg:mb-0">
+                                <div className="space-y-1">
                                     {UserProfileList.map((userlist) => (
                                         <p>{userlist.title}</p>
                                     ))}
                                 </div>
+                                <div className="space-y-1">
+                                    {UserProfileList.map((userlistQ1) => (
+                                        <p>{userlistQ1.value}</p>
+                                    ))}
+                                </div>
                             </div>
+                        </div>
 
-                            <div className="border-r-2 border-sky-200 pt-[35px]">
-                                {UserProfileList.map((userlistQ1) => (
-                                    <p>{userlistQ1.value}</p>
-                                ))}
+                        <h1 className="font-bold text-lg h-8 pr-2 md:ml-4 leading-6 md:hidden block bg-gray-100 text-black">
+                            Manage Profiles
+                        </h1>
+
+                        <div className="xl:ml-20 lg:ml-2">
+                            <div className="text-start xl:ml-20 lg:ml-2">
+                                <h1 className="font-bold text-lg h-8 pr-2 md:block hidden leading-6 bg-gray-100 text-black">
+                                    Manage Profiles
+                                </h1>
                             </div>
-
-                            <div className=" space-y-3 ml-4">
-                                <h1 className="font-bold text-xl  ">Manage Profiles</h1>
-
-                                <UserProfileLink title="Edit Personal Profile" url="/" />
-                                <UserProfileLink title="Edit Partner Profile" url="/" />
-                                <UserProfileLink title="Edit Contact Details" url="/" />
-                                <UserProfileLink title="View Profile Status" url="/" />
-                            </div>
-                            <div className=" pt-[39px] space-y-3 ">
-                                <UserProfileLink title="Add Photos" url="/" />
-                                <UserProfileLink title="Hobbies & Interests" url="/" />
-                                <UserProfileLink title="Set Contact Filters" url="/" />
-                                <UserProfileLink title="Hide / Delete Profile" url="/" />
+                            <div className="grid grid-cols-2 lg:space-x-2 space-x-1 lg:border-l-2 lg:border-sky-400">
+                                <div className="space-y-6 xl:ml-20 lg:ml-2 text-start">
+                                    <UserProfileLink title="Edit Personal Profile" url="/" />
+                                    <UserProfileLink title="Edit Partner Profile" url="/" />
+                                    <UserProfileLink title="Edit Contact Details" url="/" />
+                                    <UserProfileLink title="View Profile Status" url="/" />
+                                </div>
+                                <div className="space-y-6 text-start">
+                                    <UserProfileLink title="Add Photos" url="/" />
+                                    <UserProfileLink title="Hobbies & Interests" url="/" />
+                                    <UserProfileLink title="Set Contact Filters" url="/" />
+                                    <UserProfileLink title="Hide / Delete Profile" url="/" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 <section>
                     <div className="userdetails lg mx-5 mt-0 ">
                         <Link href="/">
@@ -234,18 +241,18 @@ const UserProfile: FC = () => {
                             <Link href="/">Edit</Link>
                         </div>
                     </div>
-                    <div className="userLocationrdetails pb-3 grid grid-cols-4 mx-5 my-4">
+                    <div className="userLocationrdetails pb-3 md:grid md:grid-cols-4 grid grid-cols-2 text-sm md:text-base mx-5 my-4">
                         <div className="">
                             <p>Current Residence</p>
                             <p>State of Residence</p>
                         </div>
 
-                        <div className="border-r-2 border-sky-200">
+                        <div className="md:border-r-2 md:border-sky-200">
                             <p>: Bengaluru / Bengalore, India</p>
                             <p>: Karnataka</p>
                         </div>
 
-                        <div className="mx-5">
+                        <div className="md:mx-5">
                             <p>Residency Status</p>
                             <p>Zip / Pin Code</p>
                         </div>
@@ -264,29 +271,44 @@ const UserProfile: FC = () => {
                             <Link href="/">Edit</Link>
                         </div>
                     </div>
-                    <div className="userLocationrdetails pb-3 grid grid-cols-4 mx-5  my-4">
+                    <div className="userLocationrdetails pb-3 md:grid md:grid-cols-4 grid grid-cols-2 mx-5  text-sm md:text-base my-4">
                         <div className="">
                             <p>Hobbies</p>
                             <p>Interests</p>
                             <p>Favorite Reads</p>
                         </div>
 
-                        <div className="border-r-2 border-sky-200">
-                            <Link href="/">: Enter Now</Link>
-                            <Link href="/">: Enter Now</Link>
-                            <Link href="/">: Enter Now</Link>
+                        <div className="md:border-r-2 md:border-sky-200 gird grid-cols-2">
+                            <div className="">
+                                <Link href="/">: Enter Now</Link>
+                            </div>
+                            <div>
+                                <Link href="/">: Enter Now</Link>
+                            </div>
+                            <div>
+                                <Link href="/">: Enter Now</Link>
+                            </div>
                         </div>
 
-                        <div className="mx-5">
+                        <div className="md:mx-5">
                             <p>Sport / Fitness Activities</p>
                             <p>Favourite Cuisine</p>
                             <p>Preferred Dress Style</p>
                         </div>
 
                         <div className="">
-                            <Link href="/">: Enter Now</Link>
-                            <Link href="/">: Enter Now</Link>
-                            <Link href="/">: Enter Now</Link>
+                            <div className="">
+                                <Link href="/">: Enter Now</Link>
+                            </div>
+                            <div>
+                                <Link href="/">: Enter Now</Link>
+                            </div>
+                            <div>
+                                <Link href="/">: Enter Now</Link>
+                            </div>
+                            <div>
+                                <Link href="/">: Enter Now</Link>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -301,14 +323,14 @@ const UserProfile: FC = () => {
                             <Link href="/">Edit</Link>
                         </div>
                     </div>
-                    <div className="userprefernce pb-3 grid grid-cols-4 mx-5 my-4">
+                    <div className="userprefernce pb-3 md:grid md:grid-cols-4 grid grid-cols-2 mx-5 text-sm md:text-base my-4">
                         <div className="">
                             <p>Age</p>
                             <p>Height</p>
-                            <p>Religion / Community</p>
+                            <p className="mt-6 md:mt-0">Religion / Community</p>
                         </div>
 
-                        <div className="border-r-2 border-sky-200">
+                        <div className="md:border-r-2 md:border-sky-200">
                             <p>: 19 to 26</p>
                             <p>: 4' 10'(147cm) to 5'4'(162cm)</p>
                             <p>
@@ -317,9 +339,9 @@ const UserProfile: FC = () => {
                             </p>
                         </div>
 
-                        <div className="mx-5">
+                        <div className="md:mx-5">
                             <p>Mother tongue</p>
-                            <p>Marital status</p>
+                            <p className="mt-6 md:mt-0">Marital status</p>
                         </div>
 
                         <div className="">
@@ -336,14 +358,14 @@ const UserProfile: FC = () => {
                             <Link href="/">Edit</Link>
                         </div>
                     </div>
-                    <div className="userprefernce pb-3 grid grid-cols-4 mx-5  my-4">
+                    <div className="userprefernce pb-3 md:grid md:grid-cols-4 grid grid-cols-2 mx-5 text-sm md:text-base  my-4">
                         <div className="">
                             <p>Country living in</p>
                             <p>State living in</p>
-                            <p>City / District</p>
+                            <p className="mt-6 md:mt-0">City / District</p>
                         </div>
 
-                        <div className="border-r-2 border-sky-200">
+                        <div className="md:border-r-2 md:border-sky-200">
                             <p>: India</p>
                             <p>: Karnataka, Maharashtra</p>
                             <p>: Doesn't Matter </p>
@@ -358,19 +380,19 @@ const UserProfile: FC = () => {
                             <Link href="/">Edit</Link>
                         </div>
                     </div>
-                    <div className="userprefernce pb-3 grid grid-cols-4 mx-5 my-4">
+                    <div className="userprefernce pb-3 md:grid md:grid-cols-4 grid grid-cols-2 mx-5 text-sm md:text-base my-4">
                         <div className="">
                             <p>Education</p>
                             <p>Working with</p>
                             <p>Profession area</p>
                         </div>
 
-                        <div className="border-r-2 border-sky-200">
+                        <div className="md:border-r-2 md:border-sky-200">
                             <p>: Doesn't Matter </p>
                             <p>: Doesn't Matter </p>
                             <p>: Doesn't Matter </p>
                         </div>
-                        <div className="mx-5">
+                        <div className="md:mx-5">
                             <p>Working as</p>
                             <p>Annual income</p>
                         </div>
@@ -389,15 +411,15 @@ const UserProfile: FC = () => {
                             <Link href="/">Edit</Link>
                         </div>
                     </div>
-                    <div className="userprefernce pb-3 grid grid-cols-4 mx-5 border-b-2 border-sky-200 my-4">
+                    <div className="userprefernce pb-3 md:grid md:grid-cols-4 grid grid-cols-2 mx-5 text-sm md:text-base border-b-2 border-sky-200 my-4">
                         <div className="">
                             <p>Profile created by</p>
                         </div>
 
-                        <div className="border-r-2 border-sky-200">
+                        <div className="md:border-r-2 md:border-sky-200">
                             <p>: Doesn't Matter </p>
                         </div>
-                        <div className="mx-5">
+                        <div className="md:mx-5">
                             <p>Diet</p>
                         </div>
 
@@ -414,7 +436,7 @@ const UserProfile: FC = () => {
 
                 <section>
                     <div className="pt-7">
-                        <div className="userpersonaldetails pb-3 border-y-2 border-sky-100 grid grid-cols-4 mx-5 my-4">
+                        <div className="userpersonaldetails pb-3 border-y-2 border-sky-100  text-sm md:text-base md:grid md:grid-cols-4 grid grid-cols-2 mx-5 my-4">
                             <div className="">
                                 {userpersonalList.map((personallist) => (
                                     <p>{personallist.title}</p>
