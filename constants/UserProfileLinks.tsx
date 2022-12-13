@@ -112,10 +112,21 @@ export const familyList = [
     {
         title: 'Family Location',
 
-        value: ': Bengaluru, Kar, Ind',
+        value: (
+            <table>
+                <tbody>
+                    <tr>
+                        :
+                        <td>
+                            <p className="ml-[3px]">Bengaluru, Karnataka, India</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        ),
     },
     {
-        title: 'Native Place',
+        title: <p className="mt-5 md:mt-6 lg:mt-0">Native Place</p>,
         value: ': Not Specified',
     },
 ];
@@ -146,15 +157,37 @@ export const familysiblingList = [
 export const usercareerList = [
     {
         title: 'Highest Qualification',
-        value: ': B.E / B.Tech - Engineer',
+        value: (
+            <table>
+                <tbody>
+                    <tr>
+                        :
+                        <td>
+                            <p className="ml-[3px]">B.E / B.Tech - Engineer</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        ),
     },
-    {
-        title: 'College(s) Attended',
 
-        value: ': Jawaharlal Nehru Krishi Vishwa Vidyalaya',
+    {
+        title: <p className="md:mt-0 mt-6 ">College(s) Attended</p>,
+        value: (
+            <table>
+                <tbody>
+                    <tr>
+                        :
+                        <td>
+                            <p className="ml-[3px]"> Jawaharlal Nehru Krishi Vishwa Vidyalaya</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        ),
     },
     {
-        title: 'Annual Income',
+        title: <p className="md:mt-0 mt-10 ">Annual Income</p>,
         value: ': INR 2 Lakh to 4 Lakh',
     },
 ];
@@ -166,10 +199,21 @@ export const userworkingList = [
     },
     {
         title: 'Working As',
-        value: ': Software Developer/ Programmer',
+        value: (
+            <table>
+                <tbody>
+                    <tr>
+                        :
+                        <td>
+                            <p className="ml-[3px]">Software Developer/ Programmer</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        ),
     },
     {
-        title: 'Employer Name',
+        title: <p className="md:mt-0 mt-6 ">Employer Name</p>,
         value: ': webranc',
     },
 ];
@@ -190,11 +234,25 @@ export const userpersonalList = [
 
     {
         title: 'Convenient Time to call',
-        value: ': -',
+        value: <p className="mt-5 md:mt-0"> : -</p>,
     },
 
     {
         title: 'Display Option',
-        value: ': You have chosen to display your contact details to all premium members',
+        value: (
+            <table className="mt-5 md:mt-0">
+                <tbody>
+                    <tr>
+                        <td>
+                            :
+                            <p className="ml-[3px] ">
+                                You have chosen to display your contact details to all premium
+                                members
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        ),
     },
 ];

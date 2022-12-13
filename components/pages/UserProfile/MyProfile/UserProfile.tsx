@@ -25,16 +25,16 @@ const UserProfile: FC = () => {
                     <div className="profileName grid grid-4 mx-5 h-10 leading-10 text-center bg-slate-100">
                         <h1 className="text-slate-400 pl-4 font-bold">BIO-DATA</h1>
                     </div>
-                    <div className="mx-5 py-3 text-center lg:text-start  lg:flex border-b-4 border-sky-400">
+                    <div className="md:mx-5 mx-2 py-3 text-center lg:text-start  lg:flex border-b-4 border-sky-400">
                         <Image src="/images/img-7.jpg" alt="profile" width="170" height="177" />
-                        <h1 className="font-bold text-lg h-8 pr-2 md:ml-4 leading-6 md:hidden block bg-sky-400 text-white">
+                        <h1 className="font-bold text-lg h-8 pr-2 md:ml-4 leading-6 md:hidden block bg-sky-400 text-center text-white">
                             Rasheed Khan <span className="text-xs">( S12345678 )</span>
                         </h1>
                         <div className="text-start lg:ml-4 ">
-                            <h1 className="font-bold text-lg h-8 pr-2 md:block hidden leading-6 bg-sky-400 text-white">
+                            <h1 className="font-bold text-lg h-8 pr-2  md:block hidden leading-6 bg-sky-400 text-center lg:text-start text-white">
                                 Rasheed Khan <span className="text-xs">( S12345678 )</span>
                             </h1>
-                            <div className="grid grid-cols-2 lg:space-x-7 mb-4 lg:mb-0">
+                            <div className="grid grid-cols-2 lg:space-x-7 mb-4 text-sm md:text-base lg:mb-0 border-b-2 border-sky-200 pb-3 lg:border-b-0  lg:pb-0">
                                 <div className="space-y-1">
                                     {UserProfileList.map((userlist) => (
                                         <p>{userlist.title}</p>
@@ -48,24 +48,24 @@ const UserProfile: FC = () => {
                             </div>
                         </div>
 
-                        <h1 className="font-bold text-lg h-8 pr-2 md:ml-4 leading-6 md:hidden block bg-gray-100 text-black">
+                        <h1 className="font-bold text-lg h-8 pr-2 md:ml-4 leading-6 md:hidden block  text-black">
                             Manage Profiles
                         </h1>
 
                         <div className="xl:ml-20 lg:ml-2">
                             <div className="text-start xl:ml-20 lg:ml-2">
-                                <h1 className="font-bold text-lg h-8 pr-2 md:block hidden leading-6 bg-gray-100 text-black">
+                                <h1 className="font-bold text-lg h-8 pr-2 md:block hidden leading-6  text-black">
                                     Manage Profiles
                                 </h1>
                             </div>
-                            <div className="grid grid-cols-2 lg:space-x-2 space-x-1 lg:border-l-2 lg:border-sky-400">
+                            <div className="grid grid-cols-2 lg:space-x-2 space-x-1 text-sm md:text-base lg:border-l-2 lg:border-sky-400">
                                 <div className="space-y-6 xl:ml-20 lg:ml-2 text-start">
                                     <UserProfileLink title="Edit Personal Profile" url="/" />
                                     <UserProfileLink title="Edit Partner Profile" url="/" />
                                     <UserProfileLink title="Edit Contact Details" url="/" />
                                     <UserProfileLink title="View Profile Status" url="/" />
                                 </div>
-                                <div className="space-y-6 text-start">
+                                <div className="space-y-6 xl:!mr-32 text-start">
                                     <UserProfileLink title="Add Photos" url="/" />
                                     <UserProfileLink title="Hobbies & Interests" url="/" />
                                     <UserProfileLink title="Set Contact Filters" url="/" />
@@ -92,7 +92,7 @@ const UserProfile: FC = () => {
 
                     <div className="userFamilydetails lg mx-5 pt-3  ">
                         <div className="flex justify-between border-b-2 border-sky-200">
-                            <h1 className="font-bold text-lg  ">
+                            <h1 className="font-bold md:text-lg text-sm  ">
                                 Personality, Family Details, Career, Partnes Expectations ect.
                             </h1>
                             <div className=" text-md ">
@@ -244,11 +244,21 @@ const UserProfile: FC = () => {
                     <div className="userLocationrdetails pb-3 md:grid md:grid-cols-4 grid grid-cols-2 text-sm md:text-base mx-5 my-4">
                         <div className="">
                             <p>Current Residence</p>
-                            <p>State of Residence</p>
+                            <p className="md:mt-0 mt-6 "> State of Residence</p>
                         </div>
 
                         <div className="md:border-r-2 md:border-sky-200">
-                            <p>: Bengaluru / Bengalore, India</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        :{' '}
+                                        <td>
+                                            <p className="ml-[3px]">Bengaluru / Bengalore, India</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
                             <p>: Karnataka</p>
                         </div>
 
@@ -300,10 +310,7 @@ const UserProfile: FC = () => {
                             <div className="">
                                 <Link href="/">: Enter Now</Link>
                             </div>
-                            <div>
-                                <Link href="/">: Enter Now</Link>
-                            </div>
-                            <div>
+                            <div className="mt-[15px] md:mt-6 lg:mt-0">
                                 <Link href="/">: Enter Now</Link>
                             </div>
                             <div>
@@ -327,21 +334,42 @@ const UserProfile: FC = () => {
                         <div className="">
                             <p>Age</p>
                             <p>Height</p>
-                            <p className="mt-6 md:mt-0">Religion / Community</p>
+                            <p className="mt-6 lg:mt-0">Religion / Community</p>
                         </div>
 
                         <div className="md:border-r-2 md:border-sky-200">
                             <p>: 19 to 26</p>
-                            <p>: 4' 10'(147cm) to 5'4'(162cm)</p>
-                            <p>
-                                : Muslim:Ansari, Muslim: Arain, Muslim: Awan, Muslim: Dekkani,
-                                Muslim:Dudekula, Muslim:Jat, Muslim Lebbai{' '}
-                            </p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        :
+                                        <td>
+                                            <p className="ml-[3px]">
+                                                {' '}
+                                                4' 10'(147cm) to 5'4'(162cm)
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        :
+                                        <td>
+                                            <p className="ml-[3px]">
+                                                Muslim:Ansari, Muslim: Arain, Muslim: Awan, Muslim:
+                                                Dekkani, Muslim:Dudekula, Muslim:Jat, Muslim Lebbai
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
 
                         <div className="md:mx-5">
                             <p>Mother tongue</p>
-                            <p className="mt-6 md:mt-0">Marital status</p>
+                            <p className="">Marital status</p>
                         </div>
 
                         <div className="">
@@ -367,7 +395,17 @@ const UserProfile: FC = () => {
 
                         <div className="md:border-r-2 md:border-sky-200">
                             <p>: India</p>
-                            <p>: Karnataka, Maharashtra</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        :
+                                        <td>
+                                            <p className="ml-[3px]">Karnataka, Maharashtra </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
                             <p>: Doesn't Matter </p>
                         </div>
                     </div>
@@ -399,7 +437,19 @@ const UserProfile: FC = () => {
 
                         <div className="">
                             <p>: Doesn't Matter</p>
-                            <p>: INR less than 1 lakh to 4 lakhs.</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        :
+                                        <td>
+                                            <p className="ml-[3px]">
+                                                {' '}
+                                                INR less than 1 lakh to 4 lakhs.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </section>
@@ -436,7 +486,7 @@ const UserProfile: FC = () => {
 
                 <section>
                     <div className="pt-7">
-                        <div className="userpersonaldetails pb-3 border-y-2 border-sky-100  text-sm md:text-base md:grid md:grid-cols-4 grid grid-cols-2 mx-5 my-4">
+                        <div className="userpersonaldetails pb-3 border-y-2 border-sky-100  text-sm md:text-base md:grid md:grid-cols-3 grid grid-cols-2 mx-5 my-4">
                             <div className="">
                                 {userpersonalList.map((personallist) => (
                                     <p>{personallist.title}</p>
