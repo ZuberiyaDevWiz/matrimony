@@ -7,7 +7,7 @@ const UserProfileStatus: FC = () => (
         <section>
             <h1 className="text-xl text-gray-400 font-bold">Hide / Delete Profile</h1>
             <div className="bg-white px-4 mt-4">
-                <table className="py-5 w-full">
+                <table className="px-5 w-full">
                     <tbody>
                         <tr>
                             <td className=" border-b-2 broder-gray-100 py-2">Hide Profile</td>

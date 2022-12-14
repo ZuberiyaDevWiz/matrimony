@@ -25,17 +25,23 @@ const UserEmailAlert: FC = () => {
                                         Match Mail & Photo Match Mail
                                     </h4>
                                     <p className="">Personalized matches</p>
-                                    <CheckBox name="broaderMatch" label="" options={['Send']} />
-                                    <p className="">
-                                        Send me Broader Matches if there are no new Preferred
-                                    </p>
-                                    <p> Matches</p>
+                                    <CheckBox
+                                        name="broaderMatch"
+                                        label=" Send me Broader Matches if there are no new Preferred Matches"
+                                        options={['Send']}
+                                    />
                                 </div>
                                 <div className=" ">
                                     <h4 className="font-bold mb-5">Email Alert</h4>
+
                                     <Radio
                                         name="matech"
-                                        options={['Daily', 'Tri-weekly', 'Weekly', 'Unsubscribe']}
+                                        options={[
+                                            ' Daily',
+                                            ' Tri-weekly',
+                                            ' Weekly',
+                                            ' Unsubscribe',
+                                        ]}
                                     />
                                 </div>
                             </div>
@@ -46,7 +52,7 @@ const UserEmailAlert: FC = () => {
                                 </div>
                                 <div className="">
                                     <h4 className="font-bold mb-2">Email Alert</h4>
-                                    <Radio name="premium" options={['Weekly', 'Unsubscribe']} />
+                                    <Radio name="premium" options={[' Weekly', ' Unsubscribe']} />
                                 </div>
                             </div>
                             <div className=" grid grid-cols-2 pt-4 border-b-2 border-gray-200 space-x-6 ">
@@ -58,7 +64,7 @@ const UserEmailAlert: FC = () => {
                                     <h4 className="font-bold mb-2">Email Alert</h4>
                                     <Radio
                                         name="recentvisitor"
-                                        options={['Daily', 'Unsubscribe']}
+                                        options={[' Daily', ' Unsubscribe']}
                                     />
                                 </div>
                             </div>
@@ -75,7 +81,7 @@ const UserEmailAlert: FC = () => {
                                     <h4 className="font-bold mb-2">Email Alert</h4>
                                     <Radio
                                         name="membershorlisted"
-                                        options={['Daily', 'Unsubscribe']}
+                                        options={[' Daily', ' Unsubscribe']}
                                     />
                                 </div>
                             </div>
@@ -90,7 +96,7 @@ const UserEmailAlert: FC = () => {
                                     <h4 className="font-bold mb-2">Email Alert</h4>
                                     <Radio
                                         name="viewprofileemail"
-                                        options={['Weekly', 'Unsubscribe']}
+                                        options={[' Weekly', ' Unsubscribe']}
                                     />
                                 </div>
                             </div>
@@ -105,7 +111,7 @@ const UserEmailAlert: FC = () => {
                                     <h4 className="font-bold mb-2">Email Alert</h4>
                                     <Radio
                                         name="similarprofile"
-                                        options={['Bi-Weekly', 'Unsubscribe']}
+                                        options={[' Bi-Weekly', ' Unsubscribe']}
                                     />
                                 </div>
                             </div>
@@ -121,9 +127,9 @@ const UserEmailAlert: FC = () => {
                                     <Radio
                                         name="contactalert"
                                         options={[
-                                            'Instant- A mail for every response',
-                                            'Daily - A digital of all response received in a day',
-                                            'Unsubscribe',
+                                            ' Instant- A mail for every response',
+                                            ' Daily - A digital of all response received in a day',
+                                            ' Unsubscribe',
                                         ]}
                                     />
                                 </div>
@@ -140,8 +146,8 @@ const UserEmailAlert: FC = () => {
                                     <Radio
                                         name="messagereceivedllart"
                                         options={[
-                                            'Daily - A digital of all response received in a day',
-                                            'Unsubscribe',
+                                            ' Daily - A digital of all response received in a day',
+                                            ' Unsubscribe',
                                         ]}
                                     />
                                 </div>
@@ -154,13 +160,13 @@ const UserEmailAlert: FC = () => {
                                 <div className="">
                                     <h4 className="font-bold mb-2">Email Alert</h4>
                                     <CheckBox
-                                        label="For every intivation received (max 2 per/day"
+                                        label=" For every intivation received (max 2 per/day"
                                         name="smsalertforinvrec"
                                         options={['Send']}
                                     />
                                     <CheckBox
                                         name="xmxalertforacceptinv"
-                                        label="For every Accept to my invitation (max 2 per/day)"
+                                        label=" For every Accept to my invitation (max 2 per/day)"
                                         options={['Send']}
                                     />
                                 </div>
@@ -174,7 +180,7 @@ const UserEmailAlert: FC = () => {
                                     <h4 className="font-bold mb-2">Email Alert</h4>
                                     <Radio
                                         name="profileblaster"
-                                        options={['Subscribe', 'Unsubscribe']}
+                                        options={[' Subscribe', ' Unsubscribe']}
                                     />
                                 </div>
                             </div>
@@ -193,8 +199,8 @@ const UserEmailAlert: FC = () => {
                                     <Radio
                                         name="shaadispcial"
                                         options={[
-                                            'Occasional - Not more than twice a month',
-                                            'Unsubscribe',
+                                            ' Occasional - Not more than twice a month',
+                                            ' Unsubscribe',
                                         ]}
                                     />
                                 </div>
@@ -208,7 +214,10 @@ const UserEmailAlert: FC = () => {
                                 </div>
                                 <div className="">
                                     <h4 className="font-bold mb-2">Email Alert</h4>
-                                    <Radio name="yourmatchs" options={['Monthly', 'Unsubscribe']} />
+                                    <Radio
+                                        name="yourmatchs"
+                                        options={[' Monthly', ' Unsubscribe']}
+                                    />
                                 </div>
                             </div>
                         </div>

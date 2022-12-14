@@ -8,10 +8,10 @@ const UserAccount: FC = () => {
     return (
         <SettingLayout pageTitle="Hellooo">
             <section>
-                <div className=" bg-gray-200">
-                    <div className="userinfo ">
+                <div className=" bg-gray-200 ">
+                    <div className="w-full px-5 ">
                         <h1 className="text-xl text-gray-400 font-bold mb-3">My Account</h1>
-                        <div className="flex justify-between pl-5">
+                        <div className="flex justify-between px-5">
                             <h3 className="text-xl">Email</h3>
 
                             <button
@@ -50,8 +50,8 @@ const UserAccount: FC = () => {
                                 </>
                             )}
                         </div>
-                        <div className="flex justify-between pt-5 ">
-                            <h3 className="text-xl pl-5">Password</h3>
+                        <div className="flex justify-between pt-5 px-5 ">
+                            <h3 className="text-xl ">Password</h3>
 
                             <button
                                 type="button"
