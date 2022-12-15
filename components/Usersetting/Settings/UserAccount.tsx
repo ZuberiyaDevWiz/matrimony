@@ -8,8 +8,8 @@ const UserAccount: FC = () => {
     return (
         <SettingLayout pageTitle="Hellooo">
             <section>
-                <div className=" bg-gray-200 ">
-                    <div className="w-full px-5 ">
+                <div className=" bg-gray-200 py-6 md:px-10">
+                    <div className=" px-5 w-full ">
                         <h1 className="text-xl text-gray-400 font-bold mb-3">My Account</h1>
                         <div className="flex justify-between px-5">
                             <h3 className="text-xl">Email</h3>
@@ -22,7 +22,7 @@ const UserAccount: FC = () => {
                                 Edit
                             </button>
                         </div>
-                        <div className="grid grid-cols-2 bg-white py-5 text-base mt-2">
+                        <div className="md:grid md:grid-cols-2 grid grid-cols-1  bg-white py-5 text-base mt-2">
                             <div className="pl-5 ">
                                 <p>Email</p>
                             </div>

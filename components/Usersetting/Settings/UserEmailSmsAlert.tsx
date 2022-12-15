@@ -124,14 +124,16 @@ const UserEmailAlert: FC = () => {
                                 </div>
                                 <div className="">
                                     <h4 className="font-bold mb-2">Email Alert</h4>
-                                    <Radio
-                                        name="contactalert"
-                                        options={[
-                                            ' Instant- A mail for every response',
-                                            ' Daily - A digital of all response received in a day',
-                                            ' Unsubscribe',
-                                        ]}
-                                    />
+                                    <div className="">
+                                        <Radio
+                                            name="contactalert"
+                                            options={[
+                                                ' Instant- A mail for every response',
+                                                ' Daily - A digital of all response received in a day',
+                                                ' Unsubscribe',
+                                            ]}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                             <div className=" grid grid-cols-2 pt-4 border-b-2 border-gray-200 space-x-6 ">
