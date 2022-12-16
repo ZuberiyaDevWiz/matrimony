@@ -11,7 +11,7 @@ const PrivacyOption: FC = () => (
         <section>
             <h1 className="text-xl text-gray-400 font-bold">Privacy Options</h1>
             <div className="bg-white px-4 mt-4">
-                <table className=" w-full ">
+                <table className=" ">
                     <tbody>
                         {UserPrivacyList.map((pravicy) => (
                             <Row key={pravicy.url} {...pravicy} />

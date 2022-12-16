@@ -85,7 +85,7 @@ const SettingLayout: FC<SliderProps> = ({ children, pageTitle }) => {
     return (
         <section>
             <div className="lg:flex   bg-gray-100 md:px-10  py-20">
-                <div className=" shrink-0 md:w-[30%]">
+                <div className="">
                     <h1 className="text-xl font-bold py-3 bg-white pl-4">Settings</h1>
                     <div className="bg-white flex lg:block  ">
                         {links.map((link) => (
@@ -104,7 +104,7 @@ const SettingLayout: FC<SliderProps> = ({ children, pageTitle }) => {
                         ))}
                     </div>
                 </div>
-                <div className="lg:px-5 md:w-full ">
+                <div className="lg:px-5 w-[60%]">
                     <p title={pageTitle} />
 
                     {children}

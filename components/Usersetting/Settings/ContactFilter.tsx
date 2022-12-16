@@ -17,7 +17,7 @@ const ContactFilter: FC = () => {
                             details
                         </h1>
 
-                        <table className="w-full">
+                        <table className="">
                             <tbody>
                                 {UserMemberList.map((members) => (
                                     <Row key={members.url} {...members} />

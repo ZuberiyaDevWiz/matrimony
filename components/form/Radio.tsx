@@ -15,7 +15,7 @@ const Radio: FC<RadioProps> = (props) => {
     return (
         <div>
             <label htmlFor={name}>{label}</label>
-            <div className="tw-p-2 xl:space-x-2 xl:flex tw-space-y-2">
+            <div className="tw-p-2  ">
                 {options.map((option) => (
                     <div key={option}>
                         <input
@@ -24,7 +24,7 @@ const Radio: FC<RadioProps> = (props) => {
                             value={value}
                             className="focus:tw-ring-0 "
                         />
-                        <span className={clx('tw-pl-2 tw-text-sm', additionalStyles || null)}>
+                        <span className={clx(' tw-text-sm', additionalStyles || null)}>
                             {option}
                         </span>
                     </div>

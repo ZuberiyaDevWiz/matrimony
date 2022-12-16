@@ -18,7 +18,7 @@ const UserEmailAlert: FC = () => {
 
                     <h1 className="text-xl text-gray-400 font-bold mb-4">My Alerts </h1>
                     <form className="">
-                        <div className=" bg-white pt-5 text-base w-full">
+                        <div className=" bg-white pt-5 text-base">
                             <div className=" grid grid-cols-2 border-b-2 border-gray-200 space-x-6 ">
                                 <div className="pl-4">
                                     <h4 className="font-bold mb-2">
